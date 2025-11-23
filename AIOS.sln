@@ -1,0 +1,101 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "interface", "interface", "{A83FB771-9961-F8C1-4A11-26F20453E45E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ai", "ai", "{BA58FF10-E1F2-1F22-EED5-4647CFF8BF60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tachyonic", "tachyonic", "{A126EF14-60DE-4941-D10F-586B29F47B27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIOS.Core", "interface\AIOS.Core\AIOS.Core.csproj", "{34254CC0-8BD3-9B4A-3F21-84DD5A725A58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIOS.Models", "interface\AIOS.Models\AIOS.Models.csproj", "{357E5452-C7C7-C3E7-2BC0-1DCDE2BE8520}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIOS.Services", "interface\AIOS.Services\AIOS.Services.csproj", "{E4B79D04-EF7C-6EDD-5B04-11D4EBB23B9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIOS.UI.Clean", "interface\AIOS.UI\AIOS.UI.Clean.csproj", "{91BBB4DB-75D7-FFC8-3CFA-1AF23674B263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIOS.UI", "interface\AIOS.UI\AIOS.UI.csproj", "{1CA97B79-0AB3-A24C-21D0-46DD8E0EBAD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIOS.UI.Minimal", "interface\AIOS.UI\AIOS.UI.Minimal.csproj", "{116A2CB9-7C91-E7A3-E76E-17C419047771}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIOS.UI.Diagnostics", "interface\AIOS.UI.Diagnostics\AIOS.UI.Diagnostics.csproj", "{2C8F41BC-2FCF-1A59-B5E5-CAD647ED1D0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgeTest", "interface\BridgeTest\BridgeTest.csproj", "{AA4B6BC6-4EC6-1AF8-EC0A-B7D0ABC71453}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreEngineTest", "interface\CoreEngineTest\CoreEngineTest.csproj", "{8E57726C-7BE7-3403-9BC1-9AF30B2F19F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BE0B3DF2-F37C-449D-F624-39E4FE56170C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsciousnessTest", "ai\tests\ConsciousnessTest\ConsciousnessTest.csproj", "{276424FE-4308-1473-7672-D056863A4611}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "visualization", "visualization", "{67669809-8539-3E91-A02B-EF5DCD213641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIOS.VisualInterface", "interface\visualization\visual_interface\AIOS.VisualInterface.csproj", "{EB17A9D3-12FC-B533-13EA-24B663B8FFE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "archive", "archive", "{AF33A0C5-C1E0-3D55-6DC9-73A71D5FBF86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "computational_layer_ingested_20251025", "computational_layer_ingested_20251025", "{898E4141-F6E5-D758-94B5-90E7FBB2DD1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIOS.Core", "tachyonic\archive\computational_layer_ingested_20251025\core_systems\AIOS.Core.csproj", "{12FDF364-24C3-EB47-2964-EB98B9DDC4EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34254CC0-8BD3-9B4A-3F21-84DD5A725A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34254CC0-8BD3-9B4A-3F21-84DD5A725A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34254CC0-8BD3-9B4A-3F21-84DD5A725A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34254CC0-8BD3-9B4A-3F21-84DD5A725A58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357E5452-C7C7-C3E7-2BC0-1DCDE2BE8520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357E5452-C7C7-C3E7-2BC0-1DCDE2BE8520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357E5452-C7C7-C3E7-2BC0-1DCDE2BE8520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357E5452-C7C7-C3E7-2BC0-1DCDE2BE8520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B79D04-EF7C-6EDD-5B04-11D4EBB23B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B79D04-EF7C-6EDD-5B04-11D4EBB23B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B79D04-EF7C-6EDD-5B04-11D4EBB23B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B79D04-EF7C-6EDD-5B04-11D4EBB23B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91BBB4DB-75D7-FFC8-3CFA-1AF23674B263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91BBB4DB-75D7-FFC8-3CFA-1AF23674B263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91BBB4DB-75D7-FFC8-3CFA-1AF23674B263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91BBB4DB-75D7-FFC8-3CFA-1AF23674B263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA97B79-0AB3-A24C-21D0-46DD8E0EBAD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA97B79-0AB3-A24C-21D0-46DD8E0EBAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA97B79-0AB3-A24C-21D0-46DD8E0EBAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA97B79-0AB3-A24C-21D0-46DD8E0EBAD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116A2CB9-7C91-E7A3-E76E-17C419047771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116A2CB9-7C91-E7A3-E76E-17C419047771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116A2CB9-7C91-E7A3-E76E-17C419047771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116A2CB9-7C91-E7A3-E76E-17C419047771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8F41BC-2FCF-1A59-B5E5-CAD647ED1D0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8F41BC-2FCF-1A59-B5E5-CAD647ED1D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8F41BC-2FCF-1A59-B5E5-CAD647ED1D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8F41BC-2FCF-1A59-B5E5-CAD647ED1D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA4B6BC6-4EC6-1AF8-EC0A-B7D0ABC71453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA4B6BC6-4EC6-1AF8-EC0A-B7D0ABC71453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA4B6BC6-4EC6-1AF8-EC0A-B7D0ABC71453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA4B6BC6-4EC6-1AF8-EC0A-B7D0ABC71453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E57726C-7BE7-3403-9BC1-9AF30B2F19F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E57726C-7BE7-3403-9BC1-9AF30B2F19F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E57726C-7BE7-3403-9BC1-9AF30B2F19F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E57726C-7BE7-3403-9BC1-9AF30B2F19F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{276424FE-4308-1473-7672-D056863A4611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{276424FE-4308-1473-7672-D056863A4611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{276424FE-4308-1473-7672-D056863A4611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{276424FE-4308-1473-7672-D056863A4611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB17A9D3-12FC-B533-13EA-24B663B8FFE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB17A9D3-12FC-B533-13EA-24B663B8FFE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB17A9D3-12FC-B533-13EA-24B663B8FFE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB17A9D3-12FC-B533-13EA-24B663B8FFE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12FDF364-24C3-EB47-2964-EB98B9DDC4EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12FDF364-24C3-EB47-2964-EB98B9DDC4EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12FDF364-24C3-EB47-2964-EB98B9DDC4EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12FDF364-24C3-EB47-2964-EB98B9DDC4EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

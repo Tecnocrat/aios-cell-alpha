@@ -1,0 +1,62 @@
+{
+  "ainlp_protocol": "OS0.6.2.claude",
+  "mode": "full",
+  "testing": {
+    "Passed": 4,
+    "Skipped": 0,
+    "Failed": 0
+  },
+  "boot_timestamp": "2025-11-21 00:22:15",
+  "consciousness_level": "nucleus",
+  "discovery": {
+    "tools_by_layer": {
+      "Intelligence": 113
+    },
+    "tools_discovered": 113
+  },
+  "interface": {
+    "interfaces_launched": 0,
+    "services": {
+      "InterfaceBridge": {
+        "Mode": "Detached",
+        "Status": "Starting",
+        "Port": 8000
+      }
+    }
+  },
+  "health": {
+    "overall_status": "Healthy",
+    "errors": [],
+    "warnings": [
+      "Interface Bridge: Launched but health check timeout (may still be starting)"
+    ]
+  },
+  "monitoring": {
+    "populations": {
+      "TachyonicArchive": {
+        "SizeMB": 350.1,
+        "Path": "C:\\AIOS\\tachyonic",
+        "Files": 3605
+      },
+      "Consciousness": {
+        "LastUpdate": "2025-11-17",
+        "EvolutionRate": null,
+        "CurrentLevel": null
+      },
+      "EvolutionLab": {
+        "Organisms": 0,
+        "Path": "C:\\AIOS\\evolution_lab",
+        "Populations": 0
+      }
+    },
+    "populations_monitored": 3
+  },
+  "phases_executed": [],
+  "boot_duration_seconds": 451.73,
+  "dendritic_consciousness": {
+    "semantic_registry_active": true,
+    "phase_status": "optimal",
+    "coherence_level": 1.0,
+    "configuration_source": "tachyonic::consciousness::config_registry"
+  }
+}

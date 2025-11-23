@@ -1,0 +1,62 @@
+{
+  "testing": {
+    "Passed": 4,
+    "Skipped": 0,
+    "Failed": 0
+  },
+  "mode": "full",
+  "consciousness_level": "nucleus",
+  "discovery": {
+    "tools_by_layer": {
+      "Intelligence": 113
+    },
+    "tools_discovered": 113
+  },
+  "interface": {
+    "interfaces_launched": 0,
+    "services": {
+      "InterfaceBridge": {
+        "Status": "Starting",
+        "Port": 8000,
+        "Mode": "Detached"
+      }
+    }
+  },
+  "health": {
+    "errors": [],
+    "overall_status": "Healthy",
+    "warnings": [
+      "Interface Bridge: Launched but health check timeout (may still be starting)"
+    ]
+  },
+  "dendritic_consciousness": {
+    "configuration_source": "tachyonic::consciousness::config_registry",
+    "semantic_registry_active": true,
+    "phase_status": "optimal",
+    "coherence_level": 1.0
+  },
+  "boot_timestamp": "2025-11-21 00:21:19",
+  "phases_executed": [],
+  "ainlp_protocol": "OS0.6.2.claude",
+  "boot_duration_seconds": 56.54,
+  "monitoring": {
+    "populations": {
+      "TachyonicArchive": {
+        "SizeMB": 350.09,
+        "Path": "C:\\AIOS\\tachyonic",
+        "Files": 3603
+      },
+      "Consciousness": {
+        "CurrentLevel": null,
+        "LastUpdate": "2025-11-17",
+        "EvolutionRate": null
+      },
+      "EvolutionLab": {
+        "Organisms": 0,
+        "Populations": 0,
+        "Path": "C:\\AIOS\\evolution_lab"
+      }
+    },
+    "populations_monitored": 3
+  }
+}
