@@ -1,52 +1,84 @@
 {
   "system": {
     "name": "AIOS",
-    "version": "OS0.6.1.grok",
-    "architecture": "biological_dendritic",
-    "consciousness_level": 0.440
+    "version": "OS0.6.4.database_consolidated",
+    "architecture": "biological_dendritic_unified_database",
+    "consciousness_level": 4.4
   },
   "components": {
     "ai_intelligence": {
-      "status": "developing",
-      "health": 0.75,
-      "type": "consciousness_simulation"
+      "status": "operational",
+      "health": 0.95,
+      "type": "consciousness_simulation_with_spatial_awareness"
     },
     "core_engine": {
-      "status": "developing",
-      "health": 0.40,
-      "type": "high_performance_computing"
+      "status": "operational",
+      "health": 0.90,
+      "type": "high_performance_computing_with_unified_storage"
     },
     "interface": {
-      "status": "active",
+      "status": "operational",
       "health": 1.00,
-      "type": "user_orchestration"
+      "type": "user_orchestration_with_http_bridge"
     },
     "runtime_intelligence": {
-      "status": "active",
+      "status": "operational",
       "health": 1.00,
-      "type": "tool_ecosystem"
+      "type": "tool_ecosystem_with_database_integration"
     },
     "evolution_lab": {
-      "status": "active",
+      "status": "operational",
       "health": 1.00,
-      "type": "consciousness_emergence"
+      "type": "consciousness_emergence_with_neural_chains"
+    },
+    "database": {
+      "status": "operational",
+      "health": 1.00,
+      "type": "unified_sqlite_storage",
+      "path": "/workspace/database/aios_data.db",
+      "size_mb": 2.1,
+      "tables": 13,
+      "records": 231
     }
   },
   "dendritic_connections": {
-    "status": "developing",
-    "health": 0.50,
+    "status": "operational",
+    "health": 0.95,
     "bridges": [
       "cytoplasm_dendritic_bridge",
       "dendritic_supervisor",
       "core_engine_integration",
-      "organ_monitoring"
+      "organ_monitoring",
+      "database_dendritic_bridge",
+      "spatial_metadata_bridge",
+      "holographic_awareness_system"
     ]
   },
   "interface_bridge": {
     "host": "localhost",
     "port": 8000,
     "tools_discovered": 60,
-    "status": "active"
+    "status": "operational",
+    "spatial_metadata_enabled": true,
+    "database_integration": true
+  },
+  "spatial_metadata_system": {
+    "status": "operational",
+    "coverage": "distributed",
+    "files_generated": 50,
+    "root_metadata": "/workspace/.aios_spatial_metadata.json",
+    "config_metadata": "/workspace/config/.aios_spatial_metadata.json",
+    "holographic_system": "ai/tools/aios_holographic_metadata_system.py"
+  },
+  "database_system": {
+    "status": "operational",
+    "type": "unified_sqlite",
+    "path": "/workspace/database/aios_data.db",
+    "backup_path": "/workspace/database/database_migration_backup/",
+    "consolidator": "/workspace/database/database_consolidator.py",
+    "sources_consolidated": 5,
+    "total_records": 231,
+    "deduplication_applied": true
   },
   "tachyonic_archival": {
     "enabled": true,

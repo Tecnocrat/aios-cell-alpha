@@ -99,16 +99,25 @@ class AIOSHolographicMetadataSystem:
         logger.info(f"📊 Generating metadata for: {folder_path}")
         
         # Basic folder information
-        relative_path = folder_path.relative_to(self.workspace_root)
-        folder_name = folder_path.name
-        
-        # Safely calculate parent path relative to workspace
-        try:
-            parent_relative = folder_path.parent.relative_to(self.workspace_root)
-            parent_path_str = str(parent_relative)
-        except ValueError:
-            # Parent is outside workspace (e.g., for root directory)
+        # Handle root directory case
+        if folder_path == self.workspace_root:
+            relative_path = Path(".")
+            folder_name = folder_path.name or "AIOS"
             parent_path_str = ""
+            depth_level = 0
+        else:
+            relative_path = folder_path.relative_to(self.workspace_root)
+            folder_name = folder_path.name
+            
+            # Safely calculate parent path relative to workspace
+            try:
+                parent_relative = folder_path.parent.relative_to(self.workspace_root)
+                parent_path_str = str(parent_relative)
+            except ValueError:
+                # Parent is outside workspace (e.g., for root directory)
+                parent_path_str = ""
+            
+            depth_level = len(relative_path.parts)
         
         metadata = {
             "spatial_metadata_version": "1.0.0",
@@ -118,7 +127,7 @@ class AIOSHolographicMetadataSystem:
                 "absolute_path": str(folder_path.absolute()),
                 "relative_path": str(relative_path),
                 "parent_path": parent_path_str,
-                "depth_level": len(relative_path.parts)
+                "depth_level": depth_level
             },
             "architectural_classification": self._classify_architectural_area(relative_path),
             "spatial_context": self._analyze_spatial_context(folder_path),
@@ -681,6 +690,9 @@ class AIOSHolographicMetadataSystem:
         
         if target_folder is None:
             target_folder = self.workspace_root
+        
+        # Resolve the target folder to absolute path
+        target_folder = target_folder.resolve()
         
         if not target_folder.exists():
             logger.error(f"❌ Target folder does not exist: {target_folder}")
