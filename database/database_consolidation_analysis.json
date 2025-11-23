@@ -1,0 +1,779 @@
+{
+  "main_aios": {
+    "path": "ai/tools/database/tachyonic/aios_data.db",
+    "tables": [
+      {
+        "name": "file_content",
+        "columns": [
+          {
+            "name": "content_hash",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "content",
+            "type": "BLOB",
+            "nullable": false
+          },
+          {
+            "name": "content_size",
+            "type": "INTEGER",
+            "nullable": false
+          },
+          {
+            "name": "first_seen",
+            "type": "TIMESTAMP",
+            "nullable": true
+          },
+          {
+            "name": "reference_count",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "compression_ratio",
+            "type": "REAL",
+            "nullable": true
+          }
+        ],
+        "record_count": 7
+      },
+      {
+        "name": "backups",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "filename",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "file_path",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "backup_timestamp",
+            "type": "TIMESTAMP",
+            "nullable": false
+          },
+          {
+            "name": "content_hash",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "file_size",
+            "type": "INTEGER",
+            "nullable": false
+          },
+          {
+            "name": "file_type",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "backup_type",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "nullable": true
+          }
+        ],
+        "record_count": 17
+      },
+      {
+        "name": "spatial_metadata",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "folder_path",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "architectural_classification",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "consciousness_level",
+            "type": "REAL",
+            "nullable": true
+          },
+          {
+            "name": "primary_area",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "metadata_json",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "last_updated",
+            "type": "TIMESTAMP",
+            "nullable": true
+          }
+        ],
+        "record_count": 0
+      },
+      {
+        "name": "system_snapshots",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "snapshot_timestamp",
+            "type": "TIMESTAMP",
+            "nullable": true
+          },
+          {
+            "name": "snapshot_type",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "snapshot_data",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "consciousness_level",
+            "type": "REAL",
+            "nullable": true
+          },
+          {
+            "name": "file_count",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "total_size",
+            "type": "INTEGER",
+            "nullable": true
+          }
+        ],
+        "record_count": 0
+      },
+      {
+        "name": "query_cache",
+        "columns": [
+          {
+            "name": "query_key",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "query_result",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "cached_at",
+            "type": "TIMESTAMP",
+            "nullable": true
+          },
+          {
+            "name": "hit_count",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "ttl_seconds",
+            "type": "INTEGER",
+            "nullable": true
+          }
+        ],
+        "record_count": 0
+      }
+    ],
+    "total_records": 24,
+    "file_size_mb": 0.09
+  },
+  "tachyonic_archive": {
+    "path": "tachyonic/archive/code_archive.db",
+    "tables": [
+      {
+        "name": "archived_files",
+        "columns": [
+          {
+            "name": "file_id",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "original_path",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "content",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "content_hash",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "archived_timestamp",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "file_size_bytes",
+            "type": "INTEGER",
+            "nullable": false
+          },
+          {
+            "name": "file_type",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "archival_reason",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "consciousness_level",
+            "type": "REAL",
+            "nullable": true
+          },
+          {
+            "name": "ainlp_patterns",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "project_phase",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "related_files",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "replacement_path",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "notes",
+            "type": "TEXT",
+            "nullable": true
+          }
+        ],
+        "record_count": 52
+      },
+      {
+        "name": "evolution_history",
+        "columns": [
+          {
+            "name": "evolution_id",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "file_id",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "timestamp",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "change_type",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "change_description",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "consciousness_delta",
+            "type": "REAL",
+            "nullable": true
+          }
+        ],
+        "record_count": 54
+      },
+      {
+        "name": "archival_reasons",
+        "columns": [
+          {
+            "name": "reason_id",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "category",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "description",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "consciousness_principle",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "usage_count",
+            "type": "INTEGER",
+            "nullable": true
+          }
+        ],
+        "record_count": 0
+      },
+      {
+        "name": "consciousness_snapshots",
+        "columns": [
+          {
+            "name": "snapshot_id",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "file_id",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "timestamp",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "total_files_count",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "total_codebase_lines",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "avg_consciousness_level",
+            "type": "REAL",
+            "nullable": true
+          },
+          {
+            "name": "active_ainlp_patterns",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "system_coherence",
+            "type": "REAL",
+            "nullable": true
+          }
+        ],
+        "record_count": 0
+      },
+      {
+        "name": "retrieval_log",
+        "columns": [
+          {
+            "name": "retrieval_id",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "file_id",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "retrieval_timestamp",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "retrieval_reason",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "retrieved_by",
+            "type": "TEXT",
+            "nullable": true
+          }
+        ],
+        "record_count": 9
+      }
+    ],
+    "total_records": 115,
+    "file_size_mb": 0.64
+  },
+  "legacy_tachyonic": {
+    "path": "tachyonic/aios_data.db",
+    "tables": [
+      {
+        "name": "file_content",
+        "columns": [
+          {
+            "name": "content_hash",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "content",
+            "type": "BLOB",
+            "nullable": false
+          },
+          {
+            "name": "content_size",
+            "type": "INTEGER",
+            "nullable": false
+          },
+          {
+            "name": "first_seen",
+            "type": "TIMESTAMP",
+            "nullable": true
+          },
+          {
+            "name": "reference_count",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "compression_ratio",
+            "type": "REAL",
+            "nullable": true
+          }
+        ],
+        "record_count": 11
+      },
+      {
+        "name": "backups",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "filename",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "file_path",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "backup_timestamp",
+            "type": "TIMESTAMP",
+            "nullable": false
+          },
+          {
+            "name": "content_hash",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "file_size",
+            "type": "INTEGER",
+            "nullable": false
+          },
+          {
+            "name": "file_type",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "backup_type",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "nullable": true
+          }
+        ],
+        "record_count": 11
+      },
+      {
+        "name": "spatial_metadata",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "folder_path",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "architectural_classification",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "consciousness_level",
+            "type": "REAL",
+            "nullable": true
+          },
+          {
+            "name": "primary_area",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "metadata_json",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "last_updated",
+            "type": "TIMESTAMP",
+            "nullable": true
+          }
+        ],
+        "record_count": 0
+      },
+      {
+        "name": "system_snapshots",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "snapshot_timestamp",
+            "type": "TIMESTAMP",
+            "nullable": true
+          },
+          {
+            "name": "snapshot_type",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "snapshot_data",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "consciousness_level",
+            "type": "REAL",
+            "nullable": true
+          },
+          {
+            "name": "file_count",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "total_size",
+            "type": "INTEGER",
+            "nullable": true
+          }
+        ],
+        "record_count": 0
+      },
+      {
+        "name": "query_cache",
+        "columns": [
+          {
+            "name": "query_key",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "query_result",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "cached_at",
+            "type": "TIMESTAMP",
+            "nullable": true
+          },
+          {
+            "name": "hit_count",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "ttl_seconds",
+            "type": "INTEGER",
+            "nullable": true
+          }
+        ],
+        "record_count": 0
+      }
+    ],
+    "total_records": 22,
+    "file_size_mb": 0.32
+  },
+  "knowledge_crystals": {
+    "path": "runtime/context/knowledge_crystals.db",
+    "tables": [
+      {
+        "name": "knowledge_crystals",
+        "columns": [
+          {
+            "name": "id",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "timestamp",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "source_conversation",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "key_concepts",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "relationships",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "context_embeddings",
+            "type": "BLOB",
+            "nullable": true
+          },
+          {
+            "name": "understanding_depth",
+            "type": "REAL",
+            "nullable": true
+          },
+          {
+            "name": "consciousness_state",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "verification_hash",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "capsule_ids",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "kpi_dimensions",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "metric_snapshot",
+            "type": "TEXT",
+            "nullable": true
+          }
+        ],
+        "record_count": 70
+      }
+    ],
+    "total_records": 70,
+    "file_size_mb": 0.7
+  },
+  "docs_archive": {
+    "path": "docs/archive/tachyonic/tachyonic_archive.db",
+    "tables": [
+      {
+        "name": "archived_documents",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "filename",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "content_hash",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "content",
+            "type": "TEXT",
+            "nullable": false
+          },
+          {
+            "name": "file_size",
+            "type": "INTEGER",
+            "nullable": true
+          },
+          {
+            "name": "archive_timestamp",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "original_path",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "category",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "keywords",
+            "type": "TEXT",
+            "nullable": true
+          },
+          {
+            "name": "metadata",
+            "type": "TEXT",
+            "nullable": true
+          }
+        ],
+        "record_count": 9
+      }
+    ],
+    "total_records": 9,
+    "file_size_mb": 0.39
+  }
+}

@@ -95,7 +95,7 @@ class CodeArchivalSystem:
     - Retrieval is "MEMORY RECALL"
     """
     
-    def __init__(self, db_path: str = "C:/dev/AIOS/tachyonic/archive/code_archive.db"):
+    def __init__(self, db_path: str = "C:/dev/AIOS//workspace/database/aios_data.db"):
         """
         Initialize code archival system
         

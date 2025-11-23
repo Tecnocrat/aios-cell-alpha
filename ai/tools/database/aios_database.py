@@ -26,7 +26,7 @@ Performance Goals:
 AINLP Patterns:
 - AINLP.discovery: No existing database infrastructure (clean slate)
 - AINLP.enhancement: New foundational layer (not enhancement)
-- AINLP.output: Database file → tachyonic/aios_data.db
+- AINLP.output: Database file → /workspace/aios_data.db
 - AINLP.integration: Hooks for backup_manager.ps1, Interface Bridge
 
 Created: October 12, 2025 06:00 AM
@@ -68,12 +68,12 @@ class AIOSDatabase:
     - query_cache: Performance optimization layer
     """
     
-    def __init__(self, db_path: str = "tachyonic/aios_data.db"):
+    def __init__(self, db_path: str = "/workspace/database/aios_data.db"):
         """
         Initialize AIOS database connection.
         
         Args:
-            db_path: Path to SQLite database file (default: tachyonic/aios_data.db)
+            db_path: Path to SQLite database file (default: /workspace/database/aios_data.db)
         """
         self.db_path = Path(db_path)
         self.db_path.parent.mkdir(parents=True, exist_ok=True)

@@ -30,7 +30,7 @@ def deep_archive_semantic_validator():
     print("🔮 Starting Deep Archival Process...")
 
     # Initialize database connection
-    db = AIOSDatabase("tachyonic/aios_data.db")
+    db = AIOSDatabase("/workspace/database/aios_data.db")
 
     # File paths
     source_file = Path("../../../tachyonic/database/"
@@ -95,7 +95,7 @@ def deep_archive_semantic_validator():
         cleanup_record.unlink()
 
     print("✨ Deep archival complete - workspace uncluttered!")
-    print("   📁 Files permanently stored in: tachyonic/aios_data.db")
+    print("   📁 Files permanently stored in: /workspace/database/aios_data.db")
     print("   🔍 Query with: SELECT * FROM backups WHERE filename "
           "LIKE 'semantic_validator%'")
 

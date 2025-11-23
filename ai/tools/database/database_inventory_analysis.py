@@ -62,8 +62,8 @@ def main():
 
     # Define database locations
     databases = [
-        ("ai/tools/database/tachyonic/aios_data.db", "Main AIOS Database"),
-        ("docs/archive/tachyonic/tachyonic_archive.db", "Tachyonic Archive DB"),
+        ("/workspace/database/aios_data.db", "Main AIOS Database"),
+        ("/workspace/database/aios_data.db", "Tachyonic Archive DB"),
         ("runtime/logs/sessions/session_AIOS_20250811_220407_3e2543c7.db", "Session DB 1"),
         ("runtime/logs/sessions/session_AIOS_20250811_220422_48da9d15.db", "Session DB 2"),
         ("runtime/logs/sessions/session_AIOS_20250813_235739_d04bb138.db", "Session DB 3"),

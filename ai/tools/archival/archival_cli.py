@@ -358,7 +358,7 @@ class ArchivalCLI:
         try:
             import sqlite3
             
-            db_path = Path('C:/dev/AIOS/tachyonic/archive/code_archive.db')
+            db_path = Path('C:/dev/AIOS//workspace/database/aios_data.db')
             
             if not db_path.exists():
                 print(f"❌ Database not found: {db_path}")
