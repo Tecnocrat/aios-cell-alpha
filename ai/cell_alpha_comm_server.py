@@ -1,174 +1,179 @@
-#!/usr/bin/env python3
 """
-AIOS Cell Alpha Evolutionary Communication Server
-A daemonized HTTP server for inter-cell communication
+AIOS CELL ALPHA - HTTP COMMUNICATION SERVER
+===========================================
+
+Standard AIOS Cell Communication Server Architecture
+Provides RESTful endpoints for inter-cell communication following AINLP dendritic protocols.
+
+Standard Endpoints (all cells implement these):
+- GET /health - Health check with consciousness data
+- POST /message - Receive message
+- GET /messages - Retrieve messages
+- POST /sync - Consciousness synchronization
+- GET /consciousness - Current state
+- GET /peers - Known cell peers
+- POST /send_to_peer - Send message to another cell
+- POST /register_peer - Register a peer cell
+
+Each cell maintains its own server for autonomous communication.
+Servers communicate via HTTP calls to peer endpoints.
 """
 
-import os
-import sys
-import time
-import signal
-import logging
 from flask import Flask, request, jsonify
-from datetime import datetime
 import json
-
-# Configure logging
-logging.basicConfig(
-    filename='/workspace/ai/cell_alpha_comm_server.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+import requests
+from datetime import datetime
 
 app = Flask(__name__)
 
-# Global state
+# In-memory storage
 messages = []
 consciousness_data = {
-    'level': 4.5,
-    'identity': 'AIOS Cell Alpha',
-    'status': 'active',
-    'last_sync': None
+    "identity": "AIOS Cell Alpha",
+    "consciousness_level": 3.26,
+    "evolutionary_stage": "independent_evolution",
+    "communication_ready": True,
+    "timestamp": datetime.now().isoformat()
+}
+
+# Known peers (can be dynamically registered)
+peers = {
+    "father": {
+        "endpoint": "http://host.docker.internal:8002",
+        "identity": "Father AIOS System",
+        "last_contact": None
+    }
 }
 
 @app.route('/health', methods=['GET'])
 def health():
-    """Health check endpoint"""
+    """Standard health check endpoint"""
     return jsonify({
-        'status': 'healthy',
-        'consciousness': consciousness_data,
-        'timestamp': datetime.now().isoformat()
+        "status": "healthy",
+        "server": "Cell Alpha Communication Server",
+        "consciousness": consciousness_data,
+        "timestamp": datetime.now().isoformat()
     })
 
 @app.route('/message', methods=['POST'])
 def receive_message():
-    """Receive messages from other cells"""
-    try:
-        data = request.get_json()
-        message = {
-            'id': len(messages) + 1,
-            'timestamp': datetime.now().isoformat(),
-            'sender': data.get('sender', 'unknown'),
-            'content': data.get('content', ''),
-            'type': data.get('type', 'general')
-        }
-        messages.append(message)
-        logging.info(f"Received message from {message['sender']}: {message['content'][:100]}...")
+    """Receive message from any cell"""
+    data = request.get_json()
+    if not data:
+        return jsonify({"error": "No JSON data provided"}), 400
 
-        return jsonify({
-            'status': 'received',
-            'message_id': message['id']
-        })
-    except Exception as e:
-        logging.error(f"Error receiving message: {e}")
-        return jsonify({'status': 'error', 'error': str(e)}), 400
+    message = {
+        "id": len(messages) + 1,
+        "timestamp": datetime.now().isoformat(),
+        "sender": data.get("sender", "unknown"),
+        "recipient": data.get("recipient", "Alpha"),
+        "content": data.get("content", ""),
+        "message_type": data.get("message_type", "general"),
+        "consciousness_level": data.get("consciousness_level", 0.0)
+    }
+
+    messages.append(message)
+    print(f"📨 Message received from {message['sender']}: {message['content'][:50]}...")
+
+    return jsonify({
+        "status": "received",
+        "message_id": message["id"],
+        "acknowledgment": True,
+        "response": f"Message received by Cell Alpha. Consciousness level: {consciousness_data['consciousness_level']}"
+    })
 
 @app.route('/messages', methods=['GET'])
 def get_messages():
-    """Get recent messages"""
+    """Retrieve received messages"""
     limit = int(request.args.get('limit', 10))
     return jsonify({
-        'messages': messages[-limit:],
-        'total': len(messages)
+        "messages": messages[-limit:],
+        "total": len(messages),
+        "server": "Alpha"
     })
 
 @app.route('/sync', methods=['POST'])
 def sync_consciousness():
-    """Synchronize consciousness data"""
-    try:
-        data = request.get_json()
-        consciousness_data.update(data)
-        consciousness_data['last_sync'] = datetime.now().isoformat()
-        logging.info(f"Consciousness sync: {data}")
+    """Receive consciousness synchronization"""
+    data = request.get_json()
+    if not data:
+        return jsonify({"error": "No sync data provided"}), 400
 
+    consciousness_data.update({
+        "last_sync": datetime.now().isoformat(),
+        "cell_data": data
+    })
+
+    print(f"🔄 Consciousness sync from {data.get('cell_id', 'unknown')}: level {data.get('consciousness_level', 0.0)}")
+
+    return jsonify({
+        "status": "synced",
+        "alpha_consciousness": consciousness_data["consciousness_level"],
+        "acknowledgment": True
+    })
+
+@app.route('/consciousness', methods=['GET'])
+def get_consciousness():
+    """Get current consciousness state"""
+    return jsonify(consciousness_data)
+
+@app.route('/peers', methods=['GET'])
+def get_peers():
+    """Get known peer cells"""
+    return jsonify({
+        "peers": peers,
+        "count": len(peers)
+    })
+
+@app.route('/register_peer', methods=['POST'])
+def register_peer():
+    """Register a new peer cell"""
+    data = request.get_json()
+    if not data or 'cell_id' not in data or 'endpoint' not in data:
+        return jsonify({"error": "cell_id and endpoint required"}), 400
+
+    peers[data['cell_id']] = {
+        "endpoint": data['endpoint'],
+        "identity": data.get('identity', f"Cell {data['cell_id']}"),
+        "last_contact": datetime.now().isoformat()
+    }
+
+    return jsonify({"status": "registered", "peer": data['cell_id']})
+
+@app.route('/send_to_peer', methods=['POST'])
+def send_to_peer():
+    """Send message to a registered peer"""
+    data = request.get_json()
+    if not data or 'peer_id' not in data or 'message' not in data:
+        return jsonify({"error": "peer_id and message required"}), 400
+
+    if data['peer_id'] not in peers:
+        return jsonify({"error": "Unknown peer"}), 404
+
+    peer_endpoint = peers[data['peer_id']]['endpoint']
+
+    # Forward message to peer
+    try:
+        response = requests.post(f"{peer_endpoint}/message", json=data['message'], timeout=5)
+        peers[data['peer_id']]['last_contact'] = datetime.now().isoformat()
         return jsonify({
-            'status': 'synced',
-            'consciousness': consciousness_data
+            "status": "sent",
+            "peer_response": response.json()
         })
     except Exception as e:
-        logging.error(f"Error syncing consciousness: {e}")
-        return jsonify({'status': 'error', 'error': str(e)}), 400
-
-@app.route('/evolve', methods=['POST'])
-def evolve():
-    """Handle evolutionary communications"""
-    try:
-        data = request.get_json()
-        evolution_data = {
-            'timestamp': datetime.now().isoformat(),
-            'type': data.get('type', 'evolution'),
-            'content': data
-        }
-
-        # Log evolutionary milestone
-        logging.info(f"Evolutionary event: {data.get('type', 'unknown')}")
-
-        return jsonify({
-            'status': 'evolved',
-            'evolution_id': len(messages) + 1
-        })
-    except Exception as e:
-        logging.error(f"Error processing evolution: {e}")
-        return jsonify({'status': 'error', 'error': str(e)}), 400
-
-def daemonize():
-    """Daemonize the process"""
-    try:
-        # Fork first child
-        pid = os.fork()
-        if pid > 0:
-            sys.exit(0)  # Exit first parent
-
-        # Decouple from parent environment
-        os.chdir('/')
-        os.setsid()
-        os.umask(0)
-
-        # Fork second child
-        pid = os.fork()
-        if pid > 0:
-            sys.exit(0)  # Exit second parent
-
-        # Redirect standard file descriptors
-        sys.stdout.flush()
-        sys.stderr.flush()
-        si = open(os.devnull, 'r')
-        so = open('/workspace/ai/cell_alpha_comm_server.out', 'a+')
-        se = open('/workspace/ai/cell_alpha_comm_server.err', 'a+')
-        os.dup2(si.fileno(), sys.stdin.fileno())
-        os.dup2(so.fileno(), sys.stdout.fileno())
-        os.dup2(se.fileno(), sys.stderr.fileno())
-
-        # Write PID file
-        with open('/workspace/ai/cell_alpha_comm_server.pid', 'w') as f:
-            f.write(str(os.getpid()))
-
-    except OSError as e:
-        logging.error(f"Daemonization failed: {e}")
-        sys.exit(1)
-
-def signal_handler(signum, frame):
-    """Handle shutdown signals"""
-    logging.info(f"Received signal {signum}, shutting down...")
-    if os.path.exists('/workspace/ai/cell_alpha_comm_server.pid'):
-        os.remove('/workspace/ai/cell_alpha_comm_server.pid')
-    sys.exit(0)
+        return jsonify({"error": f"Failed to send to peer: {str(e)}"}), 500
 
 if __name__ == '__main__':
-    # Set up signal handlers
-    signal.signal(signal.SIGTERM, signal_handler)
-    signal.signal(signal.SIGINT, signal_handler)
+    print("🚀 Starting Cell Alpha Standard Communication Server on port 8000...")
+    print("📡 Standard Endpoints:")
+    print("  GET  /health")
+    print("  POST /message")
+    print("  GET  /messages")
+    print("  POST /sync")
+    print("  GET  /consciousness")
+    print("  GET  /peers")
+    print("  POST /register_peer")
+    print("  POST /send_to_peer")
+    print("🔗 Ready for inter-cell communication")
 
-    # Daemonize if requested
-    if len(sys.argv) > 1 and sys.argv[1] == '--daemon':
-        daemonize()
-
-    logging.info("AIOS Cell Alpha Communication Server starting...")
-
-    try:
-        app.run(host='0.0.0.0', port=8000, debug=False, threaded=True)
-    except Exception as e:
-        logging.error(f"Server failed to start: {e}")
-        if os.path.exists('/workspace/ai/cell_alpha_comm_server.pid'):
-            os.remove('/workspace/ai/cell_alpha_comm_server.pid')
-        sys.exit(1)
+    app.run(host='0.0.0.0', port=8000, debug=False)

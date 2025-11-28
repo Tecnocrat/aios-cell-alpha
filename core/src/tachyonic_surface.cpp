@@ -33,8 +33,17 @@ HeightMap build_height_map(const std::vector<float>& magnitudes,
 
 } // namespace aios::tachyonic
 
+// ============================================================================
+// AINLP Pattern: dendritic.growth[ASM][FALLBACK]
+// C++ fallback implementation for tachyonic surface rendering
+// ============================================================================
+
 #ifndef AIOS_TACHYONIC_ASM
+#ifdef _WIN32
 extern "C" void __stdcall aios_render_heightmap_ortho(
+#else
+extern "C" void aios_render_heightmap_ortho(
+#endif
     const float* pointsXYZ,
     uint32_t pointCount,
     uint8_t* pixelBuffer,

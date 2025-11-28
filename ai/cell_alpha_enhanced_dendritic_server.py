@@ -482,7 +482,7 @@ if __name__ == '__main__':
     logging.info("AIOS Cell Alpha Enhanced Dendritic Communication Server starting...")
 
     try:
-        app.run(host='0.0.0.0', port=8002, debug=False, threaded=True)
+        app.run(host='0.0.0.0', port=8000, debug=False, threaded=True)
     except Exception as e:
         logging.error(f"Server failed to start: {e}")
         if os.path.exists('/workspace/ai/cell_alpha_enhanced_comm_server.pid'):

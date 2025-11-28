@@ -9,5 +9,6 @@
             "fileMatch": ["tachyonic/consciousness/config_registry.json"],
             "url": "./tachyonic/consciousness/schemas/config_registry.v1.json"
         }
-    ]
+    ],
+    "cmake.sourceDirectory": "/workspace/core"
 }

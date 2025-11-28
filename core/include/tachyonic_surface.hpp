@@ -24,9 +24,20 @@ HeightMap build_height_map(
     uint32_t rows
 );
 
+} // namespace aios::tachyonic
+
+// ============================================================================
+// AINLP Pattern: dendritic.growth[ASM][INTERFACE]
+// Assembly renderer interface for tachyonic surface rendering
+// ============================================================================
+
 // Assembly renderer interface (implemented in tachyonic_surface.asm)
 // Renders height map to 32-bit BGRA pixel buffer using orthographic projection.
+#ifdef _WIN32
 extern "C" void __stdcall aios_render_heightmap_ortho(
+#else
+extern "C" void aios_render_heightmap_ortho(
+#endif
     const float* pointsXYZ, // interleaved x,y,z (normalized x,y in [0,1], z in [-1,1])
     uint32_t pointCount,
     uint8_t* pixelBuffer,
@@ -35,5 +46,3 @@ extern "C" void __stdcall aios_render_heightmap_ortho(
     float zScale,
     uint32_t baseColor // 0xAARRGGBB
 );
-
-} // namespace aios::tachyonic
