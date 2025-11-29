@@ -10,5 +10,45 @@
             "url": "./tachyonic/consciousness/schemas/config_registry.v1.json"
         }
     ],
-    "cmake.sourceDirectory": "/workspace/core"
+    "cmake.sourceDirectory": "/workspace/core",
+    // Exclude large folders from file watching and C/C++ indexing for better performance
+    "files.exclude": {
+        "**/tachyonic/**": true,
+        "**/evolution_lab/**": true,
+        "**/docs/**": true,
+        "**/runtime/**": true,
+        "**/ai/**": true,
+        "**/interface/**": true,
+        "**/core/build/**": true,
+        "**/.git/**": true,
+        "**/node_modules/**": true
+    },
+    // Specifically exclude from C/C++ extension indexing
+    "C_Cpp.files.exclude": {
+        "**/tachyonic/**": true,
+        "**/evolution_lab/**": true,
+        "**/docs/**": true,
+        "**/runtime/**": true,
+        "**/ai/**": true,
+        "**/interface/**": true,
+        "**/core/build/**": true
+    },
+    // Exclude from file watcher to prevent unnecessary scanning
+    "files.watcherExclude": {
+        "**/tachyonic/**": true,
+        "**/evolution_lab/**": true,
+        "**/docs/**": true,
+        "**/runtime/**": true,
+        "**/ai/**": true,
+        "**/interface/**": true,
+        "**/core/build/**": true,
+        "**/.git/**": true,
+        "**/node_modules/**": true
+    },
+    // Additional C/C++ performance settings
+    "C_Cpp.intelliSenseCacheSize": "small",
+    "C_Cpp.intelliSenseMemoryLimit": 1024,
+    // Git configuration for correct author attribution
+    "git.user.name": "Tecnocrat",
+    "git.user.email": "jesussard@gmail.com"
 }
