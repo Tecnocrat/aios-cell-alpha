@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "AIOS Core",
+            "includePath": [
+                "${workspaceFolder}/core/include",
+                "${workspaceFolder}/core/src"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/core/include",
+                    "${workspaceFolder}/core/src"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}
