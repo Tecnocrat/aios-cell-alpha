@@ -537,15 +537,33 @@ class AIOSCore:
                     correlation_results['error'] = 'No aggregated data available for correlation analysis'
                     return correlation_results
 
-                # Extract metric values across supercells
+                # Extract metric values across supercells with enhanced validation
                 metric_data = {}
+                invalid_values_count = 0
                 for supercell_data in aggregated_data['metrics_by_supercell'].values():
                     if supercell_data.get('sync_success'):
                         for metric_name, value in supercell_data['metrics'].items():
-                            if isinstance(value, (int, float)):
+                            # Enhanced validation: check type and NaN
+                            if isinstance(value, (int, float)) and not (isinstance(value, float) and np.isnan(value)):
                                 if metric_name not in metric_data:
                                     metric_data[metric_name] = []
-                                metric_data[metric_name].append(value)
+                                metric_data[metric_name].append(float(value))
+                            else:
+                                invalid_values_count += 1
+                
+                if invalid_values_count > 0:
+                    logger.warning(f"Filtered out {invalid_values_count} invalid metric values during aggregated data extraction")
+                
+                # Ensure all metric arrays have sufficient data points
+                if metric_data:
+                    filtered_metrics = {}
+                    for name, values in metric_data.items():
+                        if len(values) >= 2:  # Need at least 2 points for correlation
+                            filtered_metrics[name] = values
+                        else:
+                            logger.warning(f"Excluding metric {name} due to insufficient data points ({len(values)} < 2)")
+                    
+                    metric_data = filtered_metrics
 
             elif data_source == 'temporal':
                 # Use temporal tracking data if available
@@ -553,14 +571,38 @@ class AIOSCore:
                     correlation_results['error'] = 'No temporal data available. Run track_temporal_metrics first.'
                     return correlation_results
 
-                # Extract metrics from temporal measurements
+                # Extract metrics from temporal measurements with enhanced validation
                 metric_data = {}
+                invalid_values_count = 0
                 for measurement in self._temporal_cache.get('measurements', []):
                     for metric_name, value in measurement['metrics'].items():
-                        if isinstance(value, (int, float)):
+                        # Enhanced validation: check type and NaN
+                        if isinstance(value, (int, float)) and not (isinstance(value, float) and np.isnan(value)):
                             if metric_name not in metric_data:
                                 metric_data[metric_name] = []
-                            metric_data[metric_name].append(value)
+                            metric_data[metric_name].append(float(value))
+                        else:
+                            invalid_values_count += 1
+                
+                if invalid_values_count > 0:
+                    logger.warning(f"Filtered out {invalid_values_count} invalid metric values during temporal data extraction")
+                
+                # Ensure all metric arrays have the same length (filter incomplete metrics)
+                if metric_data:
+                    min_length = min(len(values) for values in metric_data.values())
+                    if min_length < 2:
+                        correlation_results['error'] = 'Insufficient valid data points for correlation analysis'
+                        return correlation_results
+                    
+                    # Trim all arrays to the same length and filter out short ones
+                    filtered_metrics = {}
+                    for name, values in metric_data.items():
+                        if len(values) >= min_length:
+                            filtered_metrics[name] = values[:min_length]  # Trim to min_length
+                        else:
+                            logger.warning(f"Excluding metric {name} due to insufficient data points ({len(values)} < {min_length})")
+                    
+                    metric_data = filtered_metrics
 
             else:
                 correlation_results['error'] = f"Unsupported data_source: {data_source}"
@@ -577,6 +619,7 @@ class AIOSCore:
             # Calculate correlation matrix
             if correlation_method == 'pearson':
                 corr_matrix = np.corrcoef(data_matrix)
+                p_matrix = np.full_like(corr_matrix, 0.0)  # No p-values for Pearson
             elif correlation_method == 'spearman':
                 corr_matrix = np.zeros((len(metric_names), len(metric_names)))
                 p_matrix = np.zeros((len(metric_names), len(metric_names)))
@@ -584,21 +627,52 @@ class AIOSCore:
                     for j in range(len(metric_names)):
                         if i != j:
                             result = stats.spearmanr(metric_data[metric_names[i]], metric_data[metric_names[j]])
-                            # Extract correlation and p-value
-                            if hasattr(result, 'correlation'):
-                                corr = result.correlation
-                                p_val = result.pvalue
-                            else:
-                                corr = result[0]
-                                p_val = result[1]
-                            corr_matrix[i, j] = float(corr)
-                            p_matrix[i, j] = float(p_val)
+                            # Extract correlation and p-value with validation
+                            try:
+                                if hasattr(result, 'correlation'):
+                                    corr = result.correlation  # type: ignore
+                                    p_val = result.pvalue  # type: ignore
+                                else:
+                                    corr = result[0]
+                                    p_val = result[1]
+                                
+                                # Validate types and convert safely
+                                if isinstance(corr, (int, float)) and not np.isnan(corr):
+                                    corr_matrix[i, j] = float(corr)
+                                else:
+                                    logger.warning(f"Invalid correlation value for {metric_names[i]} vs {metric_names[j]}: {corr}")
+                                    corr_matrix[i, j] = 0.0  # Safe fallback
+                                
+                                if isinstance(p_val, (int, float)) and not np.isnan(p_val):
+                                    p_matrix[i, j] = float(p_val)
+                                else:
+                                    logger.warning(f"Invalid p-value for {metric_names[i]} vs {metric_names[j]}: {p_val}")
+                                    p_matrix[i, j] = 1.0  # Safe fallback (no significance)
+                                    
+                            except (TypeError, ValueError, IndexError) as e:
+                                logger.warning(f"Failed to extract correlation for {metric_names[i]} vs {metric_names[j]}: {e}")
+                                corr_matrix[i, j] = 0.0  # Safe fallback
+                                p_matrix[i, j] = 1.0  # Safe fallback
                         else:
                             corr_matrix[i, j] = 1.0
                             p_matrix[i, j] = 0.0
             else:
                 correlation_results['error'] = f"Unsupported correlation method: {correlation_method}"
                 return correlation_results
+
+            # Validate correlation matrix for NaN values
+            nan_count = np.sum(np.isnan(corr_matrix))
+            if nan_count > 0:
+                logger.warning(f"Detected {nan_count} NaN values in correlation matrix - this indicates problematic metric data")
+                correlation_results['analysis_metadata']['nan_warnings'] = {
+                    'nan_count': int(nan_count),
+                    'total_correlations': corr_matrix.size,
+                    'nan_percentage': float(nan_count / corr_matrix.size * 100),
+                    'warning': 'NaN values detected - check metric data quality'
+                }
+                # Replace NaN values with 0.0 for stability, but log the issue
+                corr_matrix = np.nan_to_num(corr_matrix, nan=0.0)
+                p_matrix = np.nan_to_num(p_matrix, nan=1.0)  # p=1.0 for NaN correlations
 
             # Store correlation matrix
             for i, name_i in enumerate(metric_names):
@@ -620,7 +694,7 @@ class AIOSCore:
             )
 
             # Analysis metadata
-            correlation_results['analysis_metadata'] = {
+            metadata = {
                 'total_metrics_analyzed': len(metric_names),
                 'data_points_per_metric': {name: len(values) for name, values in metric_data.items()},
                 'correlation_method': correlation_method,
@@ -628,6 +702,12 @@ class AIOSCore:
                 'supercells_included': supercells or ['ai', 'core', 'interface', 'tachyonic'],
                 'analysis_duration_seconds': time.time() - correlation_results['analysis_timestamp']
             }
+            
+            # Preserve any existing metadata (like nan_warnings)
+            if correlation_results['analysis_metadata']:
+                metadata.update(correlation_results['analysis_metadata'])
+            
+            correlation_results['analysis_metadata'] = metadata
 
             logger.info(f"Correlation analysis completed for {len(metric_names)} metrics using {correlation_method} method")
 

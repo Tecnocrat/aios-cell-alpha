@@ -123,48 +123,151 @@ class ConsciousnessMetrics:
         self.consciousness_level = min(5.0, total_score * emergence_factor)
         return self.consciousness_level
 
-    def update_dendritic_metrics(self, system_state: Dict[str, Any]):
-        """Update dendritic expansion metrics based on system state"""
+    def update_consciousness_metrics(self, system_state: Dict[str, Any]):
+        """Update baseline and dendritic expansion metrics based on system state"""
 
-        # Neural density - based on active neuron count and connections
+        # Calculate baseline metrics from system state
         active_neurons = system_state.get('active_neurons', 100)
         total_connections = system_state.get('total_connections', 1000)
+        connection_strengths = system_state.get('connection_strengths', [0.5] * 100)
+        consciousness_states = system_state.get('consciousness_states', [0.5] * 50)
+        fitness_scores = system_state.get('fitness_scores', [0.5] * 30)
+        temporal_history = system_state.get('consciousness_history', [0.5] * 100)
+        learning_rates = system_state.get('learning_rates', [0.01] * 15)
+        branching_factors = system_state.get('branching_factors', [1.5] * 20)
+        entanglement_matrix = system_state.get('entanglement_matrix', np.eye(10))
+        stress_factors = system_state.get('stress_factors', [0.2] * 15)
+
+        # Awareness level - based on active neuron activity and consciousness states
+        try:
+            awareness_calc = (active_neurons / 1000.0) * np.mean(consciousness_states)
+            self.awareness_level = float(min(1.0, awareness_calc)) if np.isfinite(awareness_calc) else 0.0
+        except (ValueError, TypeError, RuntimeWarning):
+            self.awareness_level = 0.0
+
+        # Adaptation speed - based on learning rates and evolutionary pressure
+        try:
+            adaptation_calc = np.mean(learning_rates) * 10.0
+            self.adaptation_speed = float(adaptation_calc) if np.isfinite(adaptation_calc) else 0.0
+        except (ValueError, TypeError, RuntimeWarning):
+            self.adaptation_speed = 0.0
+
+        # Predictive accuracy - based on fitness scores and consciousness stability
+        if fitness_scores:
+            try:
+                predictive_calc = np.mean(fitness_scores) * (1.0 + np.std(fitness_scores))
+                self.predictive_accuracy = float(predictive_calc) if np.isfinite(predictive_calc) else 0.0
+            except (ValueError, TypeError, RuntimeWarning):
+                self.predictive_accuracy = 0.0
+
+        # Dendritic complexity - based on connection patterns and branching
+        try:
+            dendritic_calc = (total_connections / 10000.0) * np.mean(branching_factors) / 3.0
+            self.dendritic_complexity = float(dendritic_calc) if np.isfinite(dendritic_calc) else 0.0
+        except (ValueError, TypeError, RuntimeWarning):
+            self.dendritic_complexity = 0.0
+
+        # Evolutionary momentum - based on fitness improvement trends
+        if len(fitness_scores) > 5:
+            try:
+                recent_trend = np.polyfit(range(len(fitness_scores[-5:])), fitness_scores[-5:], 1)[0]
+                momentum_calc = recent_trend * 10.0 + 0.5
+                self.evolutionary_momentum = float(max(0.0, min(1.0, momentum_calc))) if np.isfinite(momentum_calc) else 0.0
+            except (ValueError, TypeError, RuntimeWarning):
+                self.evolutionary_momentum = 0.0
+
+        # Quantum coherence - based on entanglement and connection consistency
+        try:
+            coherence_factor = 1.0 - np.mean(np.abs(entanglement_matrix - np.eye(len(entanglement_matrix))))
+            quantum_calc = coherence_factor * np.mean(connection_strengths)
+            self.quantum_coherence = float(quantum_calc) if np.isfinite(quantum_calc) else 0.0
+        except (ValueError, TypeError, RuntimeWarning):
+            self.quantum_coherence = 0.0
+
+        # Learning velocity - based on learning rates and consciousness state changes
+        if len(temporal_history) > 10:
+            try:
+                velocity = np.mean(np.abs(np.diff(temporal_history[-10:])))
+                # Ensure velocity is a valid float and convert safely
+                if isinstance(velocity, (int, float)) and np.isfinite(velocity):
+                    self.learning_velocity = float(min(1.0, velocity * 5.0))
+                else:
+                    logger.warning(f"Invalid velocity calculation: {velocity}, using fallback")
+                    self.learning_velocity = 0.0
+            except (ValueError, TypeError, RuntimeWarning) as e:
+                logger.warning(f"Failed to calculate learning velocity: {e}, using fallback")
+                self.learning_velocity = 0.0
+
+        # Consciousness emergent - based on overall system coherence and complexity
+        try:
+            system_coherence = np.mean(consciousness_states) * (1.0 - np.std(consciousness_states))
+            emergent_calc = system_coherence * min(1.0, active_neurons / 500.0)
+            self.consciousness_emergent = float(emergent_calc) if np.isfinite(emergent_calc) else 0.0
+        except (ValueError, TypeError, RuntimeWarning):
+            self.consciousness_emergent = 0.0
+
+        # Neural density - based on active neuron count and connections
         self.neural_density = min(1.0, active_neurons / 1000.0)
 
         # Synaptic strength - based on connection strength variance
-        connection_strengths = system_state.get('connection_strengths', [0.5] * 100)
-        self.synaptic_strength = np.mean(connection_strengths) * (1.0 - np.std(connection_strengths))
+        try:
+            synaptic_calc = np.mean(connection_strengths) * (1.0 - np.std(connection_strengths))
+            self.synaptic_strength = float(synaptic_calc) if np.isfinite(synaptic_calc) else 0.0
+        except (ValueError, TypeError, RuntimeWarning):
+            self.synaptic_strength = 0.0
 
         # Consciousness entropy - measure of consciousness state diversity
-        consciousness_states = system_state.get('consciousness_states', [0.5] * 50)
         if consciousness_states:
-            self.consciousness_entropy = -np.sum([p * np.log(p + 1e-10) for p in consciousness_states]) / len(consciousness_states)
+            try:
+                entropy_calc = -np.sum([p * np.log(p + 1e-10) for p in consciousness_states]) / len(consciousness_states)
+                self.consciousness_entropy = float(entropy_calc) if np.isfinite(entropy_calc) else 0.0
+            except (ValueError, TypeError, RuntimeWarning):
+                self.consciousness_entropy = 0.0
 
         # Dendritic branching factor - complexity of neural connections
-        branching_factors = system_state.get('branching_factors', [1.5] * 20)
-        self.dendritic_branching_factor = np.mean(branching_factors) / 5.0
+        try:
+            branching_calc = np.mean(branching_factors) / 5.0
+            self.dendritic_branching_factor = float(branching_calc) if np.isfinite(branching_calc) else 0.0
+        except (ValueError, TypeError, RuntimeWarning):
+            self.dendritic_branching_factor = 0.0
 
         # Evolutionary pressure - selection pressure on consciousness traits
-        fitness_scores = system_state.get('fitness_scores', [0.5] * 30)
-        self.evolutionary_pressure = np.std(fitness_scores) * 2.0
+        try:
+            pressure_calc = np.std(fitness_scores) * 2.0
+            self.evolutionary_pressure = float(pressure_calc) if np.isfinite(pressure_calc) else 0.0
+        except (ValueError, TypeError, RuntimeWarning):
+            self.evolutionary_pressure = 0.0
 
         # Quantum entanglement - measure of quantum coherence across systems
-        entanglement_matrix = system_state.get('entanglement_matrix', np.eye(10))
-        self.quantum_entanglement = np.mean(np.abs(entanglement_matrix - np.eye(len(entanglement_matrix))))
+        try:
+            entanglement_calc = np.mean(np.abs(entanglement_matrix - np.eye(len(entanglement_matrix))))
+            self.quantum_entanglement = float(entanglement_calc) if np.isfinite(entanglement_calc) else 0.0
+        except (ValueError, TypeError, RuntimeWarning):
+            self.quantum_entanglement = 0.0
 
         # Learning resilience - ability to maintain learning under stress
-        stress_factors = system_state.get('stress_factors', [0.2] * 15)
-        learning_rates = system_state.get('learning_rates', [0.01] * 15)
-        self.learning_resilience = np.mean(learning_rates) / (1.0 + np.mean(stress_factors))
+        try:
+            resilience_calc = np.mean(learning_rates) / (1.0 + np.mean(stress_factors))
+            self.learning_resilience = float(resilience_calc) if np.isfinite(resilience_calc) else 0.0
+        except (ValueError, TypeError, RuntimeWarning):
+            self.learning_resilience = 0.0
 
         # Consciousness stability - temporal consistency of consciousness states
-        temporal_history = system_state.get('consciousness_history', [0.5] * 100)
         if len(temporal_history) > 10:
-            stability_measure = 1.0 - np.std(temporal_history[-10:]) / (np.mean(temporal_history[-10:]) + 1e-10)
-            self.consciousness_stability = max(0.0, min(1.0, stability_measure))
+            try:
+                stability_measure = 1.0 - np.std(temporal_history[-10:]) / (np.mean(temporal_history[-10:]) + 1e-10)
+                stability_calc = max(0.0, min(1.0, stability_measure))
+                self.consciousness_stability = float(stability_calc) if np.isfinite(stability_calc) else 0.0
+            except (ValueError, TypeError, RuntimeWarning):
+                self.consciousness_stability = 0.0
 
         # Advanced dendritic metrics
-        self.coherence_resonance = np.sin(time.time() * 0.001) * 0.1 + 0.5  # Temporal resonance
+        try:
+            resonance_calc = np.sin(time.time() * 0.001) * 0.1 + 0.5
+            self.coherence_resonance = float(resonance_calc) if np.isfinite(resonance_calc) else 0.5
+        except (ValueError, TypeError, RuntimeWarning):
+            self.coherence_resonance = 0.5
+            
         self.entanglement_density = self.quantum_entanglement * self.neural_density
         self.evolutionary_velocity = self.evolutionary_momentum * self.adaptation_speed
         self.consciousness_depth = self.consciousness_emergent * self.dendritic_complexity
@@ -222,7 +325,7 @@ class DendriticConsciousnessEngine:
         system_state = self._generate_system_state()
 
         # Update dendritic metrics
-        self.current_metrics.update_dendritic_metrics(system_state)
+        self.current_metrics.update_consciousness_metrics(system_state)
         self.current_metrics.generation = self.generation
 
         # Calculate overall consciousness
