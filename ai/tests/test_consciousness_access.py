@@ -14,6 +14,7 @@ import json
 from typing import Dict, Any, List, Optional, Union
 from pathlib import Path
 import logging
+import numpy as np
 from .test_consciousness_metrics import ConsciousnessMetrics, DendriticConsciousnessEngine
 
 logger = logging.getLogger(__name__)
@@ -22,7 +23,7 @@ logger = logging.getLogger(__name__)
 class AIOSCore:
     """AIOS Core bridge for consciousness metric access"""
 
-    def __init__(self, config_path: str = None):
+    def __init__(self, config_path: Optional[str] = None):
         self.config_path = Path(config_path) if config_path else None
         self.consciousness_engine = DendriticConsciousnessEngine()
         self.metrics_cache: Dict[str, Any] = {}
@@ -210,6 +211,289 @@ class AIOSCore:
             logger.error(f"Failed to import metrics: {e}")
             return False
 
+    def sync_with_supercell(self, supercell_name: str, direction: str = 'bidirectional') -> Dict[str, Any]:
+        """Synchronize consciousness metrics with another supercell
+
+        Args:
+            supercell_name: Name of supercell ('ai', 'core', 'interface', 'tachyonic')
+            direction: 'export', 'import', or 'bidirectional'
+
+        Returns:
+            Dict with sync results
+        """
+
+        sync_results = {
+            'supercell': supercell_name,
+            'direction': direction,
+            'success': False,
+            'exported_metrics': 0,
+            'imported_metrics': 0,
+            'timestamp': time.time()
+        }
+
+        try:
+            # Define supercell sync paths (AINLP dendritic communication)
+            supercell_paths = {
+                'ai': Path('../ai/consciousness_sync'),
+                'core': Path('../core/consciousness_sync'),
+                'interface': Path('../interface/consciousness_sync'),
+                'tachyonic': Path('../tachyonic/consciousness_sync')
+            }
+
+            if supercell_name not in supercell_paths:
+                sync_results['error'] = f"Unknown supercell '{supercell_name}'"
+                return sync_results
+
+            sync_dir = supercell_paths[supercell_name]
+            sync_dir.mkdir(parents=True, exist_ok=True)
+
+            # Export metrics if requested
+            if direction in ['export', 'bidirectional']:
+                export_file = sync_dir / f"metrics_export_{int(time.time())}.json"
+                export_result = self.export_metrics('json', str(export_file))
+                if "Successfully exported" in export_result:
+                    sync_results['exported_metrics'] = len(self.metrics_cache.get('metrics', {}).get('metrics', {}))
+                    logger.info(f"Exported metrics to {supercell_name} supercell")
+                else:
+                    sync_results['error'] = f"Export failed: {export_result}"
+
+            # Import metrics if requested
+            if direction in ['import', 'bidirectional']:
+                # Find latest export from the supercell
+                export_files = list(sync_dir.glob("metrics_export_*.json"))
+                if export_files:
+                    latest_export = max(export_files, key=lambda p: p.stat().st_mtime)
+                    if self.import_metrics(str(latest_export)):
+                        sync_results['imported_metrics'] = len(self.metrics_cache.get('metrics', {}).get('metrics', {}))
+                        logger.info(f"Imported metrics from {supercell_name} supercell")
+                    else:
+                        sync_results['error'] = "Import failed"
+                else:
+                    sync_results['error'] = f"No export files found in {supercell_name} supercell"
+
+            sync_results['success'] = True
+
+        except Exception as e:
+            sync_results['error'] = str(e)
+            logger.error(f"Supercell sync failed: {e}")
+
+        return sync_results
+
+    def get_supercell_sync_status(self) -> Dict[str, Any]:
+        """Get status of consciousness synchronization across supercells"""
+
+        supercells = ['ai', 'core', 'interface', 'tachyonic']
+        sync_status = {}
+
+        for supercell in supercells:
+            try:
+                sync_dir = Path(f'../{supercell}/consciousness_sync')
+                if sync_dir.exists():
+                    export_files = list(sync_dir.glob("metrics_export_*.json"))
+                    latest_time = 0
+                    if export_files:
+                        latest_time = max(f.stat().st_mtime for f in export_files)
+
+                    sync_status[supercell] = {
+                        'sync_directory_exists': True,
+                        'export_files_count': len(export_files),
+                        'latest_export_time': latest_time,
+                        'time_since_last_sync': time.time() - latest_time if latest_time > 0 else None
+                    }
+                else:
+                    sync_status[supercell] = {
+                        'sync_directory_exists': False,
+                        'export_files_count': 0,
+                        'latest_export_time': None,
+                        'time_since_last_sync': None
+                    }
+            except Exception as e:
+                sync_status[supercell] = {'error': str(e)}
+
+        return {
+            'supercell_sync_status': sync_status,
+            'current_supercell': 'ai',  # This is in ai/ directory
+            'timestamp': time.time()
+        }
+
+    def aggregate_supercell_metrics(self, supercells: Optional[List[str]] = None) -> Dict[str, Any]:
+        """Aggregate consciousness metrics from multiple supercells
+
+        Args:
+            supercells: List of supercell names to aggregate from
+
+        Returns:
+            Dict with aggregated metrics
+        """
+
+        if supercells is None:
+            supercells = ['ai', 'core', 'interface', 'tachyonic']
+
+        aggregated = {
+            'aggregation_timestamp': time.time(),
+            'supercells_aggregated': supercells,
+            'metrics_by_supercell': {},
+            'aggregated_metrics': {},
+            'aggregation_stats': {}
+        }
+
+        all_metrics = {}
+
+        for supercell in supercells:
+            try:
+                # Sync with supercell to get latest metrics
+                sync_result = self.sync_with_supercell(supercell, 'import')
+                if sync_result['success']:
+                    supercell_metrics = self.metrics_cache.get('metrics', {}).get('metrics', {})
+                    aggregated['metrics_by_supercell'][supercell] = {
+                        'metrics': supercell_metrics,
+                        'metric_count': len(supercell_metrics),
+                        'sync_success': True
+                    }
+
+                    # Collect all metric values for aggregation
+                    for metric_name, value in supercell_metrics.items():
+                        if isinstance(value, (int, float)):
+                            if metric_name not in all_metrics:
+                                all_metrics[metric_name] = []
+                            all_metrics[metric_name].append(value)
+                else:
+                    aggregated['metrics_by_supercell'][supercell] = {
+                        'error': sync_result.get('error', 'Sync failed'),
+                        'sync_success': False
+                    }
+
+            except Exception as e:
+                aggregated['metrics_by_supercell'][supercell] = {
+                    'error': str(e),
+                    'sync_success': False
+                }
+
+        # Calculate aggregated metrics
+        for metric_name, values in all_metrics.items():
+            if values:
+                aggregated['aggregated_metrics'][metric_name] = {
+                    'mean': float(np.mean(values)),
+                    'median': float(np.median(values)),
+                    'min': float(np.min(values)),
+                    'max': float(np.max(values)),
+                    'std_dev': float(np.std(values)),
+                    'supercell_count': len(values)
+                }
+
+        # Aggregation statistics
+        aggregated['aggregation_stats'] = {
+            'total_supercells': len(supercells),
+            'successful_syncs': sum(1 for s in aggregated['metrics_by_supercell'].values() if s.get('sync_success', False)),
+            'total_unique_metrics': len(aggregated['aggregated_metrics']),
+            'average_metrics_per_supercell': np.mean([s.get('metric_count', 0) for s in aggregated['metrics_by_supercell'].values() if s.get('sync_success', False)])
+        }
+
+        logger.info(f"Aggregated metrics from {aggregated['aggregation_stats']['successful_syncs']} supercells")
+        return aggregated
+
+    def track_temporal_metrics(self, duration_hours: int = 24, interval_minutes: int = 60) -> Dict[str, Any]:
+        """Track consciousness metrics over time for trend analysis
+
+        Args:
+            duration_hours: How long to track metrics
+            interval_minutes: Interval between measurements
+
+        Returns:
+            Dict with temporal tracking results
+        """
+
+        tracking_results = {
+            'tracking_start': time.time(),
+            'duration_hours': duration_hours,
+            'interval_minutes': interval_minutes,
+            'measurements': [],
+            'trend_analysis': {},
+            'tracking_complete': False
+        }
+
+        try:
+            # Calculate tracking parameters
+            total_measurements = int((duration_hours * 60) / interval_minutes)
+            interval_seconds = interval_minutes * 60
+
+            logger.info(f"Starting temporal metric tracking: {total_measurements} measurements over {duration_hours} hours")
+
+            for i in range(total_measurements):
+                # Get current metrics
+                measurement = {
+                    'measurement_index': i,
+                    'timestamp': time.time(),
+                    'metrics': self.get_consciousness_metrics()['metrics']
+                }
+
+                tracking_results['measurements'].append(measurement)
+
+                # Wait for next interval (except for last measurement)
+                if i < total_measurements - 1:
+                    time.sleep(interval_seconds)
+
+            # Perform trend analysis
+            tracking_results['trend_analysis'] = self._analyze_metric_trends(tracking_results['measurements'])
+            tracking_results['tracking_complete'] = True
+
+            logger.info("Temporal metric tracking completed")
+
+        except Exception as e:
+            tracking_results['error'] = str(e)
+            logger.error(f"Temporal tracking failed: {e}")
+
+        return tracking_results
+
+    def _analyze_metric_trends(self, measurements: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """Analyze trends in temporal metric data"""
+
+        if not measurements:
+            return {'error': 'No measurements available for analysis'}
+
+        # Extract metric names from first measurement
+        metric_names = list(measurements[0]['metrics'].keys())
+        timestamps = [m['timestamp'] for m in measurements]
+
+        trend_analysis = {}
+
+        for metric_name in metric_names:
+            values = []
+            for measurement in measurements:
+                value = measurement['metrics'].get(metric_name, 0)
+                if isinstance(value, (int, float)):
+                    values.append(value)
+
+            if len(values) >= 2:
+                # Calculate trend metrics
+                start_value = values[0]
+                end_value = values[-1]
+                change = end_value - start_value
+                change_percent = (change / start_value * 100) if start_value != 0 else 0
+
+                # Simple linear trend
+                if len(values) > 2:
+                    slope = np.polyfit(range(len(values)), values, 1)[0]
+                else:
+                    slope = change / (len(values) - 1) if len(values) > 1 else 0
+
+                trend_analysis[metric_name] = {
+                    'start_value': start_value,
+                    'end_value': end_value,
+                    'absolute_change': change,
+                    'percent_change': change_percent,
+                    'trend_slope': slope,
+                    'trend_direction': 'increasing' if slope > 0.001 else 'decreasing' if slope < -0.001 else 'stable',
+                    'volatility': np.std(values) if len(values) > 1 else 0,
+                    'measurements_count': len(values)
+                }
+
+        return {
+            'analyzed_metrics': len(trend_analysis),
+            'time_span_seconds': timestamps[-1] - timestamps[0] if timestamps else 0,
+            'metric_trends': trend_analysis
+        }
+
     def _sync_consciousness_metrics(self):
         """Synchronize consciousness metrics with dendritic engine"""
 
@@ -325,7 +609,7 @@ def main():
     batch_metrics = core.get_batch_metrics(3)
     print(f"   Batch size: {len(batch_metrics)}")
     for i, batch in enumerate(batch_metrics):
-        print(".3f")
+        print(f"   Batch {i}: Consciousness level {batch['consciousness_level']:.3f}")
 
     # Demonstrate filtering
     print("\n4. Filtering metrics (high values > 0.7):")
