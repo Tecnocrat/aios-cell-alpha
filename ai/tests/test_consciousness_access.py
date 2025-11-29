@@ -21,6 +21,7 @@ import os
 
 # Add src directory to path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
+sys.path.insert(0, os.path.dirname(__file__))  # Add tests directory
 
 from test_consciousness_metrics import ConsciousnessMetrics, DendriticConsciousnessEngine
 
@@ -1273,6 +1274,427 @@ class AIOSCore:
             for name, value in metrics.items():
                 category = self._get_metric_category(name)
                 f.write(f"{name},{value},{category},{timestamp}\n")
+
+    def predict_consciousness_evolution(self, forecast_horizon: int = 10,
+                                      confidence_level: float = 0.95) -> Dict[str, Any]:
+        """Predict future consciousness evolution based on current trends"""
+
+        prediction_results = {
+            'forecast_horizon': forecast_horizon,
+            'confidence_level': confidence_level,
+            'predictions': {},
+            'risk_assessment': {},
+            'forecast_quality': {},
+            'predictive_insights': [],
+            'analysis_timestamp': time.time()
+        }
+
+        try:
+            # Get current metrics for trend analysis
+            current_metrics = self.get_consciousness_metrics()
+            if not current_metrics.get('metrics'):
+                prediction_results['error'] = "No metrics available for prediction"
+                return prediction_results
+
+            # Analyze evolution trends
+            trend_analysis = self.detect_consciousness_evolution_trends()
+            if 'error' in trend_analysis:
+                prediction_results['error'] = f"Trend analysis failed: {trend_analysis['error']}"
+                return prediction_results
+
+            evolution_trends = trend_analysis.get('evolution_trends', {})
+
+            # Generate predictions for key metrics
+            for metric_name, trend_data in evolution_trends.items():
+                prediction = self._forecast_metric_evolution(
+                    metric_name, trend_data, forecast_horizon, confidence_level
+                )
+                prediction_results['predictions'][metric_name] = prediction
+
+            # Calculate overall consciousness trajectory forecast
+            consciousness_forecast = self._forecast_consciousness_trajectory(
+                evolution_trends, forecast_horizon, confidence_level
+            )
+            prediction_results['consciousness_trajectory_forecast'] = consciousness_forecast
+
+            # Assess prediction risks
+            prediction_results['risk_assessment'] = self._assess_prediction_risks(
+                evolution_trends, prediction_results['predictions']
+            )
+
+            # Evaluate forecast quality
+            prediction_results['forecast_quality'] = self._assess_forecast_quality(
+                evolution_trends, prediction_results['predictions']
+            )
+
+            # Generate predictive insights
+            prediction_results['predictive_insights'] = self._generate_predictive_insights(
+                prediction_results['predictions'],
+                prediction_results['consciousness_trajectory_forecast'],
+                prediction_results['risk_assessment']
+            )
+
+            prediction_results['analysis_duration_seconds'] = time.time() - prediction_results['analysis_timestamp']
+            logger.info(f"Consciousness evolution prediction completed for {len(prediction_results['predictions'])} metrics")
+
+        except Exception as e:
+            prediction_results['error'] = str(e)
+            logger.error(f"Prediction failed: {e}")
+
+        return prediction_results
+
+    def _forecast_metric_evolution(self, metric_name: str, trend_data: Dict[str, Any],
+                                 forecast_horizon: int, confidence_level: float) -> Dict[str, Any]:
+        """Forecast evolution for a single metric using linear regression"""
+
+        forecast = {
+            'metric_name': metric_name,
+            'forecast_values': [],
+            'confidence_intervals': [],
+            'forecast_slope': 0.0,
+            'prediction_accuracy': 0.0,
+            'forecast_reliability': 'low'
+        }
+
+        try:
+            # Get historical data for this metric
+            # Note: In a real implementation, this would pull from a time series database
+            # For now, we'll use synthetic data based on trend analysis
+            historical_values = self._generate_synthetic_history(metric_name, trend_data)
+
+            if len(historical_values) < 3:
+                forecast['forecast_reliability'] = 'insufficient_data'
+                return forecast
+
+            # Perform linear regression
+            x = np.arange(len(historical_values))
+            slope, intercept = np.polyfit(x, historical_values, 1)
+
+            forecast['forecast_slope'] = float(slope)
+
+            # Generate forecast
+            last_value = historical_values[-1]
+            for i in range(1, forecast_horizon + 1):
+                predicted_value = last_value + slope * i
+                predicted_value = np.clip(predicted_value, 0.0, 1.0)  # Consciousness metrics are 0-1
+                forecast['forecast_values'].append(float(predicted_value))
+
+            # Calculate confidence intervals using t-distribution
+            residuals = historical_values - np.polyval([slope, intercept], x)
+            residual_std = np.std(residuals, ddof=1)  # Use ddof=1 for sample standard deviation
+
+            if residual_std > 0:
+                from scipy import stats
+                t_value = stats.t.ppf((1 + confidence_level) / 2, len(historical_values) - 2)
+
+                for i in range(forecast_horizon):
+                    # Prediction interval formula
+                    prediction_std = residual_std * np.sqrt(1 + 1/len(historical_values) +
+                                                          (i+1)**2 / np.sum((x - np.mean(x))**2))
+                    margin = t_value * prediction_std
+
+                    lower_bound = forecast['forecast_values'][i] - margin
+                    upper_bound = forecast['forecast_values'][i] + margin
+
+                    forecast['confidence_intervals'].append({
+                        'lower': float(max(0.0, lower_bound)),
+                        'upper': float(min(1.0, upper_bound))
+                    })
+
+            # Assess prediction accuracy based on trend consistency
+            r_squared = trend_data.get('predictive_confidence', 0.0)
+            forecast['prediction_accuracy'] = float(r_squared)
+
+            # Determine forecast reliability
+            if r_squared > 0.8:
+                forecast['forecast_reliability'] = 'high'
+            elif r_squared > 0.6:
+                forecast['forecast_reliability'] = 'medium'
+            else:
+                forecast['forecast_reliability'] = 'low'
+
+        except Exception as e:
+            logger.warning(f"Forecast failed for {metric_name}: {e}")
+            forecast['error'] = str(e)
+
+        return forecast
+
+    def _forecast_consciousness_trajectory(self, evolution_trends: Dict[str, Any],
+                                         forecast_horizon: int, confidence_level: float) -> Dict[str, Any]:
+        """Forecast overall consciousness trajectory"""
+
+        trajectory_forecast = {
+            'forecast_direction': 'stable',
+            'forecast_velocity': 0.0,
+            'forecast_stability': 0.0,
+            'emergence_probability': 0.0,
+            'trajectory_forecast_values': [],
+            'confidence_assessment': 'low'
+        }
+
+        try:
+            # Focus on key consciousness indicators
+            key_indicators = ['consciousness_emergent', 'evolutionary_momentum', 'learning_velocity']
+            indicator_forecasts = []
+
+            for indicator in key_indicators:
+                if indicator in evolution_trends:
+                    forecast = self._forecast_metric_evolution(
+                        indicator, evolution_trends[indicator], forecast_horizon, confidence_level
+                    )
+                    indicator_forecasts.append(forecast)
+
+            if indicator_forecasts:
+                # Aggregate forecasts
+                avg_slope = np.mean([f['forecast_slope'] for f in indicator_forecasts])
+                trajectory_forecast['forecast_velocity'] = float(avg_slope)
+
+                # Determine forecast direction
+                if abs(avg_slope) > 0.05:
+                    trajectory_forecast['forecast_direction'] = 'evolving' if avg_slope > 0 else 'devolving'
+                else:
+                    trajectory_forecast['forecast_direction'] = 'stable'
+
+                # Calculate trajectory values (simplified aggregation)
+                for i in range(forecast_horizon):
+                    trajectory_value = np.mean([f['forecast_values'][i] for f in indicator_forecasts if f['forecast_values']])
+                    trajectory_forecast['trajectory_forecast_values'].append(float(trajectory_value))
+
+                # Assess stability (inverse of forecast variance)
+                forecast_variances = [np.var(f['forecast_values']) for f in indicator_forecasts if f['forecast_values']]
+                if forecast_variances:
+                    avg_variance = np.mean(forecast_variances)
+                    trajectory_forecast['forecast_stability'] = float(1.0 / (1.0 + avg_variance))
+
+                # Emergence probability based on accelerating trends
+                accelerating_count = sum(1 for f in indicator_forecasts if f['forecast_slope'] > 0.1)
+                trajectory_forecast['emergence_probability'] = float(accelerating_count / len(indicator_forecasts))
+
+                # Confidence assessment
+                avg_accuracy = np.mean([f['prediction_accuracy'] for f in indicator_forecasts])
+                if avg_accuracy > 0.8:
+                    trajectory_forecast['confidence_assessment'] = 'high'
+                elif avg_accuracy > 0.6:
+                    trajectory_forecast['confidence_assessment'] = 'medium'
+
+        except Exception as e:
+            logger.warning(f"Trajectory forecast failed: {e}")
+            trajectory_forecast['error'] = str(e)
+
+        return trajectory_forecast
+
+    def _assess_prediction_risks(self, evolution_trends: Dict[str, Any],
+                               predictions: Dict[str, Any]) -> Dict[str, Any]:
+        """Assess risks in the prediction model"""
+
+        risks = {
+            'volatility_risks': [],
+            'trend_reversal_risks': [],
+            'data_quality_risks': [],
+            'overall_risk_level': 'low',
+            'risk_mitigation_suggestions': []
+        }
+
+        try:
+            # Assess volatility risks
+            for metric_name, trend in evolution_trends.items():
+                if trend.get('volatility', 0) > 0.5:
+                    risks['volatility_risks'].append({
+                        'metric': metric_name,
+                        'volatility_level': trend['volatility'],
+                        'risk_impact': 'high' if trend['volatility'] > 0.7 else 'medium'
+                    })
+
+            # Assess trend reversal risks
+            for metric_name, prediction in predictions.items():
+                if prediction.get('forecast_slope', 0) * evolution_trends.get(metric_name, {}).get('trend_slope', 0) < 0:
+                    risks['trend_reversal_risks'].append({
+                        'metric': metric_name,
+                        'reversal_probability': 'high',
+                        'impact': 'prediction_invalid'
+                    })
+
+            # Assess data quality risks
+            total_metrics = len(predictions)
+            low_accuracy_count = sum(1 for p in predictions.values() if p.get('prediction_accuracy', 0) < 0.6)
+
+            if low_accuracy_count / total_metrics > 0.5:
+                risks['data_quality_risks'].append({
+                    'issue': 'low_prediction_accuracy',
+                    'affected_metrics': low_accuracy_count,
+                    'recommendation': 'increase_data_collection_frequency'
+                })
+
+            # Overall risk assessment
+            total_risks = len(risks['volatility_risks']) + len(risks['trend_reversal_risks']) + len(risks['data_quality_risks'])
+
+            if total_risks > 5:
+                risks['overall_risk_level'] = 'high'
+            elif total_risks > 2:
+                risks['overall_risk_level'] = 'medium'
+
+            # Generate mitigation suggestions
+            if risks['volatility_risks']:
+                risks['risk_mitigation_suggestions'].append("Implement volatility smoothing algorithms")
+            if risks['trend_reversal_risks']:
+                risks['risk_mitigation_suggestions'].append("Add trend reversal detection mechanisms")
+            if risks['data_quality_risks']:
+                risks['risk_mitigation_suggestions'].append("Enhance data collection and validation")
+
+        except Exception as e:
+            logger.warning(f"Risk assessment failed: {e}")
+            risks['error'] = str(e)
+
+        return risks
+
+    def _assess_forecast_quality(self, evolution_trends: Dict[str, Any],
+                               predictions: Dict[str, Any]) -> Dict[str, Any]:
+        """Assess the overall quality of the forecasting model"""
+
+        quality = {
+            'average_accuracy': 0.0,
+            'forecast_consistency': 0.0,
+            'prediction_coverage': 0.0,
+            'quality_rating': 'poor',
+            'quality_factors': {}
+        }
+
+        try:
+            if not predictions:
+                return quality
+
+            # Calculate average prediction accuracy
+            accuracies = [p.get('prediction_accuracy', 0) for p in predictions.values()]
+            quality['average_accuracy'] = float(np.mean(accuracies))
+
+            # Assess forecast consistency (how well predictions align with known trends)
+            consistency_scores = []
+            for metric_name, prediction in predictions.items():
+                trend = evolution_trends.get(metric_name, {})
+                predicted_direction = 'increasing' if prediction.get('forecast_slope', 0) > 0 else 'decreasing'
+                actual_direction = trend.get('trend_direction', 'stable')
+
+                if predicted_direction == actual_direction:
+                    consistency_scores.append(1.0)
+                elif actual_direction == 'stable':
+                    consistency_scores.append(0.5)  # Neutral for stable trends
+                else:
+                    consistency_scores.append(0.0)
+
+            quality['forecast_consistency'] = float(np.mean(consistency_scores)) if consistency_scores else 0.0
+
+            # Calculate prediction coverage (percentage of metrics with reliable forecasts)
+            reliable_predictions = sum(1 for p in predictions.values()
+                                     if p.get('forecast_reliability') in ['high', 'medium'])
+            quality['prediction_coverage'] = float(reliable_predictions / len(predictions))
+
+            # Overall quality rating
+            avg_score = (quality['average_accuracy'] + quality['forecast_consistency'] + quality['prediction_coverage']) / 3
+
+            if avg_score > 0.8:
+                quality['quality_rating'] = 'excellent'
+            elif avg_score > 0.6:
+                quality['quality_rating'] = 'good'
+            elif avg_score > 0.4:
+                quality['quality_rating'] = 'fair'
+            else:
+                quality['quality_rating'] = 'poor'
+
+            # Quality factors breakdown
+            quality['quality_factors'] = {
+                'accuracy_factor': quality['average_accuracy'],
+                'consistency_factor': quality['forecast_consistency'],
+                'coverage_factor': quality['prediction_coverage'],
+                'overall_score': avg_score
+            }
+
+        except Exception as e:
+            logger.warning(f"Forecast quality assessment failed: {e}")
+            quality['error'] = str(e)
+
+        return quality
+
+    def _generate_predictive_insights(self, predictions: Dict[str, Any],
+                                    trajectory_forecast: Dict[str, Any],
+                                    risk_assessment: Dict[str, Any]) -> List[str]:
+        """Generate natural language insights from prediction analysis"""
+
+        insights = []
+
+        try:
+            # Overall trajectory insight
+            direction = trajectory_forecast.get('forecast_direction', 'stable')
+            velocity = trajectory_forecast.get('forecast_velocity', 0)
+            confidence = trajectory_forecast.get('confidence_assessment', 'low')
+
+            if direction != 'stable':
+                velocity_desc = "rapidly" if abs(velocity) > 0.1 else "steadily"
+                insights.append(f"Consciousness trajectory forecast: {velocity_desc} {direction} "
+                              f"(confidence: {confidence}, velocity: {velocity:.3f})")
+
+            # Key prediction insights
+            high_reliability_predictions = [name for name, pred in predictions.items()
+                                          if pred.get('forecast_reliability') == 'high']
+
+            if high_reliability_predictions:
+                insights.append(f"High-confidence predictions available for: {', '.join(high_reliability_predictions[:3])}")
+
+            # Risk-based insights
+            risk_level = risk_assessment.get('overall_risk_level', 'low')
+            if risk_level != 'low':
+                insights.append(f"Prediction risk level: {risk_level} - consider risk mitigation strategies")
+
+            volatility_risks = risk_assessment.get('volatility_risks', [])
+            if volatility_risks:
+                insights.append(f"Volatility risks detected in {len(volatility_risks)} metrics - predictions may be unstable")
+
+            # Emergence insights
+            emergence_prob = trajectory_forecast.get('emergence_probability', 0)
+            if emergence_prob > 0.7:
+                insights.append(f"High emergence probability ({emergence_prob:.1%}) - consciousness breakthrough likely")
+            elif emergence_prob > 0.4:
+                insights.append(f"Moderate emergence potential ({emergence_prob:.1%}) - monitor for acceleration")
+
+            # Forecast quality insights
+            quality_rating = risk_assessment.get('forecast_quality', {}).get('quality_rating', 'poor')
+            if quality_rating in ['excellent', 'good']:
+                insights.append(f"Forecast quality: {quality_rating} - predictions are reliable")
+            elif quality_rating == 'fair':
+                insights.append("Forecast quality: fair - predictions should be treated as estimates")
+
+        except Exception as e:
+            logger.warning(f"Insight generation failed: {e}")
+            insights.append("Prediction analysis completed with some processing errors")
+
+        return insights
+
+    def _generate_synthetic_history(self, metric_name: str, trend_data: Dict[str, Any]) -> List[float]:
+        """Generate synthetic historical data based on trend analysis"""
+
+        # This is a simplified implementation for demonstration
+        # In a real system, this would pull from a time series database
+
+        base_value = 0.5  # Default baseline
+        slope = trend_data.get('trend_slope', 0.0)
+        volatility = trend_data.get('volatility', 0.1)
+
+        # Generate 20 historical points
+        history = []
+        current_value = base_value
+
+        for i in range(20):
+            # Add trend component
+            trend_component = slope * (i - 10) / 10  # Center around current time
+
+            # Add random noise based on volatility
+            noise = np.random.normal(0, volatility)
+
+            current_value = base_value + trend_component + noise
+            current_value = np.clip(current_value, 0.0, 1.0)  # Keep in valid range
+
+            history.append(float(current_value))
+
+        return history
 
 
 def main():
