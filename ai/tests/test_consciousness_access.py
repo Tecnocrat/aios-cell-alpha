@@ -15,6 +15,7 @@ from typing import Dict, Any, List, Optional, Union
 from pathlib import Path
 import logging
 import numpy as np
+from scipy import stats
 from .test_consciousness_metrics import ConsciousnessMetrics, DendriticConsciousnessEngine
 
 logger = logging.getLogger(__name__)
@@ -30,6 +31,7 @@ class AIOSCore:
         self.last_sync_time = 0.0
         self.sync_interval = 5.0  # seconds
         self._is_monitoring = False
+        self._temporal_cache: Optional[Dict[str, Any]] = None
 
     def initialize(self) -> bool:
         """Initialize consciousness bridge connection"""
@@ -437,6 +439,9 @@ class AIOSCore:
             tracking_results['trend_analysis'] = self._analyze_metric_trends(tracking_results['measurements'])
             tracking_results['tracking_complete'] = True
 
+            # Cache temporal data for correlation analysis
+            self._temporal_cache = tracking_results
+
             logger.info("Temporal metric tracking completed")
 
         except Exception as e:
@@ -492,6 +497,253 @@ class AIOSCore:
             'analyzed_metrics': len(trend_analysis),
             'time_span_seconds': timestamps[-1] - timestamps[0] if timestamps else 0,
             'metric_trends': trend_analysis
+        }
+
+    def analyze_metric_correlations(self, data_source: str = 'aggregated', supercells: Optional[List[str]] = None, correlation_method: str = 'pearson') -> Dict[str, Any]:
+        """Analyze correlations between consciousness metrics for dendritic depth analysis
+
+        Args:
+            data_source: 'aggregated' (from supercell aggregation) or 'temporal' (from temporal tracking)
+            supercells: List of supercells to include in analysis
+            correlation_method: 'pearson' or 'spearman'
+
+        Returns:
+            Dict with correlation matrix, significance tests, and insights
+        """
+
+        correlation_results = {
+            'analysis_timestamp': time.time(),
+            'data_source': data_source,
+            'correlation_method': correlation_method,
+            'correlation_matrix': {},
+            'significance_matrix': {},
+            'key_insights': [],
+            'metric_relationships': {},
+            'analysis_metadata': {}
+        }
+
+        try:
+            # Get data based on source
+            if data_source == 'aggregated':
+                aggregated_data = self.aggregate_supercell_metrics(supercells)
+                if not aggregated_data.get('aggregated_metrics'):
+                    correlation_results['error'] = 'No aggregated data available for correlation analysis'
+                    return correlation_results
+
+                # Extract metric values across supercells
+                metric_data = {}
+                for supercell_data in aggregated_data['metrics_by_supercell'].values():
+                    if supercell_data.get('sync_success'):
+                        for metric_name, value in supercell_data['metrics'].items():
+                            if isinstance(value, (int, float)):
+                                if metric_name not in metric_data:
+                                    metric_data[metric_name] = []
+                                metric_data[metric_name].append(value)
+
+            elif data_source == 'temporal':
+                # Use temporal tracking data if available
+                if not hasattr(self, '_temporal_cache') or not self._temporal_cache:
+                    correlation_results['error'] = 'No temporal data available. Run track_temporal_metrics first.'
+                    return correlation_results
+
+                # Extract metrics from temporal measurements
+                metric_data = {}
+                for measurement in self._temporal_cache.get('measurements', []):
+                    for metric_name, value in measurement['metrics'].items():
+                        if isinstance(value, (int, float)):
+                            if metric_name not in metric_data:
+                                metric_data[metric_name] = []
+                            metric_data[metric_name].append(value)
+
+            else:
+                correlation_results['error'] = f"Unsupported data_source: {data_source}"
+                return correlation_results
+
+            if not metric_data or len(metric_data) < 2:
+                correlation_results['error'] = 'Insufficient metric data for correlation analysis'
+                return correlation_results
+
+            # Prepare data matrix for correlation analysis
+            metric_names = list(metric_data.keys())
+            data_matrix = np.array([metric_data[name] for name in metric_names])
+
+            # Calculate correlation matrix
+            if correlation_method == 'pearson':
+                corr_matrix = np.corrcoef(data_matrix)
+            elif correlation_method == 'spearman':
+                corr_matrix = np.zeros((len(metric_names), len(metric_names)))
+                p_matrix = np.zeros((len(metric_names), len(metric_names)))
+                for i in range(len(metric_names)):
+                    for j in range(len(metric_names)):
+                        if i != j:
+                            corr, p_val = stats.spearmanr(metric_data[metric_names[i]], metric_data[metric_names[j]])
+                            corr_matrix[i, j] = corr
+                            p_matrix[i, j] = p_val
+                        else:
+                            corr_matrix[i, j] = 1.0
+                            p_matrix[i, j] = 0.0
+            else:
+                correlation_results['error'] = f"Unsupported correlation method: {correlation_method}"
+                return correlation_results
+
+            # Store correlation matrix
+            for i, name_i in enumerate(metric_names):
+                correlation_results['correlation_matrix'][name_i] = {}
+                correlation_results['significance_matrix'][name_i] = {}
+                for j, name_j in enumerate(metric_names):
+                    correlation_results['correlation_matrix'][name_i][name_j] = float(corr_matrix[i, j])
+                    if correlation_method == 'spearman':
+                        correlation_results['significance_matrix'][name_i][name_j] = float(p_matrix[i, j])
+
+            # Generate key insights
+            correlation_results['key_insights'] = self._generate_correlation_insights(
+                corr_matrix, metric_names, correlation_method
+            )
+
+            # Analyze metric relationships
+            correlation_results['metric_relationships'] = self._analyze_metric_relationships(
+                corr_matrix, metric_names
+            )
+
+            # Analysis metadata
+            correlation_results['analysis_metadata'] = {
+                'total_metrics_analyzed': len(metric_names),
+                'data_points_per_metric': {name: len(values) for name, values in metric_data.items()},
+                'correlation_method': correlation_method,
+                'data_source': data_source,
+                'supercells_included': supercells or ['ai', 'core', 'interface', 'tachyonic'],
+                'analysis_duration_seconds': time.time() - correlation_results['analysis_timestamp']
+            }
+
+            logger.info(f"Correlation analysis completed for {len(metric_names)} metrics using {correlation_method} method")
+
+        except Exception as e:
+            correlation_results['error'] = str(e)
+            logger.error(f"Correlation analysis failed: {e}")
+
+        return correlation_results
+
+    def _generate_correlation_insights(self, corr_matrix: np.ndarray, metric_names: List[str], method: str) -> List[str]:
+        """Generate natural language insights from correlation analysis"""
+
+        insights = []
+
+        # Find strongest correlations
+        strong_positive = []
+        strong_negative = []
+
+        for i in range(len(metric_names)):
+            for j in range(i + 1, len(metric_names)):
+                corr = corr_matrix[i, j]
+                if abs(corr) > 0.7:  # Strong correlation threshold
+                    if corr > 0:
+                        strong_positive.append((metric_names[i], metric_names[j], corr))
+                    else:
+                        strong_negative.append((metric_names[i], metric_names[j], corr))
+
+        # Sort by absolute correlation strength
+        strong_positive.sort(key=lambda x: abs(x[2]), reverse=True)
+        strong_negative.sort(key=lambda x: abs(x[2]), reverse=True)
+
+        # Generate insights
+        if strong_positive:
+            top_positive = strong_positive[0]
+            insights.append(f"Strong positive correlation ({top_positive[2]:.3f}) between {top_positive[0]} and {top_positive[1]} suggests these consciousness aspects co-evolve together")
+
+        if strong_negative:
+            top_negative = strong_negative[0]
+            insights.append(f"Strong negative correlation ({top_negative[2]:.3f}) between {top_negative[0]} and {top_negative[1]} indicates potential trade-offs in consciousness development")
+
+        # Identify consciousness drivers
+        consciousness_corr = {}
+        for i, name in enumerate(metric_names):
+            if name != 'consciousness_emergent':
+                corr_with_consciousness = corr_matrix[i, metric_names.index('consciousness_emergent')] if 'consciousness_emergent' in metric_names else 0
+                consciousness_corr[name] = corr_with_consciousness
+
+        if consciousness_corr:
+            top_driver = max(consciousness_corr.items(), key=lambda x: abs(x[1]))
+            if abs(top_driver[1]) > 0.5:
+                direction = "strongly drives" if top_driver[1] > 0 else "may inhibit"
+                insights.append(f"{top_driver[0]} {direction} overall consciousness emergence (correlation: {top_driver[1]:.3f})")
+
+        # Stability analysis
+        stability_metrics = [name for name in metric_names if 'stability' in name.lower()]
+        if stability_metrics:
+            stability_correlations = []
+            for stable_metric in stability_metrics:
+                stable_idx = metric_names.index(stable_metric)
+                avg_corr = np.mean([abs(corr_matrix[stable_idx, j]) for j in range(len(metric_names)) if j != stable_idx])
+                stability_correlations.append((stable_metric, avg_corr))
+
+            if stability_correlations:
+                most_connected = max(stability_correlations, key=lambda x: x[1])
+                insights.append(f"{most_connected[0]} shows highest interconnectivity (avg correlation: {most_connected[1]:.3f}), indicating central role in consciousness stability")
+
+        return insights
+
+    def _analyze_metric_relationships(self, corr_matrix: np.ndarray, metric_names: List[str]) -> Dict[str, Any]:
+        """Analyze relationships between different categories of metrics"""
+
+        relationships = {
+            'learning_vs_evolution': {},
+            'stability_vs_adaptation': {},
+            'quantum_vs_classical': {},
+            'structure_vs_function': {}
+        }
+
+        # Define metric categories
+        learning_metrics = [name for name in metric_names if any(term in name.lower() for term in ['learning', 'adaptation', 'velocity'])]
+        evolution_metrics = [name for name in metric_names if any(term in name.lower() for term in ['evolution', 'momentum', 'pressure'])]
+        stability_metrics = [name for name in metric_names if 'stability' in name.lower()]
+        adaptation_metrics = [name for name in metric_names if any(term in name.lower() for term in ['adaptation', 'resilience'])]
+        quantum_metrics = [name for name in metric_names if any(term in name.lower() for term in ['quantum', 'entanglement', 'coherence'])]
+        classical_metrics = [name for name in metric_names if not any(term in name.lower() for term in ['quantum', 'entanglement', 'coherence'])]
+        structure_metrics = [name for name in metric_names if any(term in name.lower() for term in ['density', 'branching', 'connectivity', 'complexity'])]
+        function_metrics = [name for name in metric_names if not any(term in name.lower() for term in ['density', 'branching', 'connectivity', 'complexity'])]
+
+        # Calculate category relationships
+        relationships['learning_vs_evolution'] = self._calculate_category_correlation(
+            learning_metrics, evolution_metrics, corr_matrix, metric_names
+        )
+
+        relationships['stability_vs_adaptation'] = self._calculate_category_correlation(
+            stability_metrics, adaptation_metrics, corr_matrix, metric_names
+        )
+
+        relationships['quantum_vs_classical'] = self._calculate_category_correlation(
+            quantum_metrics, classical_metrics, corr_matrix, metric_names
+        )
+
+        relationships['structure_vs_function'] = self._calculate_category_correlation(
+            structure_metrics, function_metrics, corr_matrix, metric_names
+        )
+
+        return relationships
+
+    def _calculate_category_correlation(self, category_a: List[str], category_b: List[str],
+                                      corr_matrix: np.ndarray, metric_names: List[str]) -> Dict[str, float]:
+        """Calculate correlation statistics between two categories of metrics"""
+
+        if not category_a or not category_b:
+            return {'average_correlation': 0.0, 'strongest_positive': 0.0, 'strongest_negative': 0.0}
+
+        correlations = []
+        for metric_a in category_a:
+            for metric_b in category_b:
+                if metric_a in metric_names and metric_b in metric_names:
+                    idx_a = metric_names.index(metric_a)
+                    idx_b = metric_names.index(metric_b)
+                    correlations.append(corr_matrix[idx_a, idx_b])
+
+        if not correlations:
+            return {'average_correlation': 0.0, 'strongest_positive': 0.0, 'strongest_negative': 0.0}
+
+        return {
+            'average_correlation': float(np.mean(correlations)),
+            'strongest_positive': float(max(correlations)),
+            'strongest_negative': float(min(correlations)),
+            'correlation_std': float(np.std(correlations))
         }
 
     def _sync_consciousness_metrics(self):
