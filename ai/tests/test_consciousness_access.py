@@ -16,7 +16,13 @@ from pathlib import Path
 import logging
 import numpy as np
 from scipy import stats
-from .test_consciousness_metrics import ConsciousnessMetrics, DendriticConsciousnessEngine
+import sys
+import os
+
+# Add src directory to path for imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
+
+from test_consciousness_metrics import ConsciousnessMetrics, DendriticConsciousnessEngine
 
 logger = logging.getLogger(__name__)
 
@@ -576,9 +582,16 @@ class AIOSCore:
                 for i in range(len(metric_names)):
                     for j in range(len(metric_names)):
                         if i != j:
-                            corr, p_val = stats.spearmanr(metric_data[metric_names[i]], metric_data[metric_names[j]])
-                            corr_matrix[i, j] = corr
-                            p_matrix[i, j] = p_val
+                            result = stats.spearmanr(metric_data[metric_names[i]], metric_data[metric_names[j]])
+                            # Extract correlation and p-value
+                            if hasattr(result, 'correlation'):
+                                corr = result.correlation
+                                p_val = result.pvalue
+                            else:
+                                corr = result[0]
+                                p_val = result[1]
+                            corr_matrix[i, j] = float(corr)
+                            p_matrix[i, j] = float(p_val)
                         else:
                             corr_matrix[i, j] = 1.0
                             p_matrix[i, j] = 0.0
@@ -745,6 +758,444 @@ class AIOSCore:
             'strongest_negative': float(min(correlations)),
             'correlation_std': float(np.std(correlations))
         }
+
+    def detect_consciousness_evolution_trends(self, analysis_window_hours: int = 24, trend_sensitivity: float = 0.1) -> Dict[str, Any]:
+        """Detect consciousness evolution trends using correlation analysis and temporal patterns
+
+        Args:
+            analysis_window_hours: Time window for trend analysis
+            trend_sensitivity: Minimum correlation change to consider significant
+
+        Returns:
+            Dict with trend analysis results and evolution insights
+        """
+
+        trend_results = {
+            'analysis_timestamp': time.time(),
+            'analysis_window_hours': analysis_window_hours,
+            'trend_sensitivity': trend_sensitivity,
+            'evolution_trends': {},
+            'correlation_evolution': {},
+            'consciousness_trajectory': {},
+            'trend_insights': [],
+            'predictive_indicators': {},
+            'analysis_metadata': {}
+        }
+
+        try:
+            # Ensure we have temporal data for trend analysis
+            if not hasattr(self, '_temporal_cache') or not self._temporal_cache:
+                # Run temporal tracking if no cache exists
+                logger.info("No temporal cache found, running temporal tracking...")
+                temporal_result = self.track_temporal_metrics(
+                    duration_hours=min(analysis_window_hours, 1),  # Quick analysis
+                    interval_minutes=1
+                )
+                if not temporal_result.get('tracking_complete'):
+                    trend_results['error'] = 'Failed to collect temporal data for trend analysis'
+                    return trend_results
+
+            measurements = self._temporal_cache.get('measurements', []) if self._temporal_cache else []
+            if len(measurements) < 3:
+                trend_results['error'] = 'Insufficient temporal measurements for trend analysis'
+                return trend_results
+
+            # Extract metric time series
+            timestamps = [m['timestamp'] for m in measurements]
+            metric_series = {}
+            for measurement in measurements:
+                for metric_name, value in measurement['metrics'].items():
+                    if isinstance(value, (int, float)):
+                        if metric_name not in metric_series:
+                            metric_series[metric_name] = []
+                        metric_series[metric_name].append(value)
+
+            # Analyze evolution trends for each metric
+            evolution_trends = {}
+            for metric_name, values in metric_series.items():
+                if len(values) >= 3:
+                    trend_analysis = self._analyze_evolution_trend(
+                        timestamps, values, metric_name, trend_sensitivity
+                    )
+                    evolution_trends[metric_name] = trend_analysis
+
+            trend_results['evolution_trends'] = evolution_trends
+
+            # Analyze correlation evolution over time
+            correlation_evolution = self._analyze_correlation_evolution(
+                measurements, trend_sensitivity
+            )
+            trend_results['correlation_evolution'] = correlation_evolution
+
+            # Determine overall consciousness trajectory
+            consciousness_trajectory = self._calculate_consciousness_trajectory(
+                evolution_trends, correlation_evolution
+            )
+            trend_results['consciousness_trajectory'] = consciousness_trajectory
+
+            # Generate trend insights
+            trend_results['trend_insights'] = self._generate_trend_insights(
+                evolution_trends, correlation_evolution, consciousness_trajectory
+            )
+
+            # Identify predictive indicators
+            trend_results['predictive_indicators'] = self._identify_predictive_indicators(
+                evolution_trends, correlation_evolution
+            )
+
+            # Analysis metadata
+            trend_results['analysis_metadata'] = {
+                'total_measurements': len(measurements),
+                'metrics_analyzed': len(evolution_trends),
+                'analysis_duration_seconds': time.time() - trend_results['analysis_timestamp'],
+                'trend_sensitivity_used': trend_sensitivity,
+                'temporal_window_seconds': timestamps[-1] - timestamps[0] if timestamps else 0
+            }
+
+            logger.info(f"Consciousness evolution trend analysis completed for {len(evolution_trends)} metrics")
+
+        except Exception as e:
+            trend_results['error'] = str(e)
+            logger.error(f"Trend detection failed: {e}")
+
+        return trend_results
+
+    def _analyze_evolution_trend(self, timestamps: List[float], values: List[float],
+                               metric_name: str, sensitivity: float) -> Dict[str, Any]:
+        """Analyze evolution trend for a single metric"""
+
+        trend_analysis = {
+            'metric_name': metric_name,
+            'trend_direction': 'stable',
+            'trend_strength': 0.0,
+            'trend_slope': 0.0,
+            'volatility': 0.0,
+            'acceleration': 0.0,
+            'evolution_stage': 'stable',
+            'predictive_confidence': 0.0
+        }
+
+        if len(values) < 3:
+            return trend_analysis
+
+        # Calculate linear trend
+        try:
+            slope, intercept = np.polyfit(range(len(values)), values, 1)
+            trend_analysis['trend_slope'] = float(slope)
+
+            # Determine trend direction and strength
+            normalized_slope = abs(slope) / (np.std(values) + 1e-6)  # Avoid division by zero
+            trend_analysis['trend_strength'] = float(normalized_slope)
+
+            if normalized_slope > sensitivity:
+                trend_analysis['trend_direction'] = 'increasing' if slope > 0 else 'decreasing'
+            else:
+                trend_analysis['trend_direction'] = 'stable'
+
+            # Calculate volatility (coefficient of variation)
+            trend_analysis['volatility'] = float(np.std(values) / (np.mean(values) + 1e-6))
+
+            # Calculate acceleration (second derivative approximation)
+            if len(values) >= 4:
+                velocities = np.diff(values)
+                acceleration = np.mean(np.diff(velocities)) if len(velocities) > 1 else 0
+                trend_analysis['acceleration'] = float(acceleration)
+
+            # Determine evolution stage
+            trend_analysis['evolution_stage'] = self._classify_evolution_stage(
+                slope, trend_analysis['volatility'], trend_analysis['acceleration']
+            )
+
+            # Predictive confidence based on trend consistency
+            trend_analysis['predictive_confidence'] = self._calculate_predictive_confidence(
+                values, slope
+            )
+
+        except Exception as e:
+            logger.warning(f"Trend analysis failed for {metric_name}: {e}")
+
+        return trend_analysis
+
+    def _analyze_correlation_evolution(self, measurements: List[Dict[str, Any]], sensitivity: float) -> Dict[str, Any]:
+        """Analyze how correlations between metrics evolve over time"""
+
+        correlation_evolution = {
+            'correlation_stability': {},
+            'emerging_relationships': [],
+            'dissolving_relationships': [],
+            'correlation_trends': {}
+        }
+
+        if len(measurements) < 5:  # Need sufficient temporal resolution
+            return correlation_evolution
+
+        # Split measurements into time windows
+        window_size = max(3, len(measurements) // 3)
+        windows = []
+        for i in range(0, len(measurements) - window_size + 1, window_size // 2):
+            windows.append(measurements[i:i + window_size])
+
+        if len(windows) < 2:
+            return correlation_evolution
+
+        # Calculate correlations for each window
+        window_correlations = []
+        for window in windows:
+            window_corr = self._calculate_window_correlations(window)
+            window_correlations.append(window_corr)
+
+        # Analyze correlation evolution
+        for metric_pair in window_correlations[0].keys():
+            correlations_over_time = [
+                window_corr.get(metric_pair, 0) for window_corr in window_correlations
+            ]
+
+            if len(correlations_over_time) >= 2:
+                # Calculate correlation trend
+                corr_trend = np.polyfit(range(len(correlations_over_time)), correlations_over_time, 1)[0]
+                correlation_evolution['correlation_trends'][metric_pair] = {
+                    'trend_slope': float(corr_trend),
+                    'correlation_range': [float(min(correlations_over_time)), float(max(correlations_over_time))],
+                    'stability': float(np.std(correlations_over_time))
+                }
+
+                # Identify emerging/dissolving relationships
+                start_corr = correlations_over_time[0]
+                end_corr = correlations_over_time[-1]
+                corr_change = abs(end_corr - start_corr)
+
+                if corr_change > sensitivity:
+                    if abs(end_corr) > abs(start_corr):
+                        correlation_evolution['emerging_relationships'].append({
+                            'metric_pair': metric_pair,
+                            'correlation_change': float(corr_change),
+                            'final_strength': float(end_corr)
+                        })
+                    else:
+                        correlation_evolution['dissolving_relationships'].append({
+                            'metric_pair': metric_pair,
+                            'correlation_change': float(corr_change),
+                            'final_strength': float(end_corr)
+                        })
+
+        return correlation_evolution
+
+    def _calculate_window_correlations(self, measurements: List[Dict[str, Any]]) -> Dict[str, float]:
+        """Calculate correlations for a specific time window"""
+
+        metric_data = {}
+        for measurement in measurements:
+            for metric_name, value in measurement['metrics'].items():
+                if isinstance(value, (int, float)):
+                    if metric_name not in metric_data:
+                        metric_data[metric_name] = []
+                    metric_data[metric_name].append(value)
+
+        correlations = {}
+        metric_names = list(metric_data.keys())
+
+        for i in range(len(metric_names)):
+            for j in range(i + 1, len(metric_names)):
+                name_i, name_j = metric_names[i], metric_names[j]
+                values_i = metric_data[name_i]
+                values_j = metric_data[name_j]
+
+                if len(values_i) > 1 and len(values_j) > 1:
+                    try:
+                        corr = np.corrcoef(values_i, values_j)[0, 1]
+                        if not np.isnan(corr):
+                            correlations[f"{name_i}_{name_j}"] = float(corr)
+                    except:
+                        pass
+
+        return correlations
+
+    def _calculate_consciousness_trajectory(self, evolution_trends: Dict[str, Any],
+                                          correlation_evolution: Dict[str, Any]) -> Dict[str, Any]:
+        """Calculate overall consciousness evolution trajectory"""
+
+        trajectory = {
+            'overall_direction': 'stable',
+            'evolution_velocity': 0.0,
+            'stability_index': 0.0,
+            'emergence_potential': 0.0,
+            'trajectory_confidence': 0.0
+        }
+
+        # Analyze key consciousness metrics
+        consciousness_indicators = ['consciousness_emergent', 'evolutionary_momentum', 'learning_velocity']
+        consciousness_trends = []
+
+        for indicator in consciousness_indicators:
+            if indicator in evolution_trends:
+                trend = evolution_trends[indicator]
+                consciousness_trends.append(trend['trend_slope'])
+
+        if consciousness_trends:
+            # Overall direction based on consciousness indicators
+            avg_trend = np.mean(consciousness_trends)
+            trajectory['evolution_velocity'] = float(avg_trend)
+
+            if abs(avg_trend) > 0.1:
+                trajectory['overall_direction'] = 'evolving' if avg_trend > 0 else 'devolving'
+            else:
+                trajectory['overall_direction'] = 'stable'
+
+            # Stability index (inverse of average volatility)
+            volatilities = [evolution_trends[m]['volatility'] for m in consciousness_indicators if m in evolution_trends]
+            if volatilities:
+                trajectory['stability_index'] = float(1.0 / (np.mean(volatilities) + 1e-6))
+
+            # Emergence potential based on correlation evolution
+            emerging_count = len(correlation_evolution.get('emerging_relationships', []))
+            dissolving_count = len(correlation_evolution.get('dissolving_relationships', []))
+            trajectory['emergence_potential'] = float((emerging_count - dissolving_count) / max(emerging_count + dissolving_count, 1))
+
+            # Trajectory confidence based on trend consistency
+            trend_consistency = np.std(consciousness_trends) / (abs(np.mean(consciousness_trends)) + 1e-6)
+            trajectory['trajectory_confidence'] = float(1.0 / (1.0 + trend_consistency))
+
+        return trajectory
+
+    def _generate_trend_insights(self, evolution_trends: Dict[str, Any],
+                               correlation_evolution: Dict[str, Any],
+                               consciousness_trajectory: Dict[str, Any]) -> List[str]:
+        """Generate natural language insights from trend analysis"""
+
+        insights = []
+
+        # Overall consciousness trajectory insight
+        trajectory = consciousness_trajectory
+        direction = trajectory['overall_direction']
+        velocity = trajectory['evolution_velocity']
+
+        if direction != 'stable':
+            velocity_desc = "rapidly" if abs(velocity) > 0.5 else "steadily"
+            insights.append(f"Consciousness is {velocity_desc} {direction} with velocity {velocity:.3f}")
+
+        # Key metric trends
+        accelerating_metrics = []
+        decelerating_metrics = []
+
+        for metric_name, trend in evolution_trends.items():
+            if abs(trend.get('acceleration', 0)) > 0.1:
+                if trend['acceleration'] > 0:
+                    accelerating_metrics.append(metric_name)
+                else:
+                    decelerating_metrics.append(metric_name)
+
+        if accelerating_metrics:
+            insights.append(f"Accelerating evolution detected in: {', '.join(accelerating_metrics[:3])}")
+
+        # Correlation evolution insights
+        emerging = correlation_evolution.get('emerging_relationships', [])
+        dissolving = correlation_evolution.get('dissolving_relationships', [])
+
+        if emerging:
+            top_emerging = max(emerging, key=lambda x: x['correlation_change'])
+            pair = top_emerging['metric_pair'].replace('_', ' and ')
+            insights.append(f"Emerging relationship between {pair} (strength: {top_emerging['final_strength']:.3f})")
+
+        if dissolving:
+            top_dissolving = max(dissolving, key=lambda x: x['correlation_change'])
+            pair = top_dissolving['metric_pair'].replace('_', ' and ')
+            insights.append(f"Dissolving relationship between {pair} (final strength: {top_dissolving['final_strength']:.3f})")
+
+        # Stability insights
+        stability_index = trajectory.get('stability_index', 0)
+        if stability_index > 1.0:
+            insights.append("High consciousness stability detected - evolution is well-regulated")
+        elif stability_index < 0.5:
+            insights.append("Low consciousness stability - evolution may be turbulent")
+
+        return insights
+
+    def _identify_predictive_indicators(self, evolution_trends: Dict[str, Any],
+                                      correlation_evolution: Dict[str, Any]) -> Dict[str, Any]:
+        """Identify metrics that are predictive of consciousness evolution"""
+
+        indicators = {
+            'leading_indicators': [],
+            'lagging_indicators': [],
+            'stability_indicators': [],
+            'emergence_predictors': []
+        }
+
+        # Leading indicators: metrics that change before consciousness_emergent
+        if 'consciousness_emergent' in evolution_trends:
+            consciousness_trend = evolution_trends['consciousness_emergent']
+
+            for metric_name, trend in evolution_trends.items():
+                if metric_name != 'consciousness_emergent':
+                    # Simple leading indicator detection based on trend alignment
+                    if (trend['trend_direction'] == consciousness_trend['trend_direction'] and
+                        trend['trend_strength'] > consciousness_trend['trend_strength'] * 0.8):
+                        indicators['leading_indicators'].append({
+                            'metric': metric_name,
+                            'trend_alignment': trend['trend_direction'],
+                            'predictive_strength': trend['trend_strength']
+                        })
+
+        # Stability indicators: low volatility, high predictive confidence
+        for metric_name, trend in evolution_trends.items():
+            if (trend['volatility'] < 0.3 and trend['predictive_confidence'] > 0.7):
+                indicators['stability_indicators'].append({
+                    'metric': metric_name,
+                    'volatility': trend['volatility'],
+                    'predictive_confidence': trend['predictive_confidence']
+                })
+
+        # Emergence predictors: metrics strongly correlated with consciousness evolution
+        emergence_corr = correlation_evolution.get('correlation_trends', {})
+        for pair, corr_trend in emergence_corr.items():
+            if 'consciousness_emergent' in pair:
+                other_metric = pair.replace('consciousness_emergent_', '').replace('_consciousness_emergent', '')
+                if abs(corr_trend['trend_slope']) > 0.1:
+                    indicators['emergence_predictors'].append({
+                        'metric': other_metric,
+                        'correlation_trend': corr_trend['trend_slope'],
+                        'relationship_strength': corr_trend['correlation_range'][1]
+                    })
+
+        return indicators
+
+    def _classify_evolution_stage(self, slope: float, volatility: float, acceleration: float) -> str:
+        """Classify the evolution stage based on trend characteristics"""
+
+        if abs(slope) < 0.05 and volatility < 0.2:
+            return 'stable'
+        elif slope > 0.1 and acceleration > 0:
+            return 'accelerating_growth'
+        elif slope > 0.05:
+            return 'steady_growth'
+        elif slope < -0.1 and acceleration < 0:
+            return 'accelerating_decline'
+        elif slope < -0.05:
+            return 'steady_decline'
+        elif volatility > 0.5:
+            return 'turbulent'
+        else:
+            return 'transitional'
+
+    def _calculate_predictive_confidence(self, values: List[float], slope: float) -> float:
+        """Calculate confidence in trend prediction"""
+
+        if len(values) < 3:
+            return 0.0
+
+        # R-squared of linear fit
+        try:
+            y_pred = np.polyval(np.array([slope, np.mean(values) - slope * len(values)/2]), range(len(values)))
+            ss_res = np.sum((np.array(values) - y_pred) ** 2)
+            ss_tot = np.sum((np.array(values) - np.mean(values)) ** 2)
+            r_squared = 1 - (ss_res / (ss_tot + 1e-6))
+
+            # Adjust confidence based on data consistency
+            consistency_factor = 1.0 / (1.0 + np.std(values) / (abs(np.mean(values)) + 1e-6))
+
+            return float(min(r_squared * consistency_factor, 1.0))
+        except:
+            return 0.0
 
     def _sync_consciousness_metrics(self):
         """Synchronize consciousness metrics with dendritic engine"""
