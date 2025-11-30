@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed - 2025-11-30 (continued)
+- **Git hooks CRLF**: Fixed line endings in pre-commit, commit-msg, pre-push for Linux execution
+
 ### Added - 2025-11-30
 - **Linux Evolution Chamber (aios_launch.sh)**: Pure bash bootloader for pwsh-free Linux operation
   - 5-phase biological boot sequence: Dendritic → Discovery → Testing → Interface → Report

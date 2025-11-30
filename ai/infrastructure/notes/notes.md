@@ -15,7 +15,3 @@
       text.insert();
     }
 }
-
-
-
-https://www.linkedin.com/feed/ https://www.linkedin.com/in/jesussard/
