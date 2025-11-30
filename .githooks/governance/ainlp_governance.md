@@ -79,7 +79,7 @@ AINLP dendritic exploration has established an autonomous governance intelligenc
    - Fusion method: Genetic recombination with information preservation
 
 ### Medium Priority Fusion (55-75% similarity)
-2. **Runtime Intelligence** (`runtime/runtime_intelligence/`)
+2. **Runtime Intelligence** (`runtime/runtime/`)
    - Shared monitoring and assessment patterns
    - Different focus areas with integration potential
    - Fusion method: Selective pattern integration

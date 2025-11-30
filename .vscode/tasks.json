@@ -171,7 +171,7 @@
 			"command": "python",
 			"type": "shell",
 			"args": [
-				"runtime_intelligence/tools/system_health_check.py"
+				"runtime/tools/system_health_check.py"
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"
@@ -183,7 +183,7 @@
 			"command": "python",
 			"type": "shell",
 			"args": [
-				"runtime_intelligence/tools/aios_admin.py"
+				"runtime/tools/aios_admin.py"
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"
@@ -217,7 +217,7 @@
 			"command": "python",
 			"type": "shell",
 			"args": [
-				"runtime_intelligence/tools/system_status_report.py"
+				"runtime/tools/system_status_report.py"
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"
@@ -585,7 +585,7 @@
 			"type": "shell",
 			"command": "python",
 			"args": [
-				"runtime_intelligence/tools/enhanced_visual_intelligence_bridge.py"
+				"runtime/tools/enhanced_visual_intelligence_bridge.py"
 			]
 		},
 		{
@@ -593,7 +593,7 @@
 			"type": "shell",
 			"command": "python",
 			"args": [
-				"runtime_intelligence/tools/aios_architecture_monitor.py"
+				"runtime/tools/aios_architecture_monitor.py"
 			]
 		},
 		{

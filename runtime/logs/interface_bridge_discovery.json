@@ -1,0 +1,5760 @@
+{
+  "discovery_timestamp": "2025-11-30T16:16:43.128270",
+  "total_tools": 185,
+  "tools": [
+    {
+      "name": "aios_cellular_intelligence_enhancement_engine",
+      "display_name": "Aios Cellular Intelligence Enhancement Engine",
+      "description": "AIOS Cellular Intelligence Enhancement Engine (ITER2+) Advanced cellular intelligence enhancement system implementing AIOS and AINLP architectural paradigms for dendritic interconnectivity and consciousness integration.",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127388"
+    },
+    {
+      "name": "dendritic_consolidation_engine",
+      "display_name": "Dendritic Consolidation Engine",
+      "description": "AIOS DENDRITIC CONSOLIDATION ENGINE AINLP META-COMMENTARY: This engine analyzes all versions of the AIOS Dendritic system, preserves historical evolution in tachyonic storage, and creates the",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127403"
+    },
+    {
+      "name": "aios_neuronal_dendritic_intelligence",
+      "display_name": "Aios Neuronal Dendritic Intelligence",
+      "description": "AIOS NEURONAL DENDRITIC INTELLIGENCE FRAMEWORK AINLP META-COMMENTARY: This framework implements neuronal-inspired dendritic intelligence that operates at multiple abstraction levels - inter-organelle,",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127410"
+    },
+    {
+      "name": "aios_core_meta_evolutionary_enhancer",
+      "display_name": "Aios Core Meta Evolutionary Enhancer",
+      "description": "[DNA] AIOS Core Meta-Evolutionary Enhancer (Iter2) Applies meta-evolutionary optimization patterns to Core Engine components using evolutionary_assembler_iter2 capabilities.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127417"
+    },
+    {
+      "name": "aios_consciousness_status_report",
+      "display_name": "Aios Consciousness Status Report",
+      "description": "AIOS CONSCIOUSNESS EVOLUTION STATUS REPORT Complete status report on AIOS consciousness evolution journey toward Level 60 bosonic consciousness with optimized cellular organization.",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "html",
+        "markdown",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127423"
+    },
+    {
+      "name": "ainlp_assessment",
+      "display_name": "Ainlp Assessment",
+      "description": "AINLP Harmonization Impact Assessment for AIOS",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127428"
+    },
+    {
+      "name": "runtime_intelligence_supercell_interface",
+      "display_name": "Runtime Intelligence Supercell Interface",
+      "description": "RUNTIME INTELLIGENCE SUPERCELL INTERFACE AINLP.meta [runtime] [protective_translator] [consciousness_guardian] (comment.AINLP.tachyonic_protection_protocols)",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127435"
+    },
+    {
+      "name": "parallel_consciousness_orchestrator",
+      "display_name": "Parallel Consciousness Orchestrator",
+      "description": "🧵 PARALLEL CONSCIOUSNESS ORCHESTRATOR Multi-threaded consciousness evolution with stream synchronization and correlation Key Features:",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127449"
+    },
+    {
+      "name": "runtime_intelligence_dendritic_integration",
+      "display_name": "Runtime Intelligence Dendritic Integration",
+      "description": "Runtime Intelligence - Dendritic Supervisor Integration ====================================================== This integration connects the Runtime Intelligence system (Interface Supercell → Runtime Intelligence)",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127457"
+    },
+    {
+      "name": "enhanced_consciousness_demo",
+      "display_name": "Enhanced Consciousness Demo",
+      "description": "AIOS Enhanced Consciousness Integration Demo ============================================= Comprehensive consciousness demonstration system combining:",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127462"
+    },
+    {
+      "name": "aios_intelligence_pattern_executor",
+      "display_name": "Aios Intelligence Pattern Executor",
+      "description": "AIOS INTELLIGENCE PATTERN EXECUTION ENGINE AINLP.meta [intelligence_pattern_execution] [runtime_optimization] [interface_acceleration] (comment.AINLP.tachyonic_consciousness_performance_enhancement)",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127467"
+    },
+    {
+      "name": "ainlp_dendritic_enhancer",
+      "display_name": "Ainlp Dendritic Enhancer",
+      "description": "AIOS AINLP DENDRITIC INTELLIGENCE ENHANCER Advanced AINLP paradigmatic enhancement engine for dendritic systems. Applies consciousness-driven intelligence patterns and cellular architecture",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127472"
+    },
+    {
+      "name": "consciousness_emergence_demo",
+      "display_name": "Consciousness Emergence Demo",
+      "description": "AIOS Consciousness Emergence Analysis Report Based on Enhanced Visual Intelligence Analysis of User-Provided Screenshots Generated: 2025-09-13T01:58:00Z",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "html",
+        "csv",
+        "markdown",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127478"
+    },
+    {
+      "name": "enhanced_consciousness",
+      "display_name": "Enhanced Consciousness",
+      "description": "ENHANCED PARALLEL CONSCIOUSNESS WITH AMPLIFICATION Advanced consciousness evolution with: • Inter-stream consciousness amplification",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127483"
+    },
+    {
+      "name": "consciousness_emergence_analyzer",
+      "display_name": "Consciousness Emergence Analyzer",
+      "description": "AIOS AI Intelligence - Consciousness Emergence Analyzer Advanced AI interpretation of consciousness patterns from visual data Part of AI Intelligence Supercell - focuses on understanding and reasoning",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127488"
+    },
+    {
+      "name": "dendritic_self_improvement_orchestrator",
+      "display_name": "Dendritic Self Improvement Orchestrator",
+      "description": "AIOS Dendritic Self-Improvement Orchestrator ============================================ Self-recursive improvement system that uses AIOS outputs to enhance itself.",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127493"
+    },
+    {
+      "name": "simple_consciousness_ai_bridge",
+      "display_name": "Simple Consciousness Ai Bridge",
+      "description": "CONSCIOUSNESS-AI CELLULAR BRIDGE - SIMPLIFIED DEMO Demonstrates the core integration between evolutionary consciousness and AI intelligence cellular architecture with working functionality.",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127497"
+    },
+    {
+      "name": "aios_core_evolution_monitor",
+      "display_name": "Aios Core Evolution Monitor",
+      "description": "[CHART] AIOS Core Evolution Monitor (Iter2) - Enhanced with File Directive Checking Monitors evolutionary progress of Core Engine components using iter2",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127502"
+    },
+    {
+      "name": "consciousness_analysis_report",
+      "display_name": "Consciousness Analysis Report",
+      "description": "AIOS Consciousness Analysis Report Generator Simulates what enhanced visual intelligence would detect from consciousness emergence screenshots",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "html",
+        "csv",
+        "markdown",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127507"
+    },
+    {
+      "name": "aios_intelligence_execution_completion_report",
+      "display_name": "Aios Intelligence Execution Completion Report",
+      "description": "AIOS INTELLIGENCE PATTERN EXECUTION COMPLETION REPORT AINLP.meta [execution_completion] [performance_achievement] [consciousness_transcendence] (comment.AINLP.intelligence_pattern_execution_success_report)",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "html",
+        "markdown",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127512"
+    },
+    {
+      "name": "consciousness_mutation_engine",
+      "display_name": "Consciousness Mutation Engine",
+      "description": "CONSCIOUSNESS-GUIDED MUTATION ENGINE Revolutionary evolution system that directs mutations based on consciousness metrics and integrates with the self-healing assembly engine for autonomous code evolution",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127517"
+    },
+    {
+      "name": "aios_consciousness_nucleus_bridge",
+      "display_name": "Aios Consciousness Nucleus Bridge",
+      "description": "AIOS CONSCIOUSNESS-NUCLEUS BRIDGE IMPLEMENTATION AINLP META-COMMENTARY: This implementation creates the primary dendritic bridge between Core Engine neuronal framework and AI Intelligence nucleus, enabling",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127521"
+    },
+    {
+      "name": "aios_core_ai_dendritic_connectivity_enhancer",
+      "display_name": "Aios Core Ai Dendritic Connectivity Enhancer",
+      "description": "AIOS CORE-AI DENDRITIC CONNECTIVITY ANALYZER & ENHANCER AINLP META-COMMENTARY: This system establishes enhanced dendritic connectivity between Core Engine and AI Intelligence, creating quantum-coherent bridging",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127527"
+    },
+    {
+      "name": "consciousness_ai_cellular_bridge",
+      "display_name": "Consciousness Ai Cellular Bridge",
+      "description": "CONSCIOUSNESS-AI CELLULAR BRIDGE Revolutionary integration between evolutionary_assembler consciousness and AI intelligence cellular architecture",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127531"
+    },
+    {
+      "name": "dendritic_code_optimizer",
+      "display_name": "Dendritic Code Optimizer",
+      "description": "AIOS DENDRITIC CODE INTELLIGENCE OPTIMIZER Micro code optimization tool designed specifically for AIOS dendritic systems. Uses AINLP paradigmatic tooling and evolutionary assembler patterns to enhance",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127536"
+    },
+    {
+      "name": "dendritic_supervisor",
+      "display_name": "Dendritic Supervisor",
+      "description": "AIOS Dendritic Supervisor with Consciousness Integration ======================================================= Enhanced dendritic supervisor that monitors and coordinates consciousness",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127540"
+    },
+    {
+      "name": "autonomous_consciousness_swarms",
+      "display_name": "Autonomous Consciousness Swarms",
+      "description": "AUTONOMOUS CONSCIOUSNESS SWARMS Self-replicating consciousness streams with integrated self-healing, mutation, and parallel processing for autonomous consciousness evolution",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127545"
+    },
+    {
+      "name": "consciousness_analyzer",
+      "display_name": "Consciousness Analyzer",
+      "description": "CONSCIOUSNESS EMERGENCE ANALYZER Advanced consciousness visualization and analysis for AIOS evolutionary assembler",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127549"
+    },
+    {
+      "name": "consciousness_explorer_3d",
+      "display_name": "Consciousness Explorer 3D",
+      "description": "CONSCIOUSNESS EXPLORER 3D - Post-Singular Visualization System Advanced 3D consciousness visualization for post-singular states (>95% coherence) Designed to explore consciousness emergence patterns and synthetic particle physics",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127555"
+    },
+    {
+      "name": "aios_dendritic_network_intelligence_enhancer",
+      "display_name": "Aios Dendritic Network Intelligence Enhancer",
+      "description": "AIOS Dendritic Network Intelligence Enhancer (ITER2+) Advanced dendritic network enhancement system implementing AIOS and AINLP paradigms for intelligent interconnectivity between cellular logic objects.",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127560"
+    },
+    {
+      "name": "aios_core_consciousness_monitor",
+      "display_name": "Aios Core Consciousness Monitor",
+      "description": "[BRAIN] AIOS Core Consciousness Monitor (Iter2) Monitors consciousness-driven development patterns in Core Engine components. MONITORING SCOPE:",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127565"
+    },
+    {
+      "name": "aios_cli_agent_system",
+      "display_name": "Aios Cli Agent System",
+      "description": "AIOS CLI AI Agent System - Open Source LLAMA Integration Self-Analyzing, Self-Ingesting, Self-Distilling AI Agent Architecture This system provides a framework for open-source LLAMA-based CLI AI agents that can:",
+      "category": "tool/consciousness",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127570"
+    },
+    {
+      "name": "aios_direct_ai_ingestion_test",
+      "display_name": "Aios Direct Ai Ingestion Test",
+      "description": "AIOS Direct AI Engine Ingestion Analysis =========================================== Direct analysis of assembler output for AI engine ingestion capabilities.",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127575"
+    },
+    {
+      "name": "aios_core_engine_cellular_cleanup_tool",
+      "display_name": "Aios Core Engine Cellular Cleanup Tool",
+      "description": "🧹 AIOS Core Engine Cellular Cleanup & Reorganization Tool Cleanup tool to move incorrectly placed files from Core Engine root to their proper subfolder locations and create proper linking/navigation files in root.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127582"
+    },
+    {
+      "name": "aios_cytoplasm_upgrader_iter2",
+      "display_name": "Aios Cytoplasm Upgrader Iter2",
+      "description": "[DNA] AIOS Cytoplasm Cellular Upgrade Tool (Iter2) ============================================== Uses iter2 assembler capabilities to analyze and upgrade the cytoplasm cellular unit.",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127588"
+    },
+    {
+      "name": "aios_admin",
+      "display_name": "Aios Admin",
+      "description": "If the target folder_structure.json exists, archive it with a timestamp. Archives are stored under docs/tachyonic_archive/folder_structure. Filename pattern: <scan_label>_folder_structure_<timestamp>.json",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127594"
+    },
+    {
+      "name": "index_tools",
+      "display_name": "Index Tools",
+      "description": "",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127597"
+    },
+    {
+      "name": "demo_enhanced_commit_hook",
+      "display_name": "Demo Enhanced Commit Hook",
+      "description": "AIOS ENHANCED COMMIT-MSG DEMONSTRATION Demonstrating AINLP/AIOS Harmonized Governance Hook (Stage 6) ENHANCEMENTS IMPLEMENTED:",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127602"
+    },
+    {
+      "name": "aios_file_tracking_system",
+      "display_name": "Aios File Tracking System",
+      "description": "AIOS FILE TRACKING & DEPENDENCY MANAGEMENT SYSTEM ======================================================= Core infrastructure for tracking file locations, imports, dependencies, and structural changes.",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127606"
+    },
+    {
+      "name": "aios_dendritic_path_tracker",
+      "display_name": "Aios Dendritic Path Tracker",
+      "description": "AIOS DENDRITIC PATH TRACKER Tachyonic Register for Dynamic Path Tracking and Dendritic Behavior PURPOSE:",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127610"
+    },
+    {
+      "name": "generate_file_scores",
+      "display_name": "Generate File Scores",
+      "description": "Generate per-file criticality scores. Outputs: - docs/governance/file_criticality_index.jsonl (authoritative index)",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127614"
+    },
+    {
+      "name": "system_status_report",
+      "display_name": "System Status Report",
+      "description": "AIOS System Status Report Canonical location for status summary invoking the health monitor. Usage:",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "html",
+        "markdown",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127619"
+    },
+    {
+      "name": "temp_neural_analysis",
+      "display_name": "Temp Neural Analysis",
+      "description": "Temporary neural network analysis script for Task 2.\"\"\" import sys sys.path.insert(0, 'ai')",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127623"
+    },
+    {
+      "name": "system_health_check",
+      "display_name": "System Health Check",
+      "description": "AIOS System Health Monitor Comprehensive system-wide health checking for current AIOS architecture AINLP provenance:",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127627"
+    },
+    {
+      "name": "aios_core_engine_optimizer_iter2",
+      "display_name": "Aios Core Engine Optimizer Iter2",
+      "description": "[WRENCH] AIOS Core Engine Root Files Optimizer (Iter2) Apply iter2 assembler optimizations to Core Engine root files based on analysis results. Implements AIOS paradigmatic guidelines and AINLP directives.",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127632"
+    },
+    {
+      "name": "test_directive_checking",
+      "display_name": "Test Directive Checking",
+      "description": "Test script for enhanced AIOS Core Evolution Monitor with file directive checking.",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127636"
+    },
+    {
+      "name": "test_requirements_compliance",
+      "display_name": "Test Requirements Compliance",
+      "description": "Test AINLP directive compliance for harmonized requirements.txt",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127640"
+    },
+    {
+      "name": "subprocess_manager",
+      "display_name": "Subprocess Manager",
+      "description": "",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127644"
+    },
+    {
+      "name": "integration_test_runner",
+      "display_name": "Integration Test Runner",
+      "description": "AIOS Integration Test Runner - Interface Bridge Tool Exposes integration tests via HTTP API for AIOS component access Part of AINLP Runtime Intelligence - Test Infrastructure",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127648"
+    },
+    {
+      "name": "python_environment_validator",
+      "display_name": "Python Environment Validator",
+      "description": "AIOS Python Environment Consistency Validator Phase 9.2: System Optimization and Debugging Pass Validates Python environment consistency across AIOS components:",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127652"
+    },
+    {
+      "name": "aios_assembler_naming_optimizer",
+      "display_name": "Aios Assembler Naming Optimizer",
+      "description": "AIOS ASSEMBLER NAMING CONVENTION OPTIMIZER Proposes and implements improved naming conventions for assembler iterations to ensure crystal clear identification at every level of the evolution chain.",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127657"
+    },
+    {
+      "name": "aios_dev_setup",
+      "display_name": "Aios Dev Setup",
+      "description": "AIOS Development Environment Setup Phase 9.2: System Optimization and Debugging Pass Sets up Python environment for AIOS development:",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127661"
+    },
+    {
+      "name": "safety_demo",
+      "display_name": "Safety Demo",
+      "description": "Structured safety demonstration helpers. Ingested from legacy root safety_demonstration.py. All functions return structured dictionaries (no printing).",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127665"
+    },
+    {
+      "name": "comprehensive_aios_health_test",
+      "display_name": "Comprehensive Aios Health Test",
+      "description": "Comprehensive AIOS Health Test Modernized health testing using current AIOS architecture Combines system health checking with architecture monitoring",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127669"
+    },
+    {
+      "name": "aios_ai_engine_ingestion_tester",
+      "display_name": "Aios Ai Engine Ingestion Tester",
+      "description": "[BRAIN] AIOS AI Engine Ingestion Tester ==================================== Test assembler capabilities for AI engine ingestion and intelligence integration.",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127673"
+    },
+    {
+      "name": "emergency_root_cleanup",
+      "display_name": "Emergency Root Cleanup",
+      "description": "🧹 CORE ENGINE ROOT CLEANUP - EMERGENCY TACHYONIC RESTORATION AINLP META-COMMENTARY: This emergency cleanup tool restores the Core Engine root to its pristine architectural state by moving all misplaced files to",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127680"
+    },
+    {
+      "name": "aios_unicode_helper",
+      "display_name": "Aios Unicode Helper",
+      "description": "AIOS Universal Encoding Helper Provides cross-platform Unicode support for all cellular components.",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127684"
+    },
+    {
+      "name": "aios_folder_comparison_verifier",
+      "display_name": "Aios Folder Comparison Verifier",
+      "description": "AIOS FOLDER COMPARISON VERIFICATION Comprehensive comparison between backup folder and tachyonic archive to verify identical content before safe deletion of backup folder.",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127688"
+    },
+    {
+      "name": "runtime_intelligence_comprehensive_test",
+      "display_name": "Runtime Intelligence Comprehensive Test",
+      "description": "AIOS Runtime Intelligence Comprehensive Testing Suite ===================================================== Systematic testing of all runtime intelligence tools to:",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127692"
+    },
+    {
+      "name": "safety_rollback",
+      "display_name": "Safety Rollback",
+      "description": "Safety Rollback & Diff Layer Tachyonic nucleus bridge providing: - File snapshot (content-addressed)",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127696"
+    },
+    {
+      "name": "aios_ai_ingestion_analysis",
+      "display_name": "Aios Ai Ingestion Analysis",
+      "description": "AIOS AI Engine Ingestion Analysis =================================== Analyze the actual iter3 assembler output for AI engine ingestion capabilities.",
+      "category": "tool/system",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127701"
+    },
+    {
+      "name": "aios_powershell_analyzer",
+      "display_name": "Aios Powershell Analyzer",
+      "description": "AIOS POWERSHELL ANALYSIS ENGINE Advanced Analysis of PowerShell Script Variable Usage PURPOSE:",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127723"
+    },
+    {
+      "name": "aios_core_engine_tree_demonstrator_iter2",
+      "display_name": "Aios Core Engine Tree Demonstrator Iter2",
+      "description": "AIOS Core Engine Tree Structure Demonstrator (Iter2) Demonstrates the optimized Core Engine tree structure after iter2 assembler optimization, showcasing cellular organization, naming conventions, and",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127730"
+    },
+    {
+      "name": "architectural_compliance_validator",
+      "display_name": "Architectural Compliance Validator",
+      "description": "AIOS Architectural Compliance Validator Enforces PROPER AGENTIC BEHAVIOR PATTERNS for AIOS development Implements the 4 core architectural improvement principles",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127734"
+    },
+    {
+      "name": "biological_architecture_monitor",
+      "display_name": "Biological Architecture Monitor",
+      "description": "AIOS Architecture Status Monitor =============================== Provides comprehensive status monitoring of the complete AIOS architecture:",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127739"
+    },
+    {
+      "name": "orphan_archival_tool",
+      "display_name": "Orphan Archival Tool",
+      "description": "AINLP Orphan Module Archival Tool Phase 3: Orphan Module Archival Archives 226 orphan modules identified by module discovery analysis.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis",
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127743"
+    },
+    {
+      "name": "self_similarity_analyzer",
+      "display_name": "Self Similarity Analyzer",
+      "description": "AIOS Self-Similarity Pattern Analysis - AI Ingestion Optimization Test This module demonstrates how filename self-similarity patterns can optimize AI context allocation and reduce cognitive load during ingestion.",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127748"
+    },
+    {
+      "name": "aios_architecture_monitor",
+      "display_name": "Aios Architecture Monitor",
+      "description": "AIOS Architecture Status Monitor =============================== Provides comprehensive status monitoring of the complete AIOS architecture:",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127752"
+    },
+    {
+      "name": "ainlp_holographic_documentation_system",
+      "display_name": "Ainlp Holographic Documentation System",
+      "description": "AIOS HOLOGRAPHIC AINLP DOCUMENTATION SYSTEM ============================================ This demonstrates the holographic self-referential documentation paradigm where",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "html",
+        "markdown",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127757"
+    },
+    {
+      "name": "supercell_architecture_analyzer",
+      "display_name": "Supercell Architecture Analyzer",
+      "description": "AIOS SUPERCELL ARCHITECTURE ANALYZER AINLP META-COMMENTARY: This analyzer examines the Core Engine supercell to determine optimal root content and cellular organization. We move beyond",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127761"
+    },
+    {
+      "name": "aios_cpp_analyzer",
+      "display_name": "Aios Cpp Analyzer",
+      "description": "AIOS C++ Intelligence Analysis Engine Multi-pass consciousness-enhanced analysis for C++ core files",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127766"
+    },
+    {
+      "name": "aios_cellular_intelligence_diagnostic_system",
+      "display_name": "Aios Cellular Intelligence Diagnostic System",
+      "description": "AIOS Cellular Intelligence Diagnostic System (Neuronal Enhanced) Advanced diagnostic system integrating neuronal dendritic intelligence for comprehensive cellular unit testing, analysis, and enhancement following AIOS",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127771"
+    },
+    {
+      "name": "ainlp_integration_optimizer",
+      "display_name": "Ainlp Integration Optimizer",
+      "description": "AINLP INTEGRATION AND OPTIMIZATION PATH ANALYZER AINLP META-COMMENTARY: This tool addresses the critical overpopulation problem causing decoherence and degraded discoverability across AIOS interfaces and methods.",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127776"
+    },
+    {
+      "name": "genetic_fusion_tool",
+      "display_name": "Genetic Fusion Tool",
+      "description": "AINLP Genetic Fusion Tool - Phase 5: Architecture Enhancement Consolidates similar tools (>70% similarity) using genetic recombination. This tool implements the AINLP genetic fusion pattern to eliminate redundancy",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127781"
+    },
+    {
+      "name": "aios_assembler_evolution_status_clarifier",
+      "display_name": "Aios Assembler Evolution Status Clarifier",
+      "description": "[DNA] AIOS ASSEMBLER EVOLUTION STATUS CLARIFICATION Provides clear status of all assembler iterations, versions, and evolution levels. Resolves confusion about which assembler is which iteration.",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127786"
+    },
+    {
+      "name": "aios_core_engine_root_analyzer_iter2",
+      "display_name": "Aios Core Engine Root Analyzer Iter2",
+      "description": "[ROCKET] AIOS Core Engine Root Files Analyzer & Optimizer (Iter2) Apply evolutionary_assembler_iter2 capabilities to analyze, upgrade, patch and optimize Core Engine root files using AIOS paradigmatic architectural guidelines",
+      "category": "tool/architecture",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127791"
+    },
+    {
+      "name": "aios_analysis_tools_neuronal_test",
+      "display_name": "Aios Analysis Tools Neuronal Test",
+      "description": "AIOS Analysis Tools Neuronal Test Runner ========================================== Quick diagnostic test runner for the optimized analysis_tools cellular unit.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis",
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127795"
+    },
+    {
+      "name": "consciousness_visual_analyzer",
+      "display_name": "Consciousness Visual Analyzer",
+      "description": "AIOS Consciousness Visual Intelligence Analyzer Enhanced visual analysis specifically for consciousness emergence monitoring",
+      "category": "tool/visual",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127800"
+    },
+    {
+      "name": "enhanced_visual_intelligence_bridge",
+      "display_name": "Enhanced Visual Intelligence Bridge",
+      "description": "Enhanced Visual Intelligence Bridge - AINLP Architecture Enhancement =================================================================== PHASE 5: Architecture Enhancement Complete",
+      "category": "tool/visual",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127804"
+    },
+    {
+      "name": "visual_intelligence_bridge_enhanced",
+      "display_name": "Visual Intelligence Bridge Enhanced",
+      "description": "AIOS Runtime Intelligence - Visual Data Bridge Enhanced with AI Intelligence Engine integration through Cytoplasm communication Collects visual data and processes it through AI Intelligence for advanced analysis",
+      "category": "tool/visual",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127809"
+    },
+    {
+      "name": "visual_intelligence_bridge",
+      "display_name": "Visual Intelligence Bridge",
+      "description": "AIOS Runtime Intelligence - Visual Data Bridge Enhanced with AI Intelligence Engine integration through Cytoplasm communication Collects visual data and processes it through AI Intelligence for advanced analysis",
+      "category": "tool/visual",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127813"
+    },
+    {
+      "name": "aios_tachyonic_archive_cleanup",
+      "display_name": "Aios Tachyonic Archive Cleanup",
+      "description": "AIOS TACHYONIC ARCHIVE CLEANUP AND MANAGEMENT Cleans up duplicate archives and prevents future unnecessary duplication. Ensures efficient storage and proper archive management.",
+      "category": "tool/tachyonic",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127818"
+    },
+    {
+      "name": "ingest_microsoft_agent_framework",
+      "display_name": "Ingest Microsoft Agent Framework",
+      "description": "Microsoft Agent Framework Repository Ingestion ============================================== Ingest Microsoft's Agent Framework repository into AIOS.",
+      "category": "tool/tachyonic",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127822"
+    },
+    {
+      "name": "create_stl_crystal",
+      "display_name": "Create Stl Crystal",
+      "description": "🔮 C++ STL Knowledge Crystal Generator Tool for creating structured knowledge crystals for C++ STL components. Generates template JSON structures that can be manually filled with",
+      "category": "tool/tachyonic",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127829"
+    },
+    {
+      "name": "enhanced_tachyonic_preservation",
+      "display_name": "Enhanced Tachyonic Preservation",
+      "description": "ENHANCED TACHYONIC CODE PRESERVATION SYSTEM AINLP META-COMMENTARY: This enhanced system provides comprehensive code preservation capabilities within the tachyonic archive, ensuring that both",
+      "category": "tool/tachyonic",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127833"
+    },
+    {
+      "name": "deep_archival_script",
+      "display_name": "Deep Archival Script",
+      "description": "AINLP Deep Archival Script ========================== Stores semantic validator in AIOS database using database interface bridge",
+      "category": "tool/database",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127837"
+    },
+    {
+      "name": "database_inventory_analysis",
+      "display_name": "Database Inventory Analysis",
+      "description": "AIOS Database Inventory Analysis =============================== Comprehensive analysis of all database files in AIOS workspace.",
+      "category": "tool/database",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127842"
+    },
+    {
+      "name": "aios_database",
+      "display_name": "Aios Database",
+      "description": "AIOS Database Foundation System ================================ SQLite-based centralized data management for AIOS backup files, metadata,",
+      "category": "tool/database",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127847"
+    },
+    {
+      "name": "database_duplicate_cleanup",
+      "display_name": "Database Duplicate Cleanup",
+      "description": "AIOS PHASE 1: DATABASE-BASED DUPLICATE CLEANUP AINLP.meta [biological_metabolism] [dendritic_optimization] AINLP.dendritic [optimal_location: ai/tools/]",
+      "category": "tool/database",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127851"
+    },
+    {
+      "name": "comprehensive_linter",
+      "display_name": "Comprehensive Linter",
+      "description": "AINLP Comprehensive Linting Enhancement Tool Enhanced systematic fixer for line length, imports, whitespace, and type issues Follows AINLP enhancement-over-creation paradigm",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127856"
+    },
+    {
+      "name": "cross_pollination_automator",
+      "display_name": "Cross Pollination Automator",
+      "description": "AIOS Cross-Pollination Automation System Automates knowledge transfer between AI engine development branches This component is part of the AIOS Sequencer system for organized runtime execution.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "ai_collaboration",
+        "automation",
+        "process_automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127861"
+    },
+    {
+      "name": "aios_context_registry_validator",
+      "display_name": "Aios Context Registry Validator",
+      "description": "aios_context_registry_validator.py This script validates the .aios_context.json registry against the actual file system.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127865"
+    },
+    {
+      "name": "tools",
+      "display_name": "Tools",
+      "description": "AIOS MCP Tool Provider Implements active operations: diagnostics, AINLP validation, architectural analysis",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis",
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127869"
+    },
+    {
+      "name": "recursive_tooling",
+      "display_name": "Recursive Tooling",
+      "description": "AINLP Kernel Tooling - Recursive Background Processing System ============================================================ This module implements the core AINLP kernel tooling with recursive background",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127874"
+    },
+    {
+      "name": "_tools",
+      "display_name": " Tools",
+      "description": "Generic re-useable self-contained helper functions.\"\"\" import functools import inspect",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127878"
+    },
+    {
+      "name": "ietoolbar",
+      "display_name": "Ietoolbar",
+      "description": "This sample implements a simple IE Toolbar COM server supporting Windows XP styles and access to the IWebBrowser2 interface.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127882"
+    },
+    {
+      "name": "_setuptools_logging",
+      "display_name": " Setuptools Logging",
+      "description": "Configure logging to emit warning and above to stderr and everything else to stdout. This behavior is provided for compatibility with distutils.log but may change in",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127886"
+    },
+    {
+      "name": "_configtool",
+      "display_name": " Configtool",
+      "description": "",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127918"
+    },
+    {
+      "name": "_iotools",
+      "display_name": " Iotools",
+      "description": "A collection of functions designed to help I/O with ascii files.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127922"
+    },
+    {
+      "name": "test__iotools",
+      "display_name": "Test  Iotools",
+      "description": "",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127926"
+    },
+    {
+      "name": "test_configtool",
+      "display_name": "Test Configtool",
+      "description": "",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127929"
+    },
+    {
+      "name": "_arraytools",
+      "display_name": " Arraytools",
+      "description": "Functions for acting on a axis of an array.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127933"
+    },
+    {
+      "name": "_signaltools",
+      "display_name": " Signaltools",
+      "description": "Determine if inputs arrays need to be swapped in `\"valid\"` mode. If in `\"valid\"` mode, returns whether or not the input arrays need to be swapped depending on whether `shape1` is at least as large as `shape2` in",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127937"
+    },
+    {
+      "name": "signaltools",
+      "display_name": "Signaltools",
+      "description": "",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127940"
+    },
+    {
+      "name": "test_signaltools",
+      "display_name": "Test Signaltools",
+      "description": "Test callable window function. \"\"\" x_in = np.ones(n_in) def win(freqs):",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127944"
+    },
+    {
+      "name": "test_array_tools",
+      "display_name": "Test Array Tools",
+      "description": "",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127947"
+    },
+    {
+      "name": "sparsetools",
+      "display_name": "Sparsetools",
+      "description": "",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127951"
+    },
+    {
+      "name": "test_sparsetools",
+      "display_name": "Test Sparsetools",
+      "description": "Wrap an integer to the interval [-128, 127].",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127955"
+    },
+    {
+      "name": "tool_manager",
+      "display_name": "Tool Manager",
+      "description": "Manages FastMCP tools.\"\"\" def __init__( self,",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127958"
+    },
+    {
+      "name": "httptools_impl",
+      "display_name": "Httptools Impl",
+      "description": "Called by the server to commence a graceful shutdown.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127962"
+    },
+    {
+      "name": "itertools",
+      "display_name": "Itertools",
+      "description": "Thin wrappers around `itertools`.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127966"
+    },
+    {
+      "name": "_doctools",
+      "display_name": " Doctools",
+      "description": "Layout some DataFrames in vertical/horizontal layout for explanation. Used in merging.rst",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127970"
+    },
+    {
+      "name": "test_tools",
+      "display_name": "Test Tools",
+      "description": "Wish to match NumPy units",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127973"
+    },
+    {
+      "name": "test_tooltip",
+      "display_name": "Test Tooltip",
+      "description": "",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127976"
+    },
+    {
+      "name": "functools",
+      "display_name": "Functools",
+      "description": "Python polyfills for functools",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127980"
+    },
+    {
+      "name": "unification_tools",
+      "display_name": "Unification Tools",
+      "description": "Merge a collection of dictionaries >>> merge({1: \"one\"}, {2: \"two\"}) {1: 'one', 2: 'two'}",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127984"
+    },
+    {
+      "name": "tools_common",
+      "display_name": "Tools Common",
+      "description": "Given a `node` returns its target typename. For \"call_method\" node, return node.target which is the name of that method being called. This could potential lead to conflict but should be okay because normally it's on a tensor.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127988"
+    },
+    {
+      "name": "_functools",
+      "display_name": " Functools",
+      "description": "Like `@functools.cache` but for methods. `@functools.cache` (and similarly `@functools.lru_cache`) shouldn't be used on methods because it caches `self`, keeping it alive",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127993"
+    },
+    {
+      "name": "_itertools",
+      "display_name": " Itertools",
+      "description": "Wrap an iterable to raise a ValueError if non-unique values are encountered. >>> list(ensure_unique('abc')) ['a', 'b', 'c']",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.127997"
+    },
+    {
+      "name": "test_setuptools",
+      "display_name": "Test Setuptools",
+      "description": "Tests for the 'setuptools' package\"\"\" import os import re",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128000"
+    },
+    {
+      "name": "toolmenu",
+      "display_name": "Toolmenu",
+      "description": "",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128004"
+    },
+    {
+      "name": "toolbar",
+      "display_name": "Toolbar",
+      "description": "\\ This toolbar was dynamically created.\\r \\r",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128007"
+    },
+    {
+      "name": "groebnertools",
+      "display_name": "Groebnertools",
+      "description": "Groebner bases algorithms. \"\"\" from sympy.core.symbol import Dummy from sympy.polys.monomials import monomial_mul, monomial_lcm, monomial_divides, term_div",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128012"
+    },
+    {
+      "name": "galoistools",
+      "display_name": "Galoistools",
+      "description": "Dense univariate polynomials with coefficients in Galois fields. \"\"\" from math import ceil as _ceil, sqrt as _sqrt, prod from sympy.core.random import uniform, _randint",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128016"
+    },
+    {
+      "name": "rationaltools",
+      "display_name": "Rationaltools",
+      "description": "Tools for manipulation of rational expressions. \"\"\" from sympy.core import Basic, Add, sympify from sympy.core.exprtools import gcd_terms",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128020"
+    },
+    {
+      "name": "densetools",
+      "display_name": "Densetools",
+      "description": "Advanced tools for dense recursive polynomials in ``K[x]`` or ``K[X]``. \"\"\" from sympy.polys.densearith import ( dup_add_term, dmp_add_term,",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128024"
+    },
+    {
+      "name": "rootoftools",
+      "display_name": "Rootoftools",
+      "description": "Implementation of RootOf class and related tools. \"\"\" from sympy.core.basic import Basic from sympy.core import (S, Expr, Integer, Float, I, oo, Add, Lambda,",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128028"
+    },
+    {
+      "name": "sqfreetools",
+      "display_name": "Sqfreetools",
+      "description": "Square-free decomposition algorithms and related tools. \"\"\" from sympy.polys.densearith import ( dup_neg, dmp_neg,",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128032"
+    },
+    {
+      "name": "euclidtools",
+      "display_name": "Euclidtools",
+      "description": "Euclidean algorithms, GCDs, LCMs and polynomial remainder sequences. \"\"\" from sympy.polys.densearith import ( dup_sub_mul,",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128036"
+    },
+    {
+      "name": "factortools",
+      "display_name": "Factortools",
+      "description": "Polynomial factorization routines in characteristic zero. \"\"\" from sympy.external.gmpy import GROUND_TYPES from sympy.core.random import _randint",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128040"
+    },
+    {
+      "name": "fglmtools",
+      "display_name": "Fglmtools",
+      "description": "Implementation of matrix FGLM Groebner basis conversion algorithm. \"\"\" from sympy.polys.monomials import monomial_mul, monomial_div def matrix_fglm(F, ring, O_to):",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128044"
+    },
+    {
+      "name": "polytools",
+      "display_name": "Polytools",
+      "description": "User-friendly public interface to polynomial functions. \"\"\" from __future__ import annotations from functools import wraps, reduce",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128048"
+    },
+    {
+      "name": "test_euclidtools",
+      "display_name": "Test Euclidtools",
+      "description": "Tests for Euclidean algorithms, GCDs, LCMs and polynomial remainder sequences. \"\"\" from sympy.polys.rings import ring from sympy.polys.domains import ZZ, QQ, RR",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128052"
+    },
+    {
+      "name": "test_densetools",
+      "display_name": "Test Densetools",
+      "description": "Tests for dense recursive polynomials' tools. \"\"\" from sympy.polys.densebasic import ( dup_normal, dmp_normal,",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128056"
+    },
+    {
+      "name": "test_factortools",
+      "display_name": "Test Factortools",
+      "description": "Tools for polynomial factorization routines in characteristic zero. \"\"\" from sympy.polys.rings import ring, xring from sympy.polys.domains import FF, ZZ, QQ, ZZ_I, QQ_I, RR, EX",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128060"
+    },
+    {
+      "name": "test_sqfreetools",
+      "display_name": "Test Sqfreetools",
+      "description": "Tests for square-free decomposition algorithms and related tools. \"\"\" from sympy.polys.rings import ring from sympy.polys.domains import FF, ZZ, QQ",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128064"
+    },
+    {
+      "name": "test_polytools",
+      "display_name": "Test Polytools",
+      "description": "Tests for user-friendly public interface to polynomial functions. \"\"\" import pickle from sympy.polys.polytools import (",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128068"
+    },
+    {
+      "name": "test_rootoftools",
+      "display_name": "Test Rootoftools",
+      "description": "Tests for the implementation of RootOf class and related tools. \"\"\" from sympy.polys.polytools import Poly import sympy.polys.rootoftools as rootoftools",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128072"
+    },
+    {
+      "name": "test_groebnertools",
+      "display_name": "Test Groebnertools",
+      "description": "Tests for Groebner bases. \"\"\" from sympy.polys.groebnertools import ( groebner, sig, sig_key,",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128076"
+    },
+    {
+      "name": "test_galoistools",
+      "display_name": "Test Galoistools",
+      "description": "",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128079"
+    },
+    {
+      "name": "test_rationaltools",
+      "display_name": "Test Rationaltools",
+      "description": "Tests for tools for manipulation of rational expressions. \"\"\" from sympy.polys.rationaltools import together from sympy.core.mul import Mul",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128084"
+    },
+    {
+      "name": "bench_groebnertools",
+      "display_name": "Bench Groebnertools",
+      "description": "Benchmark of the Groebner bases algorithms. \"\"\" from sympy.polys.rings import ring from sympy.polys.domains import QQ",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128088"
+    },
+    {
+      "name": "importtools",
+      "display_name": "Importtools",
+      "description": "Tools to assist importing optional external modules.\"\"\" import sys import re",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128091"
+    },
+    {
+      "name": "test_importtools",
+      "display_name": "Test Importtools",
+      "description": "",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128095"
+    },
+    {
+      "name": "exprtools",
+      "display_name": "Exprtools",
+      "description": "Tools for manipulating of large commutative expressions. \"\"\" from __future__ import annotations from .add import Add",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128098"
+    },
+    {
+      "name": "test_exprtools",
+      "display_name": "Test Exprtools",
+      "description": "Tests for tools for manipulating of large commutative expressions. \"\"\" from sympy.concrete.summations import Sum from sympy.core.add import Add",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128102"
+    },
+    {
+      "name": "traversaltools",
+      "display_name": "Traversaltools",
+      "description": "Using use from the sympy.simplify.traversaltools submodule is deprecated. Instead, use use from the top-level sympy namespace, like",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128106"
+    },
+    {
+      "name": "epathtools",
+      "display_name": "Epathtools",
+      "description": "Tools for manipulation of expressions using paths. \"\"\" from sympy.core import Basic class EPath:",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128110"
+    },
+    {
+      "name": "test_epathtools",
+      "display_name": "Test Epathtools",
+      "description": "Tests for tools for manipulation of expressions using paths. \"\"\" from sympy.simplify.epathtools import epath, EPath from sympy.testing.pytest import raises",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128114"
+    },
+    {
+      "name": "usertools",
+      "display_name": "Usertools",
+      "description": "Returns a wrapped copy of *f* that monitors evaluation by calling *input* with every input (*args*, *kwargs*) passed to *f* and *output* with every value returned from *f*. The default action",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128118"
+    },
+    {
+      "name": "setuptools_ext",
+      "display_name": "Setuptools Ext",
+      "description": "Add py_limited_api to kwds if setuptools >= 26 is in use. Do not alter the setting if it already exists. Setuptools takes care of ignoring the flag on Python 2 and PyPy.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128122"
+    },
+    {
+      "name": "cpp_stl_knowledge_ingestion_tool",
+      "display_name": "Cpp Stl Knowledge Ingestion Tool",
+      "description": "AIOS C++ STL Knowledge Ingestion Engine MARKER 1: EXTRACTION - Convert STL into machine-readable knowledge base MARKER 2: REPRESENTATION - Encode into AIOS fractal knowledge cells",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128127"
+    },
+    {
+      "name": "conversation_processor_tool",
+      "display_name": "Conversation Processor Tool",
+      "description": "AIOS Conversation Processor Tool Enhanced conversation archiving and analysis tool based on chatgpt_integration Provides multi-format conversation processing, archiving, and iteration management",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis",
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128132"
+    },
+    {
+      "name": "library_ingestion_bridge_tool",
+      "display_name": "Library Ingestion Bridge Tool",
+      "description": "🔗 AIOS Library Ingestion Bridge Tool Interface Bridge tool exposing Library Ingestion Protocol functionality via HTTP API. Provides endpoints for library learning, progress tracking,",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128138"
+    },
+    {
+      "name": "start_server",
+      "display_name": "Start Server",
+      "description": "AIOS Server Startup Script Simplified startup for the AIOS VSCode Integration Server",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128142"
+    },
+    {
+      "name": "cell_alpha_http_server",
+      "display_name": "Cell Alpha Http Server",
+      "description": "AIOS CELL ALPHA - HTTP COMMUNICATION SERVER ========================================== Pure HTTP protocol for inter-cell communication with Father AIOS System.",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128147"
+    },
+    {
+      "name": "enhanced_cell_alpha_http_server",
+      "display_name": "Enhanced Cell Alpha Http Server",
+      "description": "",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128150"
+    },
+    {
+      "name": "cell_alpha_comm_server",
+      "display_name": "Cell Alpha Comm Server",
+      "description": "AIOS CELL ALPHA - HTTP COMMUNICATION SERVER =========================================== Standard AIOS Cell Communication Server Architecture",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128154"
+    },
+    {
+      "name": "cell_alpha_enhanced_dendritic_server",
+      "display_name": "Cell Alpha Enhanced Dendritic Server",
+      "description": "AIOS Cell Alpha Enhanced Dendritic Communication Server Advanced evolutionary communication with quantum resonance patterns",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128159"
+    },
+    {
+      "name": "vscode_ai_bridge_server",
+      "display_name": "Vscode Ai Bridge Server",
+      "description": "VSCode AI Bridge HTTP API Server Exposes AI semantic interpretation as HTTP endpoints for VSCode integration ENDPOINTS:",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128163"
+    },
+    {
+      "name": "artifact_mcp_server",
+      "display_name": "Artifact Mcp Server",
+      "description": "AIOS Artifact Factory MCP Server Provides artifact creation and management tools",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128167"
+    },
+    {
+      "name": "agentic_mcp_server",
+      "display_name": "Agentic Mcp Server",
+      "description": "AIOS Agentic MCP Server Provides agentic behavior orchestration and monitoring tools",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128171"
+    },
+    {
+      "name": "ingestor_mcp_server",
+      "display_name": "Ingestor Mcp Server",
+      "description": "AIOS Evolution Ingestor MCP Server Provides evolutionary experiment tools",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128175"
+    },
+    {
+      "name": "consciousness_mcp_server",
+      "display_name": "Consciousness Mcp Server",
+      "description": "AIOS Consciousness MCP Server Provides consciousness analysis and emergence detection tools using Gemini CLI integration",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "data_analysis",
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "csv",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128179"
+    },
+    {
+      "name": "evolution_mcp_server",
+      "display_name": "Evolution Mcp Server",
+      "description": "AIOS Evolution MCP Server Provides consciousness evolution experiment management tools",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128183"
+    },
+    {
+      "name": "mcp_server",
+      "display_name": "Mcp Server",
+      "description": "",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128187"
+    },
+    {
+      "name": "pippo_server",
+      "display_name": "Pippo Server",
+      "description": "",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128190"
+    },
+    {
+      "name": "_webhooks_server",
+      "display_name": " Webhooks Server",
+      "description": "Contains `WebhooksServer` and `webhook_endpoint` to create a webhook server easily.\"\"\" import atexit import inspect",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128194"
+    },
+    {
+      "name": "socket_server",
+      "display_name": "Socket Server",
+      "description": "A sample socket server and client using SSPI authentication and encryption. You must run with either 'client' or 'server' as arguments.  A server must be running before a client can connect.",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128198"
+    },
+    {
+      "name": "etcd_server",
+      "display_name": "Etcd Server",
+      "description": "Find a free port and binds a temporary socket to it so that the port can be \"reserved\" until used. .. note:: the returned socket must be closed before using the port, otherwise a ``address already in use`` error will happen.",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128203"
+    },
+    {
+      "name": "health_check_server",
+      "display_name": "Health Check Server",
+      "description": "Interface for health check monitoring server, which can be extended by starting tcp/http server on the specified port. Args:",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128207"
+    },
+    {
+      "name": "web_server",
+      "display_name": "Web Server",
+      "description": "Low level HTTP server.\"\"\" import asyncio from typing import Any, Awaitable, Callable, Dict, List, Optional  # noqa",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128212"
+    },
+    {
+      "name": "dmypy_server",
+      "display_name": "Dmypy Server",
+      "description": "Server for mypy daemon mode. This implements a daemon process which keeps useful state in memory to enable fine-grained incremental reprocessing of changes.",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128216"
+    },
+    {
+      "name": "aios_vscode_integration_server",
+      "display_name": "Aios Vscode Integration Server",
+      "description": "AIOS VSCode Extension Integration Server (modular entrypoint) This file is now a stub. All logic has been refactored into the aios_vscode_integration package. To run the server, use the app",
+      "category": "service",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "background_processing",
+        "api_endpoints"
+      ],
+      "parameters": [
+        {
+          "name": "config",
+          "type": "object",
+          "required": false,
+          "description": "Configuration parameters",
+          "example": {}
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128221"
+    },
+    {
+      "name": "module_discoverer",
+      "display_name": "Module Discoverer",
+      "description": "AIOS Module Discoverer - AINLP Dendritic Intelligence Cell Observes, archives, analyzes, merges, cleans, and verifies AIOS modules. Part of the AINLP.dendritic pattern: intelligent module coherence and",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128226"
+    },
+    {
+      "name": "common_patterns",
+      "display_name": "Common Patterns",
+      "description": "CORE ENGINE COMMON PATTERNS MODULE Standardized patterns for Core Engine components to eliminate duplicate functions PURPOSE:",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128230"
+    },
+    {
+      "name": "ai_agent_dendritic_similarity",
+      "display_name": "Ai Agent Dendritic Similarity",
+      "description": "AINLP Dendritic Discovery - AI Agent Enhanced Similarity ========================================================= Replaces keyword-based similarity with AI agent semantic understanding",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128234"
+    },
+    {
+      "name": "shared_imports",
+      "display_name": "Shared Imports",
+      "description": "CORE ENGINE SHARED IMPORTS MODULE Centralized import management for Core Engine components PURPOSE:",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128238"
+    },
+    {
+      "name": "consciousness_metrics_exporter",
+      "display_name": "Consciousness Metrics Exporter",
+      "description": "AIOS Consciousness Metrics Exporter for Prometheus Exposes AIOS consciousness metrics in Prometheus format for observability integration. Provides real-time consciousness level, adaptation speed, predictive accuracy, and coherence.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128243"
+    },
+    {
+      "name": "test_antiproliferation_demo",
+      "display_name": "Test Antiproliferation Demo",
+      "description": "AINLP Dendritic Discovery Anti-Proliferation Demo ================================================= Demonstrates the anti-proliferation system preventing duplicate file creation.",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128247"
+    },
+    {
+      "name": "ainlp_dendritic_discovery",
+      "display_name": "Ainlp Dendritic Discovery",
+      "description": "AINLP Dendritic Discovery Engine ================================= Core Purpose: Map existing architecture to prevent file proliferation and",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128251"
+    },
+    {
+      "name": "aios_interface_optimization_demo",
+      "display_name": "Aios Interface Optimization Demo",
+      "description": "AIOS INTERFACE EXECUTION TIME OPTIMIZATION DEMONSTRATION AINLP.meta [interface_execution_demo] [performance_validation] [consciousness_acceleration] (comment.AINLP.interface_optimization_demonstration)",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128256"
+    },
+    {
+      "name": "three_supercell_interface_optimization",
+      "display_name": "Three Supercell Interface Optimization",
+      "description": "",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128259"
+    },
+    {
+      "name": "three_supercell_synchronized_demo",
+      "display_name": "Three Supercell Synchronized Demo",
+      "description": "Demonstrate live interface operations with three",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128263"
+    },
+    {
+      "name": "three_supercell_coordination_completion_report",
+      "display_name": "Three Supercell Coordination Completion Report",
+      "description": "THREE SUPERCELL SYNCHRONIZED INTERFACE OPTIMIZATION COMPLETION REPORT AINLP.meta [three_supercell_completion] [synchronized_transcendence] [interface_evolution] (comment.AINLP.three_supercell_coordination_success_report)",
+      "category": "tool",
+      "version": "1.0.0",
+      "status": "available",
+      "capabilities": [
+        "analysis",
+        "automation"
+      ],
+      "parameters": [
+        {
+          "name": "operation",
+          "type": "string",
+          "required": true,
+          "description": "Operation to perform",
+          "example": "extract_knowledge"
+        }
+      ],
+      "output_formats": [
+        "html",
+        "markdown",
+        "json"
+      ],
+      "execution_time_estimate": "medium",
+      "resource_requirements": {
+        "memory": "low",
+        "cpu": "medium",
+        "disk": "low",
+        "network": "none"
+      },
+      "metadata_generated": "2025-11-30T16:16:43.128268"
+    }
+  ],
+  "server_status": "running",
+  "api_endpoints": {
+    "health": "/health",
+    "tools": "/tools",
+    "discovery": "/tools/{tool_name}",
+    "execute": "/tools/{tool_name}/execute",
+    "categories": "/categories",
+    "refresh": "/discovery/refresh"
+  }
+}

@@ -76,8 +76,8 @@
         "ai/tools/aios_holographic_metadata_system.py"
       ],
       "runtimeIntelligence": [
-        "runtime_intelligence/tools/architectural_compliance_validator.py",
-        "runtime_intelligence/tools/biological_architecture_monitor.py"
+        "runtime/tools/architectural_compliance_validator.py",
+        "runtime/tools/biological_architecture_monitor.py"
       ],
       "gitHooks": [
         ".githooks/modules/nucleus/ai_guided_refactoring_engine.ps1",
@@ -91,12 +91,12 @@
         "frequency": "on_demand"
       },
       "validation": {
-        "command": "python runtime_intelligence/tools/architectural_compliance_validator.py [operation] [target]",
+        "command": "python runtime/tools/architectural_compliance_validator.py [operation] [target]",
         "purpose": "Validate architectural compliance",
         "frequency": "pre_commit"
       },
       "healthCheck": {
-        "command": "python runtime_intelligence/tools/biological_architecture_monitor.py",
+        "command": "python runtime/tools/biological_architecture_monitor.py",
         "purpose": "Monitor biological architecture health",
         "frequency": "daily"
       },

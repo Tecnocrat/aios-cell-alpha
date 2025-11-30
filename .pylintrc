@@ -7,7 +7,7 @@
 [MASTER]
 # 🧬 NUCLEUS - Core AI Intelligence Configuration
 # High consciousness complexity - AI processing and consciousness management
-ignore=__pycache__,node_modules,build,dist,.venv,.git,vscode-extension,ai/__pycache__,runtime_intelligence/logs
+ignore=__pycache__,node_modules,build,dist,.venv,.git,vscode-extension,ai/__pycache__,runtime/logs
 jobs=2
 persistent=yes
 load-plugins=pylint.extensions.docparams,pylint.extensions.mccabe,pylint.extensions.redefined_variable_type
@@ -140,7 +140,7 @@ max-recursion-depth=6  # Slightly increased for AI processing depth
 # Inter-supercell communication and dependency management
 known-standard-library=asyncio,logging,os,subprocess,sys,traceback,datetime,psutil,fastapi,concurrent,threading,typing,pathlib,json,collections,itertools,functools,operator,re,math,random,statistics
 known-third-party=pytest,uvicorn,pybind11,torch,transformers,openai,fastapi,uvicorn,httpx,aiofiles,websockets,rich,click,pydantic,dataclasses,typing_extensions
-known-local-folder=ai,core,interface,runtime_intelligence,tachyonic,docs,scripts,config,tools,languages,consciousness,dendritic,supercell,ainlp,kernel,engine,integration,utilities,src
+known-local-folder=ai,core,interface,runtime,tachyonic,docs,scripts,config,tools,languages,consciousness,dendritic,supercell,ainlp,kernel,engine,integration,utilities,src
 
 [EXTERNAL]
 # 🌐 EXTERNAL INTERFACES - Third-party Integration

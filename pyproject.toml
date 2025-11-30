@@ -182,7 +182,7 @@ extend-exclude = '''
   | dist
   | __pycache__
   | ai/__pycache__
-  | runtime_intelligence/logs
+  | runtime/logs
 )/
 '''
 
@@ -202,7 +202,7 @@ exclude = [
     "build",
     "dist",
     "ai/__pycache__",
-    "runtime_intelligence/logs",
+    "runtime/logs",
     ".venv",
     ".tox"
 ]
@@ -220,7 +220,7 @@ no_implicit_optional = true
 # Biological architecture type exclusions
 exclude = [
     "ai/__pycache__",
-    "runtime_intelligence/logs",
+    "runtime/logs",
     "tachyonic/archive",
     "build",
     "dist"
@@ -255,7 +255,7 @@ sections = [
     "FIRSTPARTY",
     "LOCALFOLDER"
 ]
-known_first_party = ["ai", "core", "interface", "runtime_intelligence", "tachyonic"]
+known_first_party = ["ai", "core", "interface", "runtime", "tachyonic"]
 
 # ============================================================================
 # 🧬 BIOLOGICAL ARCHITECTURE INTEGRATION COMPLETE

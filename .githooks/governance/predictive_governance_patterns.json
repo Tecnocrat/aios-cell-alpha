@@ -71,7 +71,7 @@
             },
             "functional_duplication": {
               "detected": 1652,
-              "critical_duplicates": ["runtime_intelligence", "tachyonic", "core", "docs"],
+              "critical_duplicates": ["runtime", "tachyonic", "core", "docs"],
               "consolidation_method": "dendritic_self_organization",
               "threshold": 0.7
             }

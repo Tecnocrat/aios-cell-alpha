@@ -6,10 +6,10 @@ Analyzes Python files for common performance anti-patterns
 AINLP Integration Metadata:
     Pattern: AINLP.performance-optimization.static-analysis-tool
     Source: GitHub Copilot agent (copilot/identify-improve-slow-code)
-    Integration: Phase 2 - Tool relocation from scripts/ to runtime_intelligence/tools/
+    Integration: Phase 2 - Tool relocation from scripts/ to runtime/tools/
     Purpose: AST-based performance anti-pattern detection
     Original: scripts/performance_analyzer.py (367 lines)
-    AIOS Location: runtime_intelligence/tools/ (correct architectural placement)
+    AIOS Location: runtime/tools/ (correct architectural placement)
     
     Capabilities:
         - String split redundancy detection (O(n) operations)
@@ -23,9 +23,9 @@ AINLP Integration Metadata:
     Integration Date: November 8, 2025 (Phase 2 selective merge)
 
 Usage:
-    python runtime_intelligence/tools/performance_analyzer.py [path]
-    python runtime_intelligence/tools/performance_analyzer.py --all  # Analyze all Python files
-    python runtime_intelligence/tools/performance_analyzer.py --report # Generate full report
+    python runtime/tools/performance_analyzer.py [path]
+    python runtime/tools/performance_analyzer.py --all  # Analyze all Python files
+    python runtime/tools/performance_analyzer.py --report # Generate full report
 """
 
 import ast

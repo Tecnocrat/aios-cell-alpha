@@ -22,14 +22,14 @@ jobs:
       - name: Generate file scores
         shell: pwsh
         run: |
-          python runtime_intelligence/tools/generate_file_scores.py
+          python runtime/tools/generate_file_scores.py
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: file-criticality
           path: |
             governance/file_criticality_index.jsonl
-            runtime_intelligence/logs/file_scores/latest.json
+            runtime/logs/file_scores/latest.json
           if-no-files-found: error
       - name: PR File Criticality Comment
         if: github.event_name == 'pull_request'
@@ -61,7 +61,7 @@ jobs:
               const cp = require('child_process');
               // Stash current working tree state inside temp dir (checkout is detached in action)
               cp.execSync(`git checkout --quiet ${commit}`);
-              try { cp.execSync('python runtime_intelligence/tools/generate_file_scores.py',{stdio:'ignore'}); } catch {}
+              try { cp.execSync('python runtime/tools/generate_file_scores.py',{stdio:'ignore'}); } catch {}
               const idx = loadIndex();
               // Return to PR head
               return idx;
@@ -89,7 +89,7 @@ jobs:
             } finally {
               // Restore head
               try { cp.execSync(`git checkout --quiet ${headSha}`); } catch {}
-              try { cp.execSync('python runtime_intelligence/tools/generate_file_scores.py',{stdio:'ignore'}); } catch {}
+              try { cp.execSync('python runtime/tools/generate_file_scores.py',{stdio:'ignore'}); } catch {}
             }
             const baseMap = buildMap(baseIndex);
             const top = topChanged(changed, indexMap);

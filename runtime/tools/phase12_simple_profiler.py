@@ -29,7 +29,7 @@ class SimpleProfiler:
         
         # Tool directories
         self.tool_dirs = [
-            self.workspace_root / "runtime_intelligence" / "tools",
+            self.workspace_root / "runtime" / "tools",
             self.workspace_root / "ai" / "tools",
             self.workspace_root / "ai" / "tools" / "system",
             self.workspace_root / "ai" / "tools" / "consciousness",

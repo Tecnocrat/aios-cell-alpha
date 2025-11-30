@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed - 2025-11-30 (namespace migration)
+- **`runtime_intelligence` → `runtime` namespace migration**: Deprecated antipattern removed
+  - Deleted `/workspace/runtime_intelligence/` directory
+  - Migrated tools to `runtime/tools/` (cache_manager.py, phase12_*.py, performance_analyzer.py)
+  - Updated 25+ config files: workflows, tasks.json, .pylintrc, pyproject.toml, .gitignore
+  - Fixed GitHub Actions workflow `context-index-freshness.yml` path references
+  - `runtime` is now the canonical AIOS supercell namespace
+
+### Added - 2025-11-30 (context reindex)
+- **`scripts/context_reindex.py`**: Context index generator for CI/CD
+  - Parses PROJECT_CONTEXT.md into structured capsules
+  - Generates `runtime/context/context_index.json` with content hashes
+  - Supports `--emit-adjacency` for dendritic graph generation
+  - Multi-path fallback: AIOS_PROJECT_CONTEXT.md, PROJECT_CONTEXT.md, docs/AIOS_PROJECT_CONTEXT.md
+
 ### Fixed - 2025-11-30 (continued)
 - **Git hooks CRLF**: Fixed line endings in pre-commit, commit-msg, pre-push for Linux execution
 

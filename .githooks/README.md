@@ -76,7 +76,7 @@ pwsh .githooks/aios_hooks_optimized.ps1 "pre-commit"pwsh .githooks/aios_hooks_op
 
 ### [LOCK] Governance Enforcement```
 
-- **Changelog Requirements**: Auto-detects changes in governed paths (`ai/`, `core/`, `interface/`, `runtime_intelligence/`) and requires changelog updates
+- **Changelog Requirements**: Auto-detects changes in governed paths (`ai/`, `core/`, `interface/`, `runtime/`) and requires changelog updates
 
 - **File Safety**: Prevents tracking of runtime files (`.log`, `.jsonl`, `runtime/`, `/logs/`) ### Component Structure
 
@@ -124,7 +124,7 @@ pwsh .githooks/aios_hooks_optimized.ps1 "pre-commit"pwsh .githooks/aios_hooks_op
 
 [Error] CHANGELOG REQUIRED: Changes detected in governed paths- `ai_integration_bridge.ps1` - AI service bridges
 
-[Error] Unsafe files detected: runtime_intelligence/logs/temp.log- `external_tools.ps1` - External tool integrations
+[Error] Unsafe files detected: runtime/logs/temp.log- `external_tools.ps1` - External tool integrations
 
 - `aios_ainlp_integration.ps1` - AINLP pattern integration
 
@@ -178,7 +178,7 @@ Edit `config.json` to customize behavior:
 
     "file_safety_checks": true,- `enhanced_quality_integration.py` - [COMPLETE] Quality analysis with supercell communication
 
-    "governed_paths": ["ai/", "core/", "interface/", "runtime_intelligence/"]- Experimental features and demos
+    "governed_paths": ["ai/", "core/", "interface/", "runtime/"]- Experimental features and demos
 
   },
 

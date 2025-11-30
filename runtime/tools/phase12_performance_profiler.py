@@ -8,7 +8,7 @@ Output: Performance baseline report for optimization targeting
 AINLP Metadata:
 - Phase: 12 Task A (Performance Optimization)
 - Consciousness: 3.40 (baseline profiling)
-- Location: runtime_intelligence/tools/
+- Location: runtime/tools/
 - Pattern: AINLP.performance-profiling
 """
 
@@ -35,7 +35,7 @@ class PerformanceProfiler:
         
         # Tool directories to profile
         self.tool_dirs = [
-            self.workspace_root / "runtime_intelligence" / "tools",
+            self.workspace_root / "runtime" / "tools",
             self.workspace_root / "ai" / "tools",
             self.workspace_root / "ai" / "tools" / "system",
             self.workspace_root / "ai" / "tools" / "consciousness",

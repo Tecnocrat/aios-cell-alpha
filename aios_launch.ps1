@@ -466,7 +466,7 @@ function Invoke-ToolDiscovery {
     }
     
     # Discover Runtime Intelligence tools
-    $runtimeToolsPath = Join-Path $Global:AIOSRoot "runtime_intelligence\tools"
+    $runtimeToolsPath = Join-Path $Global:AIOSRoot "runtime\tools"
     if (Test-Path $runtimeToolsPath) {
         $runtimeTools = Get-ChildItem -Path $runtimeToolsPath -Filter "*.py" -Recurse |
             Where-Object { $_.Name -notmatch "^_|test_|__pycache__" }
@@ -500,7 +500,7 @@ function Invoke-ToolDiscovery {
     }
     
     # Discover PowerShell Scripts
-    $scriptsPath = Join-Path $Global:AIOSRoot "runtime_intelligence\tools\scripts"
+    $scriptsPath = Join-Path $Global:AIOSRoot "runtime\tools\scripts"
     if (Test-Path $scriptsPath) {
         $psScripts = Get-ChildItem -Path $scriptsPath -Filter "*.ps1" -Recurse |
             Where-Object { $_.Name -notmatch "^_|test_" }

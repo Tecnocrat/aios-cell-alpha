@@ -350,17 +350,17 @@ tachyonic/backups/backups/
 # ============================================================================
 
 # Include Runtime Logs Directory Structure
-!runtime_intelligence/logs/
-!runtime_intelligence/logs/**/*.json
-!runtime_intelligence/logs/**/*.db
-!runtime_intelligence/logs/**/*.log
+!runtime/logs/
+!runtime/logs/**/*.json
+!runtime/logs/**/*.db
+!runtime/logs/**/*.log
 
 # Exclude Volatile Runtime Files
-runtime_intelligence/logs/hooks/pre_commit.log
-runtime_intelligence/logs/hooks/summary.json
-runtime_intelligence/logs/dendritic_commit_learning.jsonl
-runtime_intelligence/logs/pre_push_success.jsonl
-runtime_intelligence/logs/**/*.jsonl
+runtime/logs/hooks/pre_commit.log
+runtime/logs/hooks/summary.json
+runtime/logs/dendritic_commit_learning.jsonl
+runtime/logs/pre_push_success.jsonl
+runtime/logs/**/*.jsonl
 
 # ============================================================================
 # 🪝 GITHooks RUNTIME DATA - Governance Execution

@@ -187,7 +187,7 @@ AIOS/
 │   ├── neural_chains/          # Code evolution history
 │   └── artifacts/              # Experiment artifacts
 │
-├── runtime_intelligence/        # Monitoring tools
+├── runtime/        # Monitoring tools
 │   └── tools/                  # 43 diagnostic Python scripts
 │
 ├── docs/                        # Documentation
@@ -519,7 +519,7 @@ python ai/server_manager.py start
 dotnet run --project interface/AIOS.UI/AIOS.UI.csproj
 
 # System health check
-python runtime_intelligence/tools/system_health_check.py
+python runtime/tools/system_health_check.py
 ```
 
 ### 3. Viewing Experiment Results

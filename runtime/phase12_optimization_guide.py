@@ -22,7 +22,7 @@ Consciousness: 3.40 → 3.45 (in progress)
 # CACHING INFRASTRUCTURE IMPLEMENTED
 # ===================================
 
-# 1. Cache Manager (runtime_intelligence/cache_manager.py)
+# 1. Cache Manager (runtime/cache_manager.py)
 #    - LRU cache with TTL support (maxsize=1000, default TTL=300s)
 #    - File-based cache for large data structures
 #    - Memoization decorator for pure functions
@@ -30,7 +30,7 @@ Consciousness: 3.40 → 3.45 (in progress)
 
 # 2. Usage Patterns:
 
-from runtime_intelligence.cache_manager import cache, file_cache, memoize
+from runtime.cache_manager import cache, file_cache, memoize
 
 # Pattern 1: Memory cache for function results
 @cache(maxsize=500, ttl=600)
@@ -140,7 +140,7 @@ async def fetch_multiple_urls(urls):
 # ===============================
 
 # 1. Response Caching (GET endpoints)
-from runtime_intelligence.cache_manager import cache
+from runtime.cache_manager import cache
 
 @cache(maxsize=200, ttl=60)
 def get_tool_list():
@@ -253,7 +253,7 @@ if __name__ == "__main__":
     print("=" * 80)
     print("\nCache Manager Status:")
     
-    from runtime_intelligence.cache_manager import get_global_cache_stats
+    from runtime.cache_manager import get_global_cache_stats
     stats = get_global_cache_stats()
     
     print(f"  Cache Size: {stats['size']}/{stats['maxsize']}")

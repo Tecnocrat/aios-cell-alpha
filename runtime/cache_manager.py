@@ -6,7 +6,7 @@ Scope: In-memory caching with TTL, file caching, memoization decorators
 Pattern: AINLP.performance-caching
 
 Usage:
-    from runtime_intelligence.cache_manager import cache, file_cache
+    from runtime.cache_manager import cache, file_cache
     
     @cache(maxsize=1000, ttl=300)
     def expensive_operation(param):

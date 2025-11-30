@@ -101,7 +101,7 @@ jobs:
       - name: Hook summary (if present)
         shell: pwsh
         run: |
-          if(Test-Path runtime_intelligence/logs/hooks/summary.json){ Copy-Item runtime_intelligence/logs/hooks/summary.json hook_summary.json }
+          if(Test-Path runtime/logs/hooks/summary.json){ Copy-Item runtime/logs/hooks/summary.json hook_summary.json }
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:

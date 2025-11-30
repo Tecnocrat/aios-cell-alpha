@@ -302,7 +302,7 @@ NUCLEUS: AI intelligence core (ai/nucleus/)
 CYTOPLASM: Communication + intelligence (ai/cytoplasm/ - enhanced)
 EVOLUTION LAB: Population management (evolution_lab/)
 TACHYONIC ARCHIVE: Knowledge crystals (tachyonic/archive/)
-RUNTIME INTELLIGENCE: System monitoring (runtime_intelligence/)
+RUNTIME INTELLIGENCE: System monitoring (runtime/)
 
 ---
 

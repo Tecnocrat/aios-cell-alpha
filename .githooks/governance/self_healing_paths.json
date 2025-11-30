@@ -6,23 +6,23 @@
     "scan_frequency": "pre_commit",
     "auto_repair": true,
     "path_mappings": {
-      "runtime/runtime_intelligence/": "runtime_intelligence/",
-      "runtime_intelligence/tools/": "ai/tools/system/",
+      "runtime/runtime/": "runtime/",
+      "runtime/tools/": "ai/tools/system/",
       "docs/governance/": ".githooks/governance/"
     },
     "broken_paths_detected": [
       {
-        "original_path": "runtime/runtime_intelligence/logs/hooks/summary.json",
+        "original_path": "runtime/runtime/logs/hooks/summary.json",
         "status": "broken",
-        "suggested_replacement": "runtime_intelligence/logs/hooks/summary.json",
+        "suggested_replacement": "runtime/logs/hooks/summary.json",
         "confidence": 0.95,
         "auto_fix_applied": false,
         "last_detected": "2025-10-25T12:00:00.000000"
       },
       {
-        "original_path": "runtime/runtime_intelligence/logs/hooks/cache",
+        "original_path": "runtime/runtime/logs/hooks/cache",
         "status": "broken",
-        "suggested_replacement": "runtime_intelligence/logs/hooks/cache",
+        "suggested_replacement": "runtime/logs/hooks/cache",
         "confidence": 0.95,
         "auto_fix_applied": false,
         "last_detected": "2025-10-25T12:00:00.000000"
@@ -30,15 +30,15 @@
     ],
     "healing_rules": {
       "duplicate_runtime_prefix": {
-        "pattern": "runtime/runtime_intelligence/",
-        "replacement": "runtime_intelligence/",
+        "pattern": "runtime/runtime/",
+        "replacement": "runtime/",
         "description": "Remove duplicate 'runtime/' prefix",
         "confidence": 0.95
       },
       "tools_path_migration": {
-        "pattern": "runtime_intelligence/tools/",
+        "pattern": "runtime/tools/",
         "replacement": "ai/tools/system/",
-        "description": "Migrate tools from runtime_intelligence to ai/tools/system",
+        "description": "Migrate tools from runtime to ai/tools/system",
         "confidence": 0.90
       },
       "governance_relocation": {
@@ -52,7 +52,7 @@
       "ai_intelligence_layer": "ai/",
       "core_engine": "core/",
       "interface_layer": "interface/",
-      "runtime_intelligence": "runtime_intelligence/",
+      "runtime": "runtime/",
       "documentation": "docs/",
       "governance": ".githooks/governance/",
       "tachyonic_archive": "tachyonic/archive/"
@@ -67,8 +67,8 @@
         "enabled": true,
         "method": "regex_pattern_match",
         "rules": [
-          "^runtime/runtime_intelligence/.*$",
-          "^runtime_intelligence/tools/.*$",
+          "^runtime/runtime/.*$",
+          "^runtime/tools/.*$",
           "^docs/governance/.*$"
         ]
       },

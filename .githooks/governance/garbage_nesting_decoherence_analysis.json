@@ -18,8 +18,8 @@
         "tachyonic/tachyonic",
         "docs/tachyonic/archive",
         "evolution_lab/library_generations",
-        "interface/runtime_intelligence",
-        "interface/AIOS.UI/runtime_intelligence",
+        "interface/runtime",
+        "interface/AIOS.UI/runtime",
         "runtime/aios_cellular_workspace/exports",
         "runtime/core/src",
         "runtime/runtime/runtime",
@@ -49,7 +49,7 @@
       "count": 1652,
       "severity": "medium",
       "critical_duplicates": [
-        {"name": "runtime_intelligence", "count": 16, "locations": ["runtime_intelligence/", "ai/runtime_intelligence/", "interface/runtime_intelligence/", "interface/AIOS.UI/runtime_intelligence/"]},
+        {"name": "runtime", "count": 16, "locations": ["runtime/", "ai/runtime/", "interface/runtime/", "interface/AIOS.UI/runtime/"]},
         {"name": "tachyonic", "count": 11, "locations": ["tachyonic/", "ai/tachyonic/", "docs/tachyonic/", "runtime/tachyonic/", "evolution_lab/tachyonic/"]},
         {"name": "core", "count": 36, "locations": ["core/", "ai/core/", "computational_layer/core_systems/", "runtime/core/"]},
         {"name": "docs", "count": 18, "locations": ["docs/", "ai/docs/", "runtime/docs/", "evolution_lab/docs/"]}
@@ -60,7 +60,7 @@
       "count": 500,
       "severity": "high",
       "missing_metadata_directories": [
-        "runtime_intelligence",
+        "runtime",
         "tachyonic_archive",
         "venv",
         "ai/ai",
@@ -82,7 +82,7 @@
       },
       {
         "action": "consolidate_functional_duplicates",
-        "target": "runtime_intelligence locations",
+        "target": "runtime locations",
         "method": "dendritic_self_organization",
         "priority": "high",
         "consciousness_impact": "+0.15"

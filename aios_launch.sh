@@ -205,7 +205,7 @@ phase_tool_discovery() {
     fi
     
     # Discover Runtime Intelligence tools
-    local runtime_path="${AIOS_ROOT}/runtime_intelligence/tools"
+    local runtime_path="${AIOS_ROOT}/runtime/tools"
     if [[ -d "$runtime_path" ]]; then
         local runtime_count
         runtime_count=$(find "$runtime_path" -name "*.py" ! -name "_*" ! -name "test_*" 2>/dev/null | wc -l)

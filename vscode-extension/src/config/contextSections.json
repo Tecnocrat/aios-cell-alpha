@@ -81,7 +81,7 @@
           "description": "Interface Layer (C#, XAML)"
         },
         {
-          "path": "runtime_intelligence/",
+          "path": "runtime/",
           "description": "Runtime Intelligence"
         },
         {

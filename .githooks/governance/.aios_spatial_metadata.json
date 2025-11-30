@@ -148,7 +148,7 @@
       ".githooks/commit-msg",
       ".githooks/pre-push",
       "ai/tools/ainlp_documentation_governance.py",
-      "runtime/runtime_intelligence/"
+      "runtime/runtime/"
     ],
     "autonomy_level": "semi_autonomous",
     "self_assessment": {
@@ -202,7 +202,7 @@
     "related_folders": [
       ".githooks/",
       "ai/tools/",
-      "runtime/runtime_intelligence/",
+      "runtime/runtime/",
       "docs/governance/"
     ]
   }

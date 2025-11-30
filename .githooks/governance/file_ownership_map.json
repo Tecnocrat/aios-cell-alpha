@@ -54,7 +54,7 @@
   "interface/AIOS.UI/": "team_interface_ui",
   "core/src/": "team_core_engine",
   "core/": "team_core_misc",
-  "runtime/runtime_intelligence/": "team_runtime_intelligence",
+  "runtime/runtime/": "team_runtime",
   "runtime/tools/": "team_runtime_tools",
   "runtime/": "team_runtime_general",
   "docs/": "team_documentation",

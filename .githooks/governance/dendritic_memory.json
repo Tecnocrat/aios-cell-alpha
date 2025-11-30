@@ -125,7 +125,7 @@
       "data_flow": "write_only",
       "update_frequency": "per_commit"
     },
-    "runtime_intelligence": {
+    "runtime": {
       "connection_type": "api",
       "data_flow": "bidirectional",
       "update_frequency": "hourly"

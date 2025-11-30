@@ -17,7 +17,7 @@
       "core_neuron": "AIOS Biological Architecture",
       "sibling_dendrites": [
         "ai/tools/ainlp_documentation_governance.py",
-        "runtime/runtime_intelligence/",
+        "runtime/runtime/",
         "docs/governance/"
       ],
       "communication_protocols": [
@@ -84,7 +84,7 @@
     "core_neuron": "connected",
     "sibling_dendrites": {
       "ainlp_documentation_governance": "connected",
-      "runtime_intelligence": "connected",
+      "runtime": "connected",
       "docs_governance": "weak_connection"
     },
     "communication_health": "good",
