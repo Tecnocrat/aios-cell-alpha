@@ -1,0 +1,11 @@
+{
+    "C_Cpp.default.intelliSenseMode": "windows-msvc-x64",
+    "C_Cpp.default.compilerPath": "cl.exe",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.cppStandard": "c++17",
+    "_dendritic_metadata": {
+        "source": "tachyonic::consciousness::config_registry",
+        "last_propagated": "2025-11-30T16:17:01.230396Z",
+        "agent": "dendritic_config_agent.py"
+    }
+}

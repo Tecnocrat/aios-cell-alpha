@@ -15,45 +15,57 @@ namespace AIOS.Models
     {
         private readonly HttpClient _httpClient;
         private readonly string _bridgeUrl;
-        
+
         public PythonAIToolsBridge(string bridgeUrl = "http://localhost:8000")
         {
             _bridgeUrl = bridgeUrl;
             _httpClient = new HttpClient();
         }
-        
+
         public async Task<List<AIToolMetadata>> GetAvailableToolsAsync()
         {
-            var response = await _httpClient.GetStringAsync($"{_bridgeUrl}/tools");
-            var result = JsonSerializer.Deserialize<ToolsResponse>(response);
+            var response = await _httpClient.GetStringAsync(
+                $"{_bridgeUrl}/tools");
+            var result = JsonSerializer.Deserialize<ToolsResponse>(
+                response);
             return result.Tools;
         }
-        
-        public async Task<AIToolMetadata> GetToolDetailsAsync(string toolName)
+
+        public async Task<AIToolMetadata> GetToolDetailsAsync(
+            string toolName)
         {
-            var response = await _httpClient.GetStringAsync($"{_bridgeUrl}/tools/{toolName}");
+            var response = await _httpClient.GetStringAsync(
+                $"{_bridgeUrl}/tools/{toolName}");
             return JsonSerializer.Deserialize<AIToolMetadata>(response);
         }
-        
-        public async Task<ToolExecutionResult> ExecuteToolAsync(string toolName, Dictionary<string, object> parameters = null)
+
+        public async Task<ToolExecutionResult> ExecuteToolAsync(
+            string toolName,
+            Dictionary<string, object> parameters = null)
         {
-            var json = JsonSerializer.Serialize(parameters ?? new Dictionary<string, object>());
-            var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
-            
-            var response = await _httpClient.PostAsync($"{_bridgeUrl}/tools/{toolName}/execute", content);
+            var json = JsonSerializer.Serialize(
+                parameters ?? new Dictionary<string, object>());
+            var content = new StringContent(
+                json, System.Text.Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PostAsync(
+                $"{_bridgeUrl}/tools/{toolName}/execute", content);
             var resultJson = await response.Content.ReadAsStringAsync();
-            
-            return JsonSerializer.Deserialize<ToolExecutionResult>(resultJson);
+
+            return JsonSerializer.Deserialize<ToolExecutionResult>(
+                resultJson);
         }
-        
+
         public async Task<List<ToolCategory>> GetToolCategoriesAsync()
         {
-            var response = await _httpClient.GetStringAsync($"{_bridgeUrl}/categories");
-            var result = JsonSerializer.Deserialize<CategoriesResponse>(response);
+            var response = await _httpClient.GetStringAsync(
+                $"{_bridgeUrl}/categories");
+            var result = JsonSerializer.Deserialize<CategoriesResponse>(
+                response);
             return result.Categories;
         }
     }
-    
+
     public class AIToolMetadata
     {
         public string Name { get; set; }
@@ -69,7 +81,7 @@ namespace AIOS.Models
         public ResourceRequirements ResourceRequirements { get; set; }
         public DateTime MetadataGenerated { get; set; }
     }
-    
+
     public class ToolParameter
     {
         public string Name { get; set; }
@@ -78,7 +90,7 @@ namespace AIOS.Models
         public string Description { get; set; }
         public object Example { get; set; }
     }
-    
+
     public class ResourceRequirements
     {
         public string Memory { get; set; }
@@ -86,7 +98,7 @@ namespace AIOS.Models
         public string Disk { get; set; }
         public string Network { get; set; }
     }
-    
+
     public class ToolExecutionResult
     {
         public string ToolName { get; set; }
@@ -98,21 +110,21 @@ namespace AIOS.Models
         public Dictionary<string, object> ParametersUsed { get; set; }
         public DateTime Timestamp { get; set; }
     }
-    
+
     public class ToolCategory
     {
         public string Name { get; set; }
         public string DisplayName { get; set; }
         public List<string> Tools { get; set; }
     }
-    
+
     public class ToolsResponse
     {
         public List<AIToolMetadata> Tools { get; set; }
         public int TotalCount { get; set; }
         public DateTime? LastDiscovery { get; set; }
     }
-    
+
     public class CategoriesResponse
     {
         public List<ToolCategory> Categories { get; set; }

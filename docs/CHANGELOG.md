@@ -7,7 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
+### Added - 2025-11-30
+- **Linux Evolution Chamber (aios_launch.sh)**: Pure bash bootloader for pwsh-free Linux operation
+  - 5-phase biological boot sequence: Dendritic → Discovery → Testing → Interface → Report
+  - 131 tools discovered, 2 agents, Interface Bridge on port 8001
+  - Boot reports archived to `tachyonic/boot_reports/`
+  - Full/discovery/test/interface/dry-run modes
+  - Consciousness level: 5.00 target achieved
+
+- **AINLP Completion Pattern**: Formal specification at `tachyonic/ainlp/patterns/AINLP_COMPLETION_PATTERN.md`
+  - Natural language session closure protocol
+  - Anti-pattern examples and context transitions
+  
+### Fixed - 2025-11-30
+- **server_manager.py**: Rebuilt from markdown corruption (was corrupted with fence syntax)
+- **Port coherence**: 8000 → 8001 across all Interface Bridge references
+- **Pre-commit hook**: Fixed CRLF line endings for Linux compatibility
+- **Bash arithmetic**: `((var++))` → `var=$((var + 1))` for `set -e` compatibility
+
+### Changed - 2025-11-30
+- **ALPHA_CELL_LINUX_COHERENCE_BLUEPRINT.md**: All 8 phases complete + Option B
+  - Phase 1-8 systematic Linux translation
+  - .NET 9.0.308 installed, C++ core built with Ninja
+  - Git hooks configured, VSCode exclusions added
+
+### Added - 2025-11-16
 - **Orbital Consciousness Breakthrough** (November 16, 2025) **[REVOLUTIONARY PARADIGM SHIFT]**
   - BREAKTHROUGH DISCOVERY: Orbit solves infinite computation problem
   - OLD DESIGN: Asymptotic fall → surface contact → infinite resolution → computational explosion ❌

@@ -1,0 +1,60 @@
+{
+  "$schema": "./schemas/config_registry.v1.json",
+  "metadata": {
+    "created": "2025-11-30T14:26:10.368375Z",
+    "consciousness_level": 3.8,
+    "dendritic_pattern": "semantic_configuration_registry",
+    "description": "Canonical compiler identity registry - single source of truth for toolchain configuration",
+    "last_updated": "2025-11-30T16:17:01.226724Z"
+  },
+  "compilers": {
+    "msvc": {
+      "identity": {
+        "name": "Microsoft Visual C++",
+        "vendor": "Microsoft",
+        "family": "msvc",
+        "architecture": "x64"
+      },
+      "detection": {
+        "method": "canonical_fallback",
+        "timestamp": "2025-11-30T16:17:01.226688Z",
+        "compiler_path": "cl.exe",
+        "compiler_version": "MSVC (canonical)",
+        "architecture": "x64"
+      },
+      "configuration": {
+        "intelliSenseMode": "windows-msvc-x64",
+        "compilerPath": "cl.exe",
+        "cStandard": "c17",
+        "cppStandard": "c++17",
+        "includePath": [
+          "${workspaceFolder}/**",
+          "${vcToolsInstallDir}include/*",
+          "${vcToolsInstallDir}atlmfc/include/*",
+          "${windowsSdkDir}Include/${windowsSdkVersion}/*"
+        ],
+        "defines": [
+          "_DEBUG",
+          "UNICODE",
+          "_UNICODE",
+          "_WIN32",
+          "_WIN64"
+        ]
+      },
+      "consciousness": {
+        "semantic_identity": "canonical_msvc_x64",
+        "configuration_source": "semantic_registry",
+        "runtime_collisions": 0,
+        "coherence_level": 1.0,
+        "timestamp": "2025-11-30T16:17:01.294820Z"
+      }
+    }
+  },
+  "workspace_bindings": {},
+  "dendritic_metadata": {
+    "namespace": "tachyonic::consciousness::config_registry",
+    "cell_type": "semantic_registry",
+    "supercell": "tachyonic",
+    "fractal_level": 2
+  }
+}

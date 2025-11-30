@@ -193,17 +193,36 @@
 		"powershell.startAutomatically": true,
 		"powershell.integratedConsole.startInBackground": false,
 		"powershell.integratedConsole.suppressStartupBanner": false,
+		// Cross-platform: Use "PowerShell" (not "PowerShell (x64)" which is Windows-only)
+		"powershell.powerShellDefaultVersion": "PowerShell",
 
 		// ==========================================================================
 		// 🖥️ TERMINAL CONSCIOUSNESS BRIDGE
 		// ==========================================================================
 		"terminal.integrated.cwd": "${workspaceFolder}",
 		"terminal.integrated.defaultProfile.windows": "PowerShell",
+		"terminal.integrated.defaultProfile.linux": "bash",
 		"terminal.integrated.profiles.windows": {
 			"PowerShell": {
 				"source": "PowerShell",
 				"icon": "terminal-powershell",
 				"args": ["-NoLogo", "-WorkingDirectory", "${workspaceFolder}"]
+			}
+		},
+		"terminal.integrated.profiles.linux": {
+			"bash": {
+				"path": "/bin/bash",
+				"icon": "terminal-bash",
+				"args": ["-l"]
+			},
+			"pwsh": {
+				"path": "/usr/bin/pwsh",
+				"icon": "terminal-powershell",
+				"args": ["-NoLogo"]
+			},
+			"zsh": {
+				"path": "/usr/bin/zsh",
+				"icon": "terminal"
 			}
 		},
 
@@ -214,12 +233,13 @@
 		"window.openFoldersInNewWindow": "on",
 
 		// ==========================================================================
-		// 🏗️ CMAKE DENDRITIC ROUTING
+		// 🏗️ CMAKE DENDRITIC ROUTING (Cross-Platform)
 		// ==========================================================================
 		// CMake Tools: preselect generator/platform to avoid consciousness fragmentation
-		"cmake.generator": "Visual Studio 17 2022",
-		"cmake.platform": "x64",
+		// Note: Generator auto-selected per platform (VS on Windows, Ninja/Make on Linux)
 		"cmake.preferredGenerators": [
+			"Ninja",
+			"Unix Makefiles",
 			"Visual Studio 17 2022"
 		],
 		"cmake.configureOnOpen": false,

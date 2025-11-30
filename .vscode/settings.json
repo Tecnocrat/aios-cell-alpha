@@ -57,6 +57,15 @@
     // Additional C/C++ performance settings
     "C_Cpp.intelliSenseCacheSize": "small",
     "C_Cpp.intelliSenseMemoryLimit": 1024,
+    // Linux-specific exclusions for build artifacts
+    "search.exclude": {
+        "**/*.o": true,
+        "**/*.so": true,
+        "**/*.so.*": true,
+        "**/CMakeCache.txt": true,
+        "**/CMakeFiles/**": true,
+        "**/.cmake/**": true
+    },
     // Git configuration for correct author attribution
     "git.user.name": "Tecnocrat",
     "git.user.email": "jesussard@gmail.com"

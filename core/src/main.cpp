@@ -1,5 +1,7 @@
 // Minimal entry point for aios_main
 #include <iostream>
+#include <thread>
+#include <chrono>
 #include "aios_core_minimal.hpp"
 
 int main(int argc, char** argv) {

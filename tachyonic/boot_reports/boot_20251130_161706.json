@@ -1,0 +1,17 @@
+{
+    "timestamp": "2025-11-30T16:17:06+00:00",
+    "mode": "test",
+    "duration_seconds": 5,
+    "platform": "linux",
+    "shell": "bash",
+    "metrics": {
+        "tools_discovered": 0,
+        "agents_tested": 2,
+        "interfaces_launched": 0,
+        "semantic_registry": true,
+        "dendritic_coherence": 0.0,
+        "errors": 0,
+        "warnings": 0
+    },
+    "status": "OPERATIONAL"
+}

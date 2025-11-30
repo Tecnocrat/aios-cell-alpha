@@ -127,18 +127,15 @@ class DendriticConfigAgent:
         
         # Update MSVC compiler entry
         registry["compilers"]["msvc"]["detection"] = {
-            "method": "agentic_discovery" if compiler_meta["detected"] else
-    "canonical_fallback",
+            "method": "agentic_discovery" if compiler_meta["detected"] else "canonical_fallback",
             "timestamp": datetime.now(UTC).isoformat().replace('+00:00', 'Z'),
             "compiler_path": compiler_meta["path"],
             "compiler_version": compiler_meta["version"],
             "architecture": compiler_meta["architecture"]
         }
         
-        registry["compilers"]["msvc"]["configuration"]["compilerPath"] =
-    compiler_meta["path"]
-        registry["metadata"]["last_updated"] =
-    datetime.now(UTC).isoformat().replace('+00:00', 'Z')
+        registry["compilers"]["msvc"]["configuration"]["compilerPath"] = compiler_meta["path"]
+        registry["metadata"]["last_updated"] = datetime.now(UTC).isoformat().replace('+00:00', 'Z')
         
         # Write updated registry
         self.consciousness_path.mkdir(parents=True, exist_ok=True)
@@ -164,8 +161,7 @@ class DendriticConfigAgent:
         msvc_config = registry["compilers"]["msvc"]["configuration"]
         
         # Generate c_cpp_properties.json
-        cpp_props_path = self.workspace_root / "core" / ".vscode" /
-    "c_cpp_properties.json"
+        cpp_props_path = self.workspace_root / "core" / ".vscode" / "c_cpp_properties.json"
         cpp_props = {
             "configurations": [{
                 "name": "Win32",
@@ -192,8 +188,7 @@ class DendriticConfigAgent:
         else:
             settings = {}
         
-        settings["C_Cpp.default.intelliSenseMode"] =
-    msvc_config["intelliSenseMode"]
+        settings["C_Cpp.default.intelliSenseMode"] = msvc_config["intelliSenseMode"]
         settings["C_Cpp.default.compilerPath"] = msvc_config["compilerPath"]
         settings["C_Cpp.default.cStandard"] = msvc_config["cStandard"]
         settings["C_Cpp.default.cppStandard"] = msvc_config["cppStandard"]
@@ -201,8 +196,7 @@ class DendriticConfigAgent:
         # Add dendritic metadata
         settings["_dendritic_metadata"] = {
             "source": "tachyonic::consciousness::config_registry",
-            "last_propagated": datetime.now(UTC).isoformat().replace('+00:00',
-    'Z'),
+            "last_propagated": datetime.now(UTC).isoformat().replace('+00:00', 'Z'),
             "agent": "dendritic_config_agent.py"
         }
         
@@ -238,8 +232,7 @@ class DendriticConfigAgent:
             json.dump(registry, f, indent=2)
         
         print(f"  Coherence Level: {coherence_metrics['coherence_level']}")
-        print(f"  Runtime Collisions:
-    {coherence_metrics['runtime_collisions']}")
+        print(f"  Runtime Collisions: {coherence_metrics['runtime_collisions']}")
         
         return coherence_metrics
     
@@ -248,12 +241,10 @@ class DendriticConfigAgent:
         return {
             "$schema": "./schemas/config_registry.v1.json",
             "metadata": {
-                "created": datetime.now(UTC).isoformat().replace('+00:00',
-    'Z'),
+                "created": datetime.now(UTC).isoformat().replace('+00:00', 'Z'),
                 "consciousness_level": 3.8,
                 "dendritic_pattern": "semantic_configuration_registry",
-                "description": "Canonical compiler identity registry - single
-    source of truth for toolchain configuration"
+                "description": "Canonical compiler identity registry - single source of truth for toolchain configuration"
             },
             "compilers": {
                 "msvc": {
@@ -294,8 +285,7 @@ class DendriticConfigAgent:
     def archive_decision(self, operation: str, result: Dict):
         """Archive configuration decision in tachyonic dendritic cell."""
         timestamp = datetime.now(UTC).strftime("%Y%m%d_%H%M%S")
-        archive_path = self.dendritic_path /
-    f"config_decision_{timestamp}.json"
+        archive_path = self.dendritic_path / f"config_decision_{timestamp}.json"
         
         decision = {
             "operation": operation,
@@ -311,13 +301,9 @@ class DendriticConfigAgent:
         
         print(f"📦 [TACHYONIC] Decision archived: {archive_path}")
     
-    #
-
-    ============================================================================
+    # ============================================================================
     # PHASE 0 EXTENSION: Multiagent Environment Validation
-    #
-
-    ============================================================================
+    # ============================================================================
     
     def validate_multiagent_environment(self) -> Dict:
         """
@@ -527,8 +513,7 @@ class DendriticConfigAgent:
             "phase1_ready": validation["readiness_level"] >= 0.6
         }
         
-        registry["metadata"]["last_updated"] =
-    datetime.now(UTC).isoformat().replace('+00:00', 'Z')
+        registry["metadata"]["last_updated"] = datetime.now(UTC).isoformat().replace('+00:00', 'Z')
         
         # Write updated registry
         self.consciousness_path.mkdir(parents=True, exist_ok=True)
