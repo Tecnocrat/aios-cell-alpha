@@ -1,8 +1,11 @@
 {
-    // Black Formatter as default Python formatter
+    // Python configuration with Black formatting
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.python"
     },
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["--line-length", "88"],
     // JSON Schema mappings for AIOS dendritic configuration files
     "json.schemas": [
         {
@@ -17,7 +20,6 @@
         "**/evolution_lab/**": true,
         "**/docs/**": true,
         "**/runtime/**": true,
-        "**/ai/**": true,
         "**/interface/**": true,
         "**/core/build/**": true,
         "**/.git/**": true,
@@ -29,7 +31,6 @@
         "**/evolution_lab/**": true,
         "**/docs/**": true,
         "**/runtime/**": true,
-        "**/ai/**": true,
         "**/interface/**": true,
         "**/core/build/**": true
     },
@@ -39,7 +40,6 @@
         "**/evolution_lab/**": true,
         "**/docs/**": true,
         "**/runtime/**": true,
-        "**/ai/**": true,
         "**/interface/**": true,
         "**/core/build/**": true,
         "**/.git/**": true,
