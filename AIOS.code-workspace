@@ -45,33 +45,6 @@
 			"path": "./evolution_lab",
 			"description": "Evolutionary computation supercell - AI-orchestrated code evolution with fractal and holographic patterns"
 		}
-		// AINLP Spatial Awareness: Biological architecture integration validated - Root restored for git sync
-	],
-		{
-			"name": "🖥️ Interface",
-			"path": "./interface",
-			"description": "C# UI & service architecture (WPF + WebView2) - Cell membrane boundary management"
-		},
-		{
-			"name": "📚 Documentation",
-			"path": "./docs",
-			"description": "Technical documentation & API references - Knowledge genome preservation"
-		},
-		{
-			"name": "🧮 Runtime",
-			"path": "./runtime",
-			"description": "System monitoring, optimization & telemetry - Biological architecture monitoring"
-		},
-		{
-			"name": "🌌 Tachyonic",
-			"path": "./tachyonic",
-			"description": "Historical data, evolution tracking & status reports - Consciousness evolution memory"
-		},
-		{
-			"name": "🧬 Lab",
-			"path": "./evolution_lab",
-			"description": "Evolutionary computation supercell - AI-orchestrated code evolution with fractal and holographic patterns"
-		}
 		// AINLP Spatial Awareness: Biological architecture integration validated
 	],
 	"settings": {

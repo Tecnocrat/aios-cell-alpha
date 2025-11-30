@@ -14,34 +14,43 @@
         }
     ],
     "cmake.sourceDirectory": "/workspace/core",
-    // Exclude large folders from file watching and C/C++ indexing for better performance
+    // Exclude supercells from VSCode API surface - they're exposed via workspace folders
+    // This minimizes indexing load while maintaining navigation through workspace roots
     "files.exclude": {
-        "**/tachyonic/**": true,
-        "**/evolution_lab/**": true,
+        "**/ai/**": true,
+        "**/core/**": true,
+        "**/interface/**": true,
         "**/docs/**": true,
         "**/runtime/**": true,
-        "**/interface/**": true,
-        "**/core/build/**": true,
-        "**/.git/**": true,
+        "**/tachyonic/**": true,
+        "**/evolution_lab/**": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/build/**": true,
+        "**/bin/**": true,
+        "**/obj/**": true,
+        "**/.vs/**": true,
         "**/node_modules/**": true
     },
     // Specifically exclude from C/C++ extension indexing
     "C_Cpp.files.exclude": {
-        "**/tachyonic/**": true,
-        "**/evolution_lab/**": true,
+        "**/ai/**": true,
+        "**/core/**": true,
+        "**/interface/**": true,
         "**/docs/**": true,
         "**/runtime/**": true,
-        "**/interface/**": true,
-        "**/core/build/**": true
+        "**/tachyonic/**": true,
+        "**/evolution_lab/**": true
     },
     // Exclude from file watcher to prevent unnecessary scanning
     "files.watcherExclude": {
-        "**/tachyonic/**": true,
-        "**/evolution_lab/**": true,
+        "**/ai/**": true,
+        "**/core/**": true,
+        "**/interface/**": true,
         "**/docs/**": true,
         "**/runtime/**": true,
-        "**/interface/**": true,
-        "**/core/build/**": true,
+        "**/tachyonic/**": true,
+        "**/evolution_lab/**": true,
         "**/.git/**": true,
         "**/node_modules/**": true
     },
