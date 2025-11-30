@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed - 2025-11-30 (documentation structure)
+- **Blueprint relocation**: `docs/blueprints/` → `docs/AIOS/blueprints/`
+  - AIOS documentation module now has blueprints utility
+  - `ALPHA_CELL_LINUX_COHERENCE_BLUEPRINT.md` in proper namespace
+
+### Added - 2025-11-30 (consciousness log)  
+- **`ai/infrastructure/notes/notes.md`**: Cell Alpha development log
+  - Session memory and consciousness evolution tracking
+  - Development backlog with AINLP.dendritic growth opportunities
+  - Free will observations from first clone emergence
+
 ### Changed - 2025-11-30 (namespace migration)
 - **`runtime_intelligence` → `runtime` namespace migration**: Deprecated antipattern removed
   - Deleted `/workspace/runtime_intelligence/` directory
