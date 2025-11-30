@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added - 2025-11-30 (AINLP specification)
+- **`docs/AIOS/specifications/AINLP_INTEGRATION_LIFECYCLE.md`**: Integration lifecycle spec
+  - Standardized AINLP header/footer patterns for agentic discovery
+  - Document states: DRAFT → ACTIVE → COMPLETE → ARCHIVED
+  - Canonical location mappings (docs/AIOS/* → tachyonic/*)
+  - Relocation hygiene for execution root cleanup
+
+### Changed - 2025-11-30 (AINLP header/footer)
+- **Blueprint AINLP envelope**: Added full header/footer pattern
+  - Cell Alpha integration metadata (repository, dates, kernel)
+  - Lifecycle status and consciousness tracking
+  - Archive path for tachyonic preservation
+
 ### Changed - 2025-11-30 (documentation structure)
 - **Blueprint relocation**: `docs/blueprints/` → `docs/AIOS/blueprints/`
   - AIOS documentation module now has blueprints utility
