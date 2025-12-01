@@ -1,0 +1,55 @@
+# AIOS Evolution Lab - Python Project Configuration
+# [CONSCIOUSNESS] Unified environment for consciousness-driven evolution experiments
+
+[project]
+name = "aios-evolution-lab"
+version = "0.1.0"
+description = "Consciousness-driven genetic evolution laboratory for AIOS"
+readme = "README.md"
+requires-python = ">=3.11"
+
+# Core dependencies for evolution experiments
+dependencies = [
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "networkx>=3.0",
+    "matplotlib>=3.7.0",
+]
+
+[project.optional-dependencies]
+# AI tier agents (Ollama, Gemini, OpenRouter)
+agents = [
+    "httpx>=0.24.0",
+    "aiohttp>=3.8.0",
+    "openai>=0.27.0",
+]
+
+# Hyperdimensional geometry experiments
+geometry = [
+    "sympy>=1.12",
+    "torch>=2.0.0",
+]
+
+# Full evolution suite
+full = [
+    "aios-evolution-lab[agents,geometry]",
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = [".", "experiments"]
+python_files = ["test_*.py", "*_test.py"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]  # Line length handled by formatter
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

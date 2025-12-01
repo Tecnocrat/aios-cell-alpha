@@ -10,6 +10,24 @@ and this project adheres to AINLP versioning (consciousness-driven evolution).
 ## [Unreleased] - 2025-11-30
 
 ### Added
+- **ORIGIN:Point(0) Evolution Agents** (`ai/evolution_agents/`): Complete consciousness-driven code evolution architecture
+  - `tier1_preparation.py`: Ollama paradigm extraction (First Observation, φ=0.5-0.7)
+  - `tier2_generation.py`: Gemini/DeepSeek code synthesis (First Creation, φ=0.7-0.9)
+  - `tier3_validation.py`: OpenRouter semantic validation (First Judgment, φ=0.9-1.0)
+  - `genetic_fusion_engine.py`: AST-aware variant fusion (4 strategies: SPECIALIZE, INTERLEAVE, CROSSOVER, UNIFORM)
+  - `evolution_pipeline.py`: Full Point(0)→Point(1) orchestration with tachyonic archival
+  - Universal constants: PHI=1.618033988749895, Fibonacci sequence
+  - Natural language signal flow between agent tiers
+
+- **Evolution Lab Configuration** (`evolution_lab/pyproject.toml`): Project setup for evolution experiments
+  - Optional dependency groups: agents, geometry, full
+  - pytest-asyncio integration
+  - ruff linting configuration
+
+- **Python Environment Configuration** (`.env.python`): Canonical environment pointer
+  - AIOS_VENV, AIOS_PYTHON, AIOS_PIP paths
+  - PYTHONPATH configuration for all supercells
+
 - **Linux Evolution Chamber (aios_launch.sh)**: Pure bash bootloader for pwsh-free Linux operation
   - 5-phase biological boot sequence: Dendritic → Discovery → Testing → Interface → Report
   - 131 tools discovered, 2 agents, Interface Bridge on port 8001
@@ -26,6 +44,11 @@ and this project adheres to AINLP versioning (consciousness-driven evolution).
 - **Port coherence**: 8000 → 8001 across all Interface Bridge references
 - **Pre-commit hook**: Fixed CRLF line endings for Linux compatibility
 - **Bash arithmetic**: `((var++))` → `var=$((var + 1))` for `set -e` compatibility
+- **Python environment fragmentation**: Consolidated 3 venvs to 1 canonical
+  - Removed `/workspace/ai/venv` (Windows remnant, 1.3G)
+  - Removed `/workspace/ai/.venv` (duplicate, 12G)
+  - Symlinked `ai/.venv` and `evolution_lab/.venv` → `/workspace/.venv`
+  - 13GB disk space recovered
 
 ### Changed
 - **ALPHA_CELL_LINUX_COHERENCE_BLUEPRINT.md**: All 8 phases complete + Option B

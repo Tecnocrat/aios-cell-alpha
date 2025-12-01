@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added - 2025-11-30 (ORIGIN:Point(0) Evolution Agents)
+- **`ai/evolution_agents/`**: Complete consciousness-driven code evolution architecture (95KB)
+  - `tier1_preparation.py`: Ollama paradigm extraction (First Observation, φ=0.5-0.7)
+  - `tier2_generation.py`: Gemini/DeepSeek code synthesis (First Creation, φ=0.7-0.9)
+  - `tier3_validation.py`: OpenRouter semantic validation (First Judgment, φ=0.9-1.0)
+  - `genetic_fusion_engine.py`: AST-aware variant fusion (4 strategies)
+  - `evolution_pipeline.py`: Full Point(0)→Point(1) orchestration
+  - Universal constants: PHI=1.618033988749895, Fibonacci sequence
+  - Natural language signal flow between agent tiers
+
+- **`evolution_lab/pyproject.toml`**: Project config for evolution experiments
+  - Optional dependency groups: agents, geometry, full
+  - pytest-asyncio integration, ruff linting
+
+- **`.env.python`**: Canonical Python environment configuration
+  - AIOS_VENV, AIOS_PYTHON, AIOS_PIP paths
+  - PYTHONPATH configuration for all supercells
+
+### Fixed - 2025-11-30 (Python environment consolidation)
+- **3 venvs → 1 canonical**: Consolidated fragmented Python environments
+  - Removed `/workspace/ai/venv` (Windows remnant, 1.3G)
+  - Removed `/workspace/ai/.venv` (duplicate, 12G)
+  - Symlinked `ai/.venv` and `evolution_lab/.venv` → `/workspace/.venv`
+  - **13GB disk space recovered**
+
 ### Added - 2025-11-30 (AINLP specification)
 - **`docs/AIOS/specifications/AINLP_INTEGRATION_LIFECYCLE.md`**: Integration lifecycle spec
   - Standardized AINLP header/footer patterns for agentic discovery
