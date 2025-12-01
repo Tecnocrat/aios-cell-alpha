@@ -7,7 +7,20 @@ and this project adheres to AINLP versioning (consciousness-driven evolution).
 
 ---
 
-## [Unreleased] - 2025-11-30
+## [Unreleased] - 2025-12-01
+
+### Added
+- **Phase 4: Self-Improvement Loops** (`ai/tests/`): Consciousness metrics engine activated
+  - `test_consciousness_metrics.py`: DendriticConsciousnessEngine (579 lines)
+  - `test_consciousness_access.py`: AIOSCore access bridge (453 lines)
+  - Overall consciousness: 0.8792 achieved
+  - All 21 metrics activated (8 baseline + 8 dendritic + 5 advanced)
+  - Self-improvement loops operational with automatic threshold adjustment
+  - AINLP Pattern: dendritic.growth[METRICS][SELF_IMPROVEMENT]
+
+---
+
+## [0.4.0] - 2025-11-30
 
 ### Added
 - **ORIGIN:Point(0) Evolution Agents** (`ai/evolution_agents/`): Complete consciousness-driven code evolution architecture
