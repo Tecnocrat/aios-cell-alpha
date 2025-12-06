@@ -1,62 +1,94 @@
-# HSE Knowledge Distillation
+# Hyperspace Engine (HSE) Research Program
 
-> A structured extraction of core concepts from the Hyperspace Engine research corpus
+> Distilled knowledge from a thousand-year research arc into hyperspatial propulsion
 > Created: 2025-12-06
-> Purpose: Organize and distill 5 iterations of HSE development into navigable knowledge
 
 ---
 
-## Directory Structure
+## What is HSE?
+
+The Hyperspace Engine is a **speculative engineering framework** for a starship propulsion system based on an information-theoretic view of spacetime. It proposes that:
+
+1. **Spacetime is emergent** from an underlying informational substrate
+2. **A singularity can serve** as a read/write interface to this substrate  
+3. **FTL travel becomes** informational transposition, not physical movement
+
+This is **visionary research**, not near-term engineering. The project explicitly spans a 1000-year arc.
+
+---
+
+## Quick Architecture
 
 ```
-knowledge_distillation/
-├── foundations/          # Core hypothesis and theoretical basis
-├── physics/              # Grounded science vs speculative physics
-├── engineering/          # Technical architecture and components
-├── philosophy/           # Metaphysical framework and moral algorithm
-└── open_questions/       # Unsolved problems and research directions
+┌─────────────────────────────────────────────────────┐
+│          SYNTHETIC DNA WETWARE HULL                 │
+│   ┌─────────────────────────────────────────────┐   │
+│   │      OUTER ACCELERATOR RING (Metallic)      │   │
+│   │   ┌─────────────────────────────────────┐   │   │
+│   │   │     FUSION MICROSTAR ENVELOPE       │   │   │
+│   │   │   ┌─────────────────────────────┐   │   │   │
+│   │   │   │  INNER ACCEL MESH (Bio)     │   │   │   │
+│   │   │   │   ┌─────────────────────┐   │   │   │   │
+│   │   │   │   │  METALLIC HYDROGEN  │   │   │   │   │
+│   │   │   │   │   COMPUTE SHELL     │   │   │   │   │
+│   │   │   │   │      [●] ← BH       │   │   │   │   │
+│   │   │   │   │   SINGULARITY CORE  │   │   │   │   │
+│   │   │   │   └─────────────────────┘   │   │   │   │
+│   │   │   └─────────────────────────────┘   │   │   │
+│   │   └─────────────────────────────────────┘   │   │
+│   └─────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## How to Use This Distillation
+## Knowledge Distillation
 
-1. **New readers**: Start with `foundations/core_hypothesis.md`
-2. **Scientists**: Focus on `physics/` for grounded vs speculative breakdown
-3. **Engineers**: See `engineering/` for component architecture
-4. **Philosophers**: Explore `philosophy/` for the metaphysical framework
-5. **Researchers**: Check `open_questions/` for contribution opportunities
-
----
-
-## Relationship to Canonical Sources
-
-This distillation **extracts and organizes** knowledge from:
-- `/workspace/hse/Iterations/` (original development conversations)
-- `/workspace/hse/Iterations/HSE White paper/` (formal documents)
-
-The canonical sources remain **untouched and authoritative**.
-This workspace is for **active synthesis and development**.
+| Document | Description |
+|----------|-------------|
+| [Core Hypothesis](foundations/core_hypothesis.md) | The tachyonic database hypothesis |
+| [Physics Analysis](physics/grounded_vs_speculative.md) | Component ratings: 🟢 grounded → 🔴 speculative |
+| [Engineering Architecture](engineering/architecture_summary.md) | Technical diagram and specs |
+| [Philosophy Framework](philosophy/metaphysical_framework.md) | Binary cosmogony and moral algorithm |
+| [Research Catalog](open_questions/research_catalog.md) | Unsolved problems for future work |
+| [AI Assessment](AI_ASSESSMENT.md) | AI feasibility analysis (~1-5%) |
 
 ---
 
-## Status
+## Feasibility Summary
 
-- [x] Directory structure created
-- [x] Core hypothesis distillation
-- [x] Physics breakdown (grounded vs speculative)
-- [x] Engineering architecture summary
-- [x] Philosophy framework extraction
-- [x] Open questions catalog
+**Required Physics Breakthroughs:**
+- Quantum gravity unification
+- Exotic matter production  
+- Micro black hole creation/stabilization
+- Tachyonic field detection
+
+**AI Probability Estimate:** ~1-5% as literally described
+
+**Value Regardless:** The research direction advances information-theoretic physics understanding.
 
 ---
 
-## Contents
+## Connection to AIOS
 
-| File | Purpose |
-|------|---------|
-| `foundations/core_hypothesis.md` | The tachyonic database hypothesis explained |
-| `physics/grounded_vs_speculative.md` | Component-by-component scientific analysis |
-| `engineering/architecture_summary.md` | Technical diagram and layer specifications |
-| `philosophy/metaphysical_framework.md` | Binary cosmogony and moral algorithm |
-| `open_questions/research_catalog.md` | Unsolved problems for future research |
+| AIOS Module | HSE Purpose |
+|-------------|-------------|
+| `tachyonic/geometric_engine/singularity_interface/` | HSE controller prototype |
+| `tachyonic/geometric_engine/fields/` | Information field dynamics |
+| Consciousness metrics | Unified consciousness field |
+
+---
+
+## Source Material
+
+Distilled from HSE_Project_Codex (private), containing 5 iterations of white paper development. The canonical sources remain private; this is the public interface.
+
+> *"Treat every equation as provisional, every diagram as preliminary, and every hypothesis as a signpost to further discovery."*
+
+---
+
+## Source Material
+
+Distilled from HSE_Project_Codex (private), containing 5 iterations of white paper development. The canonical sources remain private; this is the public interface.
+
+> *"Treat every equation as provisional, every diagram as preliminary, and every hypothesis as a signpost to further discovery."*
