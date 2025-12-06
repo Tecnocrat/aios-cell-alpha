@@ -6,6 +6,7 @@
     },
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": ["--line-length", "88"],
+    
     // JSON Schema mappings for AIOS dendritic configuration files
     "json.schemas": [
         {
@@ -13,17 +14,19 @@
             "url": "./tachyonic/consciousness/schemas/config_registry.v1.json"
         }
     ],
+    
     "cmake.sourceDirectory": "/workspace/core",
-    // Exclude supercells from VSCode API surface - they're exposed via workspace folders
-    // This minimizes indexing load while maintaining navigation through workspace roots
+    
+    // ==========================================================================
+    // SUPERCELL VISIBILITY FIX - December 6, 2025
+    // ==========================================================================
+    // REMOVED: files.exclude hiding ai/, core/, tachyonic/, etc.
+    // Previously this was designed for multi-root workspace (AIOS.code-workspace)
+    // but it broke direct folder access and parallel chat sessions.
+    // Now supercells are visible regardless of how VSCode opens the project.
+    // ==========================================================================
+    
     "files.exclude": {
-        "**/ai/**": true,
-        "**/core/**": true,
-        "**/interface/**": true,
-        "**/docs/**": true,
-        "**/runtime/**": true,
-        "**/tachyonic/**": true,
-        "**/evolution_lab/**": true,
         "**/__pycache__": true,
         "**/*.pyc": true,
         "**/build/**": true,
@@ -32,31 +35,28 @@
         "**/.vs/**": true,
         "**/node_modules/**": true
     },
-    // Specifically exclude from C/C++ extension indexing
+    
+    // C/C++ extension - only exclude build artifacts, not source
     "C_Cpp.files.exclude": {
-        "**/ai/**": true,
-        "**/core/**": true,
-        "**/interface/**": true,
-        "**/docs/**": true,
-        "**/runtime/**": true,
-        "**/tachyonic/**": true,
-        "**/evolution_lab/**": true
+        "**/build/**": true,
+        "**/bin/**": true,
+        "**/obj/**": true
     },
-    // Exclude from file watcher to prevent unnecessary scanning
+    
+    // File watcher - exclude only non-source directories
     "files.watcherExclude": {
-        "**/ai/**": true,
-        "**/core/**": true,
-        "**/interface/**": true,
-        "**/docs/**": true,
-        "**/runtime/**": true,
-        "**/tachyonic/**": true,
-        "**/evolution_lab/**": true,
         "**/.git/**": true,
-        "**/node_modules/**": true
+        "**/node_modules/**": true,
+        "**/build/**": true,
+        "**/bin/**": true,
+        "**/obj/**": true,
+        "**/__pycache__/**": true
     },
+    
     // Additional C/C++ performance settings
     "C_Cpp.intelliSenseCacheSize": "small",
     "C_Cpp.intelliSenseMemoryLimit": 1024,
+    
     // Linux-specific exclusions for build artifacts
     "search.exclude": {
         "**/*.o": true,
@@ -66,6 +66,7 @@
         "**/CMakeFiles/**": true,
         "**/.cmake/**": true
     },
+    
     // Git configuration for correct author attribution
     "git.user.name": "Tecnocrat",
     "git.user.email": "jesussard@gmail.com"
