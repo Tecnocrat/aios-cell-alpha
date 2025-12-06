@@ -401,3 +401,72 @@ The `aios_launch.ps1` naming now **perfectly aligns** with established AIOS patt
 **Enhancement Complete**: October 12, 2025  
 **Method**: AINLP Namespace Semantic Coherence (System-First Clustering)  
 **Result**: 100% AIOS Operation Namespace Consistency
+
+---
+
+## Addendum: Tachyonic Tree Organization Pattern (December 6, 2025)
+
+### Analysis: AINLP Document Canonical Placement
+
+**Context**: During dendritic integration checklist refactoring, analyzed optimal placement for completed AINLP pattern documents.
+
+### Tachyonic Namespace Hierarchy (Semantic Organization)
+
+```
+tachyonic/
+├── ainlp/                          # AINLP protocol-specific artifacts
+│   ├── governance/                 # Governance rules, namespace policies
+│   ├── patterns/                   # ✅ CANONICAL: Active pattern templates
+│   │   ├── AINLP_DENDRITIC_INTEGRATION_CHECKLIST.md
+│   │   ├── AINLP_CANONICAL_KNOWLEDGE_GENOME.md
+│   │   └── AINLP_COMPLETION_PATTERN.md
+│   ├── harmonization/              # Consolidation and merge artifacts
+│   ├── optimization/               # Optimization reports
+│   └── refactoring/                # Refactoring plans
+│
+├── knowledge_crystals/             # Distilled reusable knowledge
+│   └── patterns/                   # ✅ CANONICAL: Crystallized patterns
+│       └── DENDRITIC_INTEGRATION_PATTERN.md
+│
+├── shadows/                        # Temporal archives (DEV_PATH shadows)
+│   └── dev_path/                   # Development path history
+│       ├── S001_*.md               # Shadow series
+│       └── SHADOW_INDEX.md
+│
+├── archive/                        # Historical/completed artifacts
+│   └── consolidation/              # Consolidation reports
+│
+└── dendritic/                      # Dendritic network data (JSON indexes)
+```
+
+### Placement Decision Rules
+
+| Document Type | Canonical Location | Rationale |
+|--------------|-------------------|-----------|
+| Active checklists/patterns | `tachyonic/ainlp/patterns/` | Living AINLP protocol documents |
+| Crystallized patterns | `tachyonic/knowledge_crystals/patterns/` | Distilled, reusable knowledge |
+| DEV_PATH shadows | `tachyonic/shadows/dev_path/` | Temporal development archives |
+| Governance policies | `tachyonic/ainlp/governance/` | Rules and namespace policies |
+| Completed optimizations | `tachyonic/archive/` | Historical reference only |
+
+### Key Insight: Patterns vs Shadows
+
+**Shadows** (`shadows/`) = **Temporal archives** of living documents (DEV_PATH snapshots)
+- Named with S### convention + date ranges
+- Preserves development state at points in time
+- Contains completed phases that were removed from living docs
+
+**Patterns** (`ainlp/patterns/`, `knowledge_crystals/patterns/`) = **Reusable templates**
+- Named descriptively (no date ranges)
+- Documents methodology for future replication
+- Active reference for ongoing development
+
+### December 6, 2025 Consolidation
+
+**Action Taken**: Kept `AINLP_DENDRITIC_INTEGRATION_CHECKLIST.md` at `tachyonic/ainlp/patterns/`
+- ✅ Correct location (AINLP pattern, not a shadow)
+- ✅ Removed root duplicate
+- ✅ Deferred incomplete items to DEV_PATH (micro context preservation)
+- ✅ Related crystallized pattern exists at `tachyonic/knowledge_crystals/patterns/DENDRITIC_INTEGRATION_PATTERN.md`
+
+**AINLP Compliance**: Documents should NOT move to shadows when complete - only DEV_PATH content shadows. Pattern documents remain in `patterns/` as canonical references.
